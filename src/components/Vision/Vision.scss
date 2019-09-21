@@ -1,0 +1,38 @@
+
+.Vision {
+    padding: 2rem 0 6rem 0;
+    margin: 0 auto;
+    width: 120rem;
+    position: relative;
+    
+       
+
+
+    &__title {
+        text-align: center;
+    margin-bottom: 5rem;
+     font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+     font-family: 'Roboto Slab';
+    }
+    &__content {
+            display: flex;
+    }
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .Vision {
+            width: 100%;
+    }
+   .Vision__content {
+       flex-direction: column;
+   }
+}

@@ -1,0 +1,331 @@
+
+
+.mainBackground {
+     height: 100vh;
+    background-size: cover;
+    background-position: top;
+  z-index: 10000;
+
+&__carousel {
+    z-index: 1000000;
+    height: 100vh;
+}
+
+
+    &__arrow {
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 1000;
+        color: white;
+        &--next {
+
+             position: absolute;
+             left: 5rem;
+             top: 45%;
+        }
+        &--prev {
+             position: absolute;
+             right: 5rem;
+             top: 45%;
+        }
+       
+    }
+}
+
+.mainBackground__background1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+      background-image: url(../../assets/img/mainBackground/bg1.jpg);
+      
+  background-size: cover;
+    background-position: bottom;
+    .mainBackground__content {
+     z-index: 1000;
+   
+         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+          width: 100%;
+        div{
+              margin-bottom: 4rem;
+             p {
+                font-size: 4.5rem;
+                padding: 0;
+                margin: 0;
+                 line-height: 5rem;
+                 color: var(--color-primary);
+                 font-weight: 600;
+                 font-family: 'Roboto Slab';
+    }
+    .mainBackground__p1 {
+        font-weight: bold;
+    }
+        }
+    }
+
+   
+
+}
+
+
+
+
+
+.mainBackground__background2 {
+     z-index: 1000;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+      background-image: url(../../assets/img/mainBackground/bg2.jpg);
+  background-size: cover;
+    background-position: bottom;
+    .mainBackground__content {
+          z-index: 1000;
+         position: absolute;
+        top: 45%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+        .mainBackground__logoGraindeDeVie {
+            img {
+                   width: 20rem;
+                   position: absolute;
+                   top: 80%;
+                  left: -15%;
+            }
+        }
+        
+        div{
+               .mainBackground__button2 {
+                          border: none;
+                          padding: .8rem 3rem;
+                          background-color: white;
+                          color: var(--color-primary);
+                          font-size: 1.7rem;
+                          border-radius: 30px;
+                          transition: all .5s;
+
+                          &:hover {
+                               background-color: var(--color-primary);
+                               color: white;
+                          }
+                      }
+             z-index: 1000;
+              margin-bottom: 2rem;
+              h3 {
+                  font-weight: 400;
+                  color: white;
+                  font-size: 3.5rem;
+                   font-family: 'Roboto Slab';
+                   display:flex;
+                   align-items: center;
+                   justify-content: center;
+
+                   .one {
+                     font-size: 14rem;
+                     font-weight: 400;
+                   }
+
+                   .null {
+                     font-size: 8rem;
+                     font-weight: 600;
+                     margin-right: 5px;
+                   }
+
+                   div {
+                        display:flex;
+                        flex-direction: column;
+                       align-items: flex-start;
+                       .two {
+                          margin-left: 1rem;
+                       }
+                       .four {
+                            margin-left: 1rem;
+                       }
+                   div {
+                           display:flex;
+                        flex-direction: row;
+                        margin: 0;
+                        padding: 0;
+                       
+                       
+                         div {
+                           display:flex;
+                            flex-direction: column;
+                       align-items: flex-start;
+                      
+                   }
+                      
+                   }
+                   }
+              }
+              div {
+                  margin-top: 0rem;
+                  display: flex;
+                  justify-content: center;
+                  div {
+                      margin: 0 1rem;
+                      display: flex;
+                      flex-direction: column;
+                      color: white;
+                       font-family: 'Roboto Slab';
+                      
+                     
+                      .mainBackground__number {
+                          font-weight: 900;
+                          font-size: 5rem;
+                          padding: 0;
+                          margin: 0;
+                        }
+                      .mainBackground__legend {
+                           padding: 0;
+                           margin: 0;
+                          font-size: 1.7rem;
+                          font-weight: 300;
+                          font-style: italic;
+                      }
+                   
+                  }
+              }
+            
+        }
+               
+    }
+    .mainBackground__p1 {
+        font-weight: bold;
+    }
+}
+   
+
+
+.mainBackground__background3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    //   background-image: url(../../assets/img/mainBackground/bg3.jpg);
+  background-size: cover;
+    background-position: bottom;
+    .mainBackground__content {
+          z-index: 1000;
+         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+          width: 100%;
+     
+    }
+
+}
+
+
+
+// MOVE
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    height: 100%;
+    overflow: hidden;
+     z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 10%;
+    bottom: -1px;
+}
+.bgTop {
+    z-index: 3;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 1;
+    opacity: 0.75;
+    // border: solid 2px white;
+}
+.bgBottom {
+    z-index: 2;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 60px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 80px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 60px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .mainBackground__arrow {
+        font-size: 3rem;
+       
+    }
+     .mainBackground__arrow--next {
+             left: 2rem;
+        }
+    .mainBackground__arrow--prev {
+             right: 2rem;
+        }
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+        .waveTop {
+    background-size: 50% 30px;
+}
+
+.waveMiddle {
+    background-size: 50% 40px;
+}
+.waveBottom {
+    background-size: 50% 30px;
+}
+}

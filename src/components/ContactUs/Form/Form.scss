@@ -1,0 +1,78 @@
+
+
+.Form {
+    width: 50vw;
+    min-height: 100vh;
+    font-size: 1.7rem;
+   
+    &__content {
+         margin-top: 10rem;
+    }
+    &__title {
+      text-align: center;
+    margin-bottom: 3rem;
+     font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    transition: all .2s;
+     font-family: 'Roboto Slab';
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__inputBox {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+
+        margin: 0 auto 1.5rem auto;
+
+        label {
+            font-weight: 400;
+        }
+        input {
+            border: 1px solid rgb(221, 221, 221);
+            border-radius: 3px;
+            padding: 1rem 2rem;
+            &:focus  {
+                 border: 1px solid #333;
+            }
+        }
+        textarea {
+              border: 1px solid rgb(221, 221, 221);
+            border-radius: 3px;
+            padding: 1rem 2rem;
+            &:focus  {
+                 border: 1px solid #333;
+            }
+        }
+
+    }
+
+    &__send {
+        cursor: pointer;
+        display: block;
+        border: none;
+        background-color: var(--color-primary);
+        margin: 0 auto;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 3px;
+        margin-bottom:4rem; 
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px)  {
+    
+.Form {
+    width: 100vw;
+}
+}

@@ -1,0 +1,23 @@
+
+
+.ContactUs {
+    display: flex;
+
+    &__image {
+        width: 50vw;
+      background-image: url(../../assets/img/contact.jpg);
+      background-position: 25% 5%;
+      background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+.ContactUs {
+    flex-direction: column;
+}
+.ContactUs__image {
+       
+        width: 100vw;
+
+    }
+}

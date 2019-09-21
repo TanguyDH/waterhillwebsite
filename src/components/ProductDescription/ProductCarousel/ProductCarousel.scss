@@ -1,0 +1,26 @@
+
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.ProductCarousel { 
+   margin: 4rem 0;
+    font-size: 1.4rem;
+
+    &__title {
+        margin-bottom: 2rem;
+        // border: solid 2px rgb(189, 188, 188);
+        display: flex;
+
+       span {
+           margin-right: 1rem;
+           color: var(--color-primary-dark);
+           font-size: 1.8rem;
+       }
+        hr {
+           flex-grow: 1;
+                align-self: center;
+            background-color: rgb(189, 188, 188);
+            height: 1px;
+        }
+    }
+
+}

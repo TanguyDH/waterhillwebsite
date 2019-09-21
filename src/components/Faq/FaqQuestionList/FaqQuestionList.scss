@@ -1,0 +1,17 @@
+
+
+.faqQuestionList {
+    width: 100rem;
+    margin: 5rem auto 5rem auto;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+.faqQuestionList {
+    width: 100%;
+}
+
+}

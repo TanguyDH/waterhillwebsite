@@ -1,0 +1,28 @@
+
+
+.productList {
+    padding: 0 2rem;
+    width: 100rem;
+    margin: 6rem auto;
+
+    &__content {
+         display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+   
+.productList {
+   width: 100%;
+}
+
+    .productList__content {
+        justify-content: center;
+    }
+}
