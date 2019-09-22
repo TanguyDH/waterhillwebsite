@@ -2,7 +2,7 @@ import React from 'react'
 import './ProductDescription.scss';
 
 import ProductText from "./ProductText/ProductText"
-import ProductCarousel from './ProductCarousel/ProductCarousel';
+// import ProductCarousel from './ProductCarousel/ProductCarousel';
 import ProductQuestion from'./ProductQuestion/ProductQuestion';
 import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductSelect from "./ProductSelect/ProductSelect";
@@ -23,7 +23,7 @@ export default (props) => {
         <ProductSelect moq={props.moq} />
       </div>
       <ProductQuestion />
-      <ProductCarousel />
+    
       <ProductText article={props.article} />
     </div>
   )

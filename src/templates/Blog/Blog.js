@@ -3,7 +3,7 @@ import './Blog.scss';
 import Layout from '../../components/Layout/Layout';
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import SocialNetwork from '../../components/SocialNetwork/SocialNetwork';
+// import SocialNetwork from '../../components/SocialNetwork/SocialNetwork';
 import Img from "gatsby-image"
 
 export const query = graphql`
@@ -53,7 +53,7 @@ const Blog = (props) => {
             options
           )}
         </div>
-        <SocialNetwork />
+     
       </Layout>
     )
 }
