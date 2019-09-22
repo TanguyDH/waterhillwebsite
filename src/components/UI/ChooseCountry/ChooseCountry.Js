@@ -5,7 +5,6 @@ import belgium from  '../../../assets/img/flags/belgium.png';
 import france from "../../../assets/img/flags/france.png"
 import luxembourg from "../../../assets/img/flags/luxembourg.png"
 import netherlands from "../../../assets/img/flags/netherlands.png"
-// import Collapsible from "react-collapsible"
 import { IoMdClose} from 'react-icons/io';
 
 Modal.setAppElement("#___gatsby")

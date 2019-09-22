@@ -2,7 +2,7 @@ import React from "react"
 import "./Footer.scss"
 import Logo from "../../assets/img/logo.png"
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa"
-import ChooseCountry from '../UI/ChooseCountry/ChooseCountry';
+// import ChooseCountry from '../UI/ChooseCountry/ChooseCountry';
 
 
 
@@ -24,7 +24,7 @@ const Footer = () => (
           </p>
         </div>
         <div className="Footer__flag">
-          <ChooseCountry />
+      choose
         </div>
       </div>
 
