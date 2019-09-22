@@ -7,7 +7,7 @@ import luxembourg from "../../../assets/img/flags/luxembourg.png"
 import netherlands from "../../../assets/img/flags/netherlands.png"
 import { IoMdClose} from 'react-icons/io';
 
-Modal.setAppElement("#___gatsby")
+// Modal.setAppElement("#___gatsby")
 
 export default class ChooseCountry extends Component {
                  state = {
