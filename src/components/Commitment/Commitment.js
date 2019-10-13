@@ -22,7 +22,7 @@ export default () => {
       ) {
         childImageSharp {
           fluid {
-             ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -44,29 +44,6 @@ export default () => {
       }
     }
   `)
-
-  // const data2 = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: "assets/img/commitment/commitment2.jpeg" }) {
-  //       childImageSharp {
-  //         fluid {
-  //           ...GatsbyImageSharpFluid_withWebp
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  //  const data3 = useStaticQuery(graphql`
-  //   query {
-  //     file(relativePath: { eq: "assets/img/commitment/commitment3.jpeg" }) {
-  //       childImageSharp {
-  //         fluid {
-  //           ...GatsbyImageSharpFluid_withWebp
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   return (
     <div className="Commitment">
