@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Navigation.scss';
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
-// import ChooseCountry from "../UI/ChooseCountry/ChooseCountry";
+import ChooseCountry from "../UI/ChooseCountry/ChooseCountry";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import {Link} from 'gatsby';
@@ -112,7 +112,7 @@ class Navigation extends Component {
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-           choose
+           <ChooseCountry />
           </div>
           <a
             rel="noopener noreferrer"

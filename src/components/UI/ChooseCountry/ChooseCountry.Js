@@ -7,7 +7,6 @@ import luxembourg from "../../../assets/img/flags/luxembourg.png"
 import netherlands from "../../../assets/img/flags/netherlands.png"
 import { IoMdClose} from 'react-icons/io';
 
-// Modal.setAppElement("#___gatsby")
 
 export default class ChooseCountry extends Component {
                  state = {
@@ -24,7 +23,7 @@ export default class ChooseCountry extends Component {
                    this.setState({ modalIsOpen: true })
                  }
       onChangeCountry = (imgFlag, flagText) => {
-        this.setState({ region: flagText, imgFlag, modalIsOpen:false })
+        this.setState({ region: flagText, imgFlag: imgFlag,  modalIsOpen:false })
        } 
 
                  render() {
@@ -117,93 +116,3 @@ export default class ChooseCountry extends Component {
 
 
 
-
-
-
-// <Collapsible
-//   trigger={
-//     <li
-//       onClick={() =>
-//         this.onChangeCountry(belgium, "Belgique")
-//       }
-//     >
-//       <img
-//         className="ChooseCountry__flag"
-//         src={belgium}
-//         alt="belgium"
-//       />
-//       Belgique
-//                                  </li>
-//   }
-// >
-//   <div className="ChooseCountry__collapsible">
-//     sisis
-//                                </div>
-// </Collapsible>
-
-
-
-//   <Collapsible
-//     trigger={
-//       <li
-//         onClick={() =>
-//           this.onChangeCountry(france, "France")
-//         }
-//       >
-//         <img
-//           className="ChooseCountry__flag"
-//           src={france}
-//           alt="france"
-//         />
-//         France
-//                              </li>
-//     }
-//   >
-//     <div className="ChooseCountry__collapsible">
-//       sisis
-//                                </div>
-//   </Collapsible>
-
-
-//   <Collapsible
-//     trigger={
-//       <li
-//         onClick={() =>
-//           this.onChangeCountry(netherlands, "Pays-Bas")
-//         }
-//       >
-//         <img
-//           className="ChooseCountry__flag"
-//           src={netherlands}
-//           alt="netherlands"
-//         />
-//         Pays-Bas
-//                              </li>
-//     }
-//   >
-//     <div className="ChooseCountry__collapsible">
-//       sisis
-//                                </div>
-//   </Collapsible>
-
-
-//   <Collapsible
-//     trigger={
-//       <li
-//         onClick={() =>
-//           this.onChangeCountry(luxembourg, "Luxembourg")
-//         }
-//       >
-//         <img
-//           className="ChooseCountry__flag"
-//           src={luxembourg}
-//           alt="luxembourg"
-//         />
-//         Luxembourg
-//                              </li>
-//     }
-//   >
-//     <div className="ChooseCountry__collapsible">
-//       sisis
-//                                </div>
-//   </Collapsible>
