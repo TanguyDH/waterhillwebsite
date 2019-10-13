@@ -2,7 +2,7 @@ import React from 'react'
 import './Testimony.scss';
 import TestimonyItem from './TestimonyItem/TestimonyItem';
 import Slider from "react-slick";
-import video from '../../assets/video/Agua-natural.mp4';
+import video from '../../assets/video/Cascade - 7334 (1).mp4';
 import boris from '../../assets/img/testimony/boris.jpg';
 import elisabeth from '../../assets/img/testimony/elisabeth.jpg';
 import geraldine from '../../assets/img/testimony/geraldine.jpg';

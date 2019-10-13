@@ -1,40 +1,40 @@
 import React from 'react'
 import './MainBackground.scss';
-// import "react-responsive-carousel/lib/styles/carousel.min.css"
-// import AnimationCount from "react-count-animation"
 import "react-count-animation/dist/count.min.css"
 import waveTop from '../../assets/img/wave-top.png';
 import waveMid from "../../assets/img/wave-mid.png"
 import waveBot from "../../assets/img/wave-bot.png"
-
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import { Link } from 'gatsby';
 import GraindeDeVie from '../../assets/img/transparent-GDV.png';
 import Video from '../../assets/img/mainBackground/bgVideo.mp4';
+import BackgroundImage from "gatsby-background-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 
 
 const  MainBackground = () =>  {
+  const data = useStaticQuery(graphql`
+    query {
+      image1: file(relativePath: { eq: "assets/img/mainBackground/bg1.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      image2: file(relativePath: { eq: "assets/img/mainBackground/bg2.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
  
-
-  const settings = {
-    start: 1500,
-    count: 3000,
-    duration: 3000,
-    decimals: 0,
-    useGroup: true,
-    animation: 'up',
-  };
-  const settings2 = {
-    start: 1522,
-    count: 54524,
-    duration: 3000,
-    decimals: 0,
-    useGroup: true,
-    animation: 'up',
-  };
 
     return (
       <React.Fragment>
@@ -63,8 +63,9 @@ const  MainBackground = () =>  {
               }}
             ></div>
           </div>
-
           <div className="mainBackground">
+
+         
             <Carousel
               className="mainBackground__carousel"
               autoPlay={990000}
@@ -82,14 +83,14 @@ const  MainBackground = () =>  {
                 </div>
               }
             >
-              <div className="mainBackground__background1">
-                <div className="mainBackground__content"></div>
-              </div>
-
-              
-              <div
-                className="mainBackground__background2"
+              <BackgroundImage
+                fluid={data.image1.childImageSharp.fluid}
+                className="mainBackground__background1"
               >
+                <div className="mainBackground__content"></div>
+              </BackgroundImage>
+
+              <BackgroundImage fluid={data.image2.childImageSharp.fluid} className="mainBackground__background2">
                 <div className="mainBackground__content">
                   <div className="mainBackground__logoGraindeDeVie">
                     <a href="https://grainedevie.org/" target="__blank">
@@ -116,19 +117,13 @@ const  MainBackground = () =>  {
                     </h3>
                     <div>
                       <div>
-                        <span className="mainBackground__number">
-                          {" "}
-                          15000
-                        </span>
+                        <span className="mainBackground__number"> 15000</span>
                         <span className="mainBackground__legend">
                           Nbr d'arbres plantés
                         </span>
                       </div>
                       <div>
-                        <span className="mainBackground__number">
-                          {" "}
-                         15400
-                        </span>
+                        <span className="mainBackground__number"> 15400</span>
                         <span className="mainBackground__legend">
                           Nbr de CO2 compensé
                         </span>
@@ -139,14 +134,17 @@ const  MainBackground = () =>  {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </BackgroundImage>
 
+
+             
               <div className="mainBackground__background3">
                 <video autoPlay loop src={Video} />
                 <div className="mainBackground__content">
                   <div> </div>
                 </div>
               </div>
+
             </Carousel>
           </div>
         </div>

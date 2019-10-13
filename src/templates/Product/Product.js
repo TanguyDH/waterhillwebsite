@@ -14,7 +14,16 @@ export const query = graphql`
              article {
                json
              }
-              gallery  {file {url}}
+             gallery {
+               file {
+                 url
+               }
+             }
+             doc {
+               file {
+                 url
+               }
+             }
            }
          }
        `
@@ -28,6 +37,7 @@ export const query = graphql`
           gallery={props.data.contentfulProduct.gallery}
           price={props.data.contentfulProduct.price}
           moq={props.data.contentfulProduct.moq}
+          doc={props.data.contentfulProduct.doc}
         />
       </Layout>
     )

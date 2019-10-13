@@ -2,22 +2,13 @@ import React from 'react'
 import './ProductSelect.scss';
 import { Link } from 'gatsby';
 import Select from "react-select"
-import ReactCircleColorPicker from 'react-circle-color-picker'
 import ChooseColor from '../../UI/ChooseColor/ChooseColor';
 
 
 
 
 export default class ProductSelect extends React.Component {
-                 state = {
-                   colors: [
-                     { hex: "#84947F", selected: true },
-                     { hex: "#E53B2C", selected: false },
-                   ]
-                 }
-
-                
-             
+        
                  render() {
           
 
@@ -178,7 +169,12 @@ export default class ProductSelect extends React.Component {
                        </div>
                        <div>
                          <span>Quantité :</span>
-                         <Select options={quantity} />
+                         <input
+                           className="ProductSelect__input"
+                           type="number"
+                          //  value={this.props.moq}
+                           placeholder={`${this.props.moq} - 10 000 unités`}
+                       />
                        </div>
                        <div className="ProductSelect__sample">
                          <input type="checkbox" />
@@ -198,3 +194,6 @@ export default class ProductSelect extends React.Component {
                    )
                  }
                }
+
+
+// ${ this.props.moq * 5 }

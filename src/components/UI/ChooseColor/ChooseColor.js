@@ -12,14 +12,41 @@ export default class ChooseColor extends Component {
     }
   render() {
    
-    const colors = ["yellow", "white", "red", "#e67e22", '#2ecc71', '#1b7741', '#3498db','#3a5169'];
+    const colors = [
+      "d5d5d5",
+      "#eee",
+      "#e2b70d",
+      "#d35400",
+      "#EA2027",
+      "#feabc9",
+      "#66317c",
+      "#99cbed",
+      "#192a56",
+      "#71db60",
+      "#236818",
+      "#a5a8b2",
+      "#75665b",
+      "#000"
+    ]
       console.log(this.state.color);
       return (
         <div className="ChooseColor">
           {colors.map(color => {
-            return <div onClick={() => this.onChangeColor(color)} className="ChooseColor__item" style={{backgroundColor:`${color}`}}>
-         { this.state.color === color ? <span><IoMdCheckmark /></span>: ""}
-            </div>
+            return (
+              <div
+                onClick={() => this.onChangeColor(color)}
+                className="ChooseColor__item"
+                style={{ backgroundColor: `${color}` }}
+              >
+                {this.state.color === color ? (
+                  <span>
+                    <IoMdCheckmark />
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
+            )
           })}
         </div>
       )

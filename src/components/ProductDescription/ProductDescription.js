@@ -19,11 +19,10 @@ export default (props) => {
         </span>
       </div>
       <div className="ProductDescription__main">
-        <ProductGallery gallery={props.gallery} />
+        <ProductGallery doc={props.doc} gallery={props.gallery} />
         <ProductSelect moq={props.moq} />
       </div>
       <ProductQuestion />
-    
       <ProductText article={props.article} />
     </div>
   )

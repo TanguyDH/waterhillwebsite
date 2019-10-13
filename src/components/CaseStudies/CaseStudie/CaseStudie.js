@@ -37,9 +37,9 @@ class CaseStudie extends Component {
             <div onClick={this.openModal} className={className}>
               <img className="caseStudie__img" src={auto} alt="MainImage" />
               <div className="caseStudie__part2">
-                <div>
+                
                   <img className="caseStudie__logo" src={logo} alt="logo" />
-                </div>
+                
               </div>
             </div>
             <Modal
@@ -69,12 +69,12 @@ class CaseStudie extends Component {
                   }
                 >
                   <img
-                    className="Modal__image Modal__image--1"
+                    className="Modal__image"
                     src={bg}
                     alt="img"
                   />
                   <img
-                    className="Modal__image Modal__image--2"
+                    className="Modal__image"
                     src={auto2}
                     alt="img"
                   />

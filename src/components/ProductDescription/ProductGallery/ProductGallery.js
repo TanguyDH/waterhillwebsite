@@ -17,7 +17,14 @@ export default (props) => {
           Download my template
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
-          Technical sheet
+          <a
+            href={props.doc[0].file.url}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Technical sheet
+          </a>
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
           Download photos

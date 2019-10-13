@@ -11,10 +11,11 @@
        &__moq {
            font-size: 1.4rem;
            p {
-                border: 1px solid rgb(216, 214, 214);
+                border: 1px solid green;
                 padding: .4rem 1rem;
                 border-radius: 3px;
                 opacity: .7;
+                color: green;
            }
           
        }
@@ -41,6 +42,16 @@
                   background-color: rgb(0, 99, 0);
              }
         }
+    }
+
+    &__input{
+        font-size: 1.6rem;
+        display: block;
+        width: 100%;
+         border: 1px solid rgb(216, 214, 214);
+                padding: 1rem;
+                border-radius: 3px;
+                opacity: .7;
     }
 
 

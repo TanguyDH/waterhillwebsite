@@ -31,14 +31,17 @@
         transition: all ease .5s;
         border: none;
         cursor: pointer;
+        a, :hover {
+            color: inherit;
+            display: block;
+        }
         &-1 {
-             background-color: rgb(146, 145, 145);
-                background-color: var(--color-primary-light);
+                background-color: var(--color-primary);
              font-size: 1rem;
              margin: .3rem 0;
              padding: .5rem 0;
               &:hover {
-                 background-color: rgb(112, 111, 111);
+                    background-color: var(--color-primary-light);
              }
         }
       

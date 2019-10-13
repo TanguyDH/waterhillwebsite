@@ -81,7 +81,7 @@ class Navigation extends Component {
             faq
           </Link>
           <Link
-            style={{ color: this.state.theposition < 0.005  && this.props.pathname === "/contact" ? "white" : "" }}
+            style={{ color: this.state.theposition < 0.005 }}
             className="navigation__link"
             to="/contact"
           >
@@ -89,7 +89,7 @@ class Navigation extends Component {
           </Link>
 
           <div
-            style={{ color: this.state.theposition < 0.005 && this.props.pathname === "/contact" ? "white" : "" }}
+            style={{ color: this.state.theposition < 0.005}}
             className="navigation__contact2"
           >
             <a className="navigation__tel" href="tel:+025243476">
@@ -108,7 +108,7 @@ class Navigation extends Component {
         </nav>
 
         <div
-          style={{ color: this.state.theposition < 0.005 && this.props.pathname === "/contact" ? "white" : "" }}
+          style={{ color: this.state.theposition < 0.005}}
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>

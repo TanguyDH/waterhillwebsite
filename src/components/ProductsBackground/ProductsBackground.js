@@ -1,10 +1,28 @@
 import React from 'react'
 import './ProductsBackground.scss';
+import BackgroundImage from "gatsby-background-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "assets/img/mainBackground/bg3.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
-    <div className="ProductsBackground">
-      <h2 className="ProductsBackground__title">Donec congue placerat accumsan.</h2>
-    </div>
+    <BackgroundImage
+      fluid={data.file.childImageSharp.fluid}
+      className="ProductsBackground"
+    >
+      <h2 className="ProductsBackground__title">
+        Donec congue placerat accumsan.
+      </h2>
+    </BackgroundImage>
   )
 }

@@ -52,8 +52,9 @@ const Blog = (props) => {
             props.data.contentfulBlog.article.json,
             options
           )}
-        </div>
      
+          </div>
+          
       </Layout>
     )
 }
