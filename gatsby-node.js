@@ -1,20 +1,7 @@
 
 const path = require(`path`)
 
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /react-leaf-carousel/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
-}
+
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
