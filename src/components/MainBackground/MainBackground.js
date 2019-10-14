@@ -128,8 +128,10 @@ const  MainBackground = () =>  {
                 </div>
               </BackgroundImage>
 
-              <div className="mainBackground__background3">
-                <video autoPlay loop src={Video} />
+              <BackgroundImage
+               fluid={data.image1.childImageSharp.fluid}
+               className="mainBackground__background3">
+                
                 <div className="mainBackground__content">
                   <div> 
                      <h3>
@@ -138,7 +140,7 @@ const  MainBackground = () =>  {
                     </h3>
                   </div>
                 </div>
-              </div>
+              </BackgroundImage>
             </Carousel>
           </div>
         </div>
@@ -147,7 +149,7 @@ const  MainBackground = () =>  {
   }
 
 
-
+// ;<video autoPlay loop src={Video} />
 export default MainBackground;
 
 
