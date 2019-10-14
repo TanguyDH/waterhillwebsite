@@ -21,7 +21,7 @@ export default () => {
         relativePath: { eq: "assets/img/commitment/commitment1.jpeg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -30,14 +30,14 @@ export default () => {
         relativePath: { eq: "assets/img/commitment/commitment2.jpg" }
       ) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       image3: file(relativePath: { eq: "assets/img/commitment/hands.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

@@ -20,14 +20,14 @@ const  MainBackground = () =>  {
     query {
       image1: file(relativePath: { eq: "assets/img/mainBackground/bg1.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       image2: file(relativePath: { eq: "assets/img/mainBackground/bg2.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
