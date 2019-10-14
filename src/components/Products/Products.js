@@ -30,26 +30,25 @@ const Products = () => {
   `)
     return (
       <div className="products">
+       
         <h3 className="products__title">
-          Water Hill,{" "}
+          <span>Water Hill,</span>
           <TextLoop>
             <span>your drink partner.</span>
             <span>your communication tool.</span>
           </TextLoop>
         </h3>
         <div className="products__content">
-          {
-            data.allContentfulProduct.edges.map(edge => {
-              return (
-                <Product
-                  img={edge.node.mainImage.fluid}
-                  description={edge.node.description}
-                  description1={edge.node.description1}
-                  name={edge.node.name}
-                />
-              )
-            })
-          }
+          {data.allContentfulProduct.edges.map(edge => {
+            return (
+              <Product
+                img={edge.node.mainImage.fluid}
+                description={edge.node.description}
+                description1={edge.node.description1}
+                name={edge.node.name}
+              />
+            )
+          })}
         </div>
 
         <Link to="/products" className="products__seeMore">

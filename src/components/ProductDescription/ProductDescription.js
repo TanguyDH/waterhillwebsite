@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useReducer} from 'react'
 import './ProductDescription.scss';
 
 import ProductText from "./ProductText/ProductText"
@@ -6,25 +6,29 @@ import ProductText from "./ProductText/ProductText"
 import ProductQuestion from'./ProductQuestion/ProductQuestion';
 import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductSelect from "./ProductSelect/ProductSelect";
+import productReducer from "../../reducers/product"
+import ProductContext from "../../context/ProductContext"
 
 
 export default (props) => {
-
+  const [productState,dispatchDispatch] = useReducer(productReducer)
   return (
-    <div className="ProductDescription">
-      <div className="ProductDescription__header">
-        <span>Bouteilles {props.description1}</span>
-        <span>
-          à partir de <strong>{props.price}</strong>{" "}
-        </span>
+    <ProductContext.Provider value={{ productState, dispatchDispatch}}>
+      <div className="ProductDescription">
+        <div className="ProductDescription__header">
+          <span>Bouteilles {props.description1}</span>
+          <span>
+            à partir de <strong>{props.price}</strong>
+          </span>
+        </div>
+        <div className="ProductDescription__main">
+          <ProductGallery doc={props.doc} gallery={props.gallery} />
+          <ProductSelect moq={props.moq} />
+        </div>
+        <ProductQuestion />
+
+        <ProductText article={props.article} />
       </div>
-      <div className="ProductDescription__main">
-        <ProductGallery doc={props.doc} gallery={props.gallery} />
-        <ProductSelect moq={props.moq} />
-      </div>
-      <ProductQuestion />
-     
-      <ProductText article={props.article} />
-    </div>
+    </ProductContext.Provider>
   )
 }
