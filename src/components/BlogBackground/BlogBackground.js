@@ -7,9 +7,9 @@ export default () => {
 
    const data = useStaticQuery(graphql`
      query {
-       file(relativePath: { eq: "assets/img/blog2.jpeg" }) {
+       file(relativePath: { eq: "assets/img/blog.jpg" }) {
          childImageSharp {
-           fluid {
+           fluid(quality: 100, maxWidth: 1920) {
              ...GatsbyImageSharpFluid_withWebp
            }
          }
