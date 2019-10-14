@@ -45,7 +45,12 @@ class Navigation extends Component {
       <div
         className="navigation"
         style={{
-          backgroundColor: this.state.theposition > 0.005 ? "white" : "",
+          backgroundColor:
+            this.state.theposition > 0.005
+              ? "white"
+              : this.props.bg
+              ? "white"
+              : "",
           color:
             this.state.theposition > 0.005
               ? "#1a252f"
@@ -89,15 +94,15 @@ class Navigation extends Component {
           </Link>
 
           <div
-            style={{ color: this.state.theposition < 0.005}}
+            style={{ color: this.state.theposition < 0.005 }}
             className="navigation__contact2"
           >
             <a className="navigation__tel" href="tel:+025243476">
-              02/524 34 76
+              +32 489 11 99 11
             </a>
             <strong>/</strong>
             <a
-              href="https://api.whatsapp.com/send?phone=0483139524&text=Bonjour WaterHill! J’ai une question au sujet de .... "
+              href="https://api.whatsapp.com/send?phone=32489119911&text=Bonjour WaterHill! J’ai une question au sujet de .... "
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -108,11 +113,11 @@ class Navigation extends Component {
         </nav>
 
         <div
-          style={{ color: this.state.theposition < 0.005}}
+          style={{ color: this.state.theposition < 0.005 }}
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-           <ChooseCountry />
+            <ChooseCountry />
           </div>
           <a
             rel="noopener noreferrer"

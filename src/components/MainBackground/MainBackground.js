@@ -64,8 +64,6 @@ const  MainBackground = () =>  {
             ></div>
           </div>
           <div className="mainBackground">
-
-         
             <Carousel
               className="mainBackground__carousel"
               autoPlay={990000}
@@ -90,40 +88,34 @@ const  MainBackground = () =>  {
                 <div className="mainBackground__content"></div>
               </BackgroundImage>
 
-              <BackgroundImage fluid={data.image2.childImageSharp.fluid} className="mainBackground__background2">
+              <BackgroundImage
+                fluid={data.image2.childImageSharp.fluid}
+                className="mainBackground__background2"
+              >
                 <div className="mainBackground__content">
-                  <div className="mainBackground__logoGraindeDeVie">
-                    <a href="https://grainedevie.org/" target="__blank">
-                      <img
-                        className="logo"
-                        src={GraindeDeVie}
-                        alt="GraindeDeVie Logo"
-                      />
-                    </a>
-                  </div>
                   <div>
                     <h3>
-                      <div className="one">1</div>
-                      <div>
-                        <div className="two">Nous compensons</div>
-                        <div>
-                          <div className="null">00%</div>
-                          <div className="four">
-                            <div>de notre empreinte</div>
-                            <div>carbone.</div>
-                          </div>
-                        </div>
-                      </div>
+                      Nous compensons <br></br>{" "}
+                      <span
+                        style={{
+                          fontWeight: "Bold",
+                          letterSpacing: "5px",
+                          fontSize: "40px",
+                        }}
+                      >
+                        100%
+                      </span>{" "}
+                      <br></br>de notre empreinte carbone.
                     </h3>
                     <div>
                       <div>
-                        <span className="mainBackground__number"> 15000</span>
+                        <span className="mainBackground__number">2400</span>
                         <span className="mainBackground__legend">
                           Nbr d'arbres plantés
                         </span>
                       </div>
                       <div>
-                        <span className="mainBackground__number"> 15400</span>
+                        <span className="mainBackground__number">240K</span>
                         <span className="mainBackground__legend">
                           Nbr de CO2 compensé
                         </span>
@@ -136,15 +128,17 @@ const  MainBackground = () =>  {
                 </div>
               </BackgroundImage>
 
-
-             
               <div className="mainBackground__background3">
                 <video autoPlay loop src={Video} />
                 <div className="mainBackground__content">
-                  <div> </div>
+                  <div> 
+                     <h3>
+                      Fabricant d'eau depuis<br></br>
+                      <br></br>2007.
+                    </h3>
+                  </div>
                 </div>
               </div>
-
             </Carousel>
           </div>
         </div>
@@ -162,14 +156,26 @@ export default MainBackground;
 
 
 
-// query {
-//   file(relativePath: { eq: "assets/img/mainBackground/bg1.jpg" }) {
-//     childImageSharp {
-//       fluid {
-//                    ...GatsbyImageSharpFluid_withWebp
-//       }
-//     }
-//   }
-// }
-//         }
+// <div className="one">1</div>
+//   <div>
+//     <div className="two">Nous compensons</div>
+//     <div>
+//       <div className="null">00%</div>
+//       <div className="four">
+//         <div>de notre empreinte</div>
+//         <div>carbone.</div>
+//       </div>
+//     </div>
+//   </div>
 
+
+
+// <div className="mainBackground__logoGraindeDeVie">
+//                     <a href="https://grainedevie.org/" target="__blank">
+//                       <img
+//                         className="logo"
+//                         src={GraindeDeVie}
+//                         alt="GraindeDeVie Logo"
+//                       />
+//                     </a>
+//                   </div>

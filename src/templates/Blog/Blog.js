@@ -54,6 +54,7 @@ const Blog = (props) => {
           )}
      
           </div>
+       
           
       </Layout>
     )

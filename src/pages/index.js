@@ -20,7 +20,7 @@ import WhyUs from '../components/WhyUs/WhyUs';
           <WhyUs />
           <CaseStudies />
           <Testimony />
-         
+        
         </Layout>
       )
     }

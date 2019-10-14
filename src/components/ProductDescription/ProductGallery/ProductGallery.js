@@ -14,7 +14,9 @@ export default (props) => {
       <div className="ProductGallery">
         <ImageGallery startIndex={0} items={images} />
         <button className="ProductGallery__button ProductGallery__button-1">
-          Download my template
+        
+            Download my template
+        
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
           <a

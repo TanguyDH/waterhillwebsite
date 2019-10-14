@@ -86,18 +86,19 @@
           z-index: 1000;
          position: absolute;
         top: 45%;
-        left: 70%;
+        left: 75%;
         transform: translate(-50%,-50%);
         text-align: center;
-        width: 100%;
-        .mainBackground__logoGraindeDeVie {
-            img {
-                   width: 20rem;
-                   position: absolute;
-                   top: 80%;
-                  left: -15%;
-            }
-        }
+     
+        // height: 100%;
+        // .mainBackground__logoGraindeDeVie {
+        //     img {
+        //            width: 20rem;
+        //            position: absolute;
+        //            top: 80%;
+        //           left: -15%;
+        //     }
+        // }
         
         div{
                .mainBackground__button2 {
@@ -116,52 +117,16 @@
                       }
              z-index: 1000;
               margin-bottom: 2rem;
+             
               h3 {
+                 
                   font-weight: 400;
                   color: white;
                   font-size: 3.5rem;
-                   font-family: 'Roboto Slab';
-                   display:flex;
-                   align-items: center;
-                   justify-content: center;
-
-                   .one {
-                     font-size: 14rem;
-                     font-weight: 400;
-                   }
-
-                   .null {
-                     font-size: 8rem;
-                     font-weight: 600;
-                     margin-right: 5px;
-                   }
-
-                   div {
-                        display:flex;
-                        flex-direction: column;
-                       align-items: flex-start;
-                       .two {
-                          margin-left: 1rem;
-                       }
-                       .four {
-                            margin-left: 1rem;
-                       }
-                   div {
-                           display:flex;
-                        flex-direction: row;
-                        margin: 0;
-                        padding: 0;
-                       
-                       
-                         div {
-                           display:flex;
-                            flex-direction: column;
-                       align-items: flex-start;
-                      
-                   }
-                      
-                   }
-                   }
+                   font-family: 'Roboto Slab'; 
+                  margin-bottom: 5rem; 
+                  line-height: 45px; 
+                  text-align: start;  
               }
               div {
                   margin-top: 0rem;
@@ -211,13 +176,24 @@
     background-position: bottom;
     .mainBackground__content {
           z-index: 1000;
-         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        
+      
         text-align: center;
           width: 100%;
-     
+       h3 {
+            position: absolute;
+        top: 20%;
+        left: 60%;
+          transform: translate(-50%,-50%);
+                 
+                  font-weight: 400;
+                  color: white;
+                  font-size: 3.5rem;
+                   font-family: 'Roboto Slab'; 
+                  margin-bottom: 5rem; 
+                  line-height: 25px; 
+                  text-align: start;  
+              }
     }
 
 }
@@ -329,3 +305,53 @@
     background-size: 50% 30px;
 }
 }
+
+
+
+
+//  h3 {
+//                   font-weight: 400;
+//                   color: white;
+//                   font-size: 3.5rem;
+//                    font-family: 'Roboto Slab';
+//                    display:flex;
+//                    align-items: center;
+//                    justify-content: center;
+
+//                    .one {
+//                      font-size: 14rem;
+//                      font-weight: 400;
+//                    }
+
+//                    .null {
+//                      font-size: 8rem;
+//                      font-weight: 600;
+//                      margin-right: 5px;
+//                    }
+
+//                    div {
+//                         display:flex;
+//                         flex-direction: column;
+//                        align-items: flex-start;
+//                        .two {
+//                           margin-left: 1rem;
+//                        }
+//                        .four {
+//                             margin-left: 1rem;
+//                        }
+//                    div {
+//                            display:flex;
+//                         flex-direction: row;
+//                         margin: 0;
+//                         padding: 0;
+                       
+                       
+//                          div {
+//                            display:flex;
+//                             flex-direction: column;
+//                        align-items: flex-start;
+                      
+//                    }
+                      
+//                    }
+//                    }

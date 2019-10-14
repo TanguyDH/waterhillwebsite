@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProductCarousel.scss';
-import img from "../../../assets/img/products/product1.png"
+import img from "../../../assets/img/annex/fridge.jpeg"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import InfiniteCarousel from "react-leaf-carousel"
 

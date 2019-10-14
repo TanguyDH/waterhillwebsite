@@ -21,7 +21,7 @@
                 <Layout blue={true}>
                     <FaqHeader text={this.state.text} onTextChange={this.onTextChange} />
                     <FaqQuestionList text={this.state.text} />
-                   
+                
                 </Layout>
             )
         }

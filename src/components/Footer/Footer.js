@@ -23,9 +23,7 @@ const Footer = () => (
             du site Web.
           </p>
         </div>
-        <div className="Footer__flag">
-      choose
-        </div>
+        <div className="Footer__flag">choose</div>
       </div>
 
       <div className="Footer__box">
@@ -65,9 +63,9 @@ const Footer = () => (
       <div className="Footer__contactus">
         <h4>Contact Us</h4>
         <div>
-          <a>service@cruyffclassics.com</a>
-          <a>Phone. +31(88) 773 64 40 </a>
-          <p>Lund - Vend 8h-22h, Sam - Dim 9h-18h</p>
+          <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
+          <a href="tel:+32489119911">Phone: +32 489 11 99 11</a>
+          <p>Lund - Vend 8h-22h, Sam 9h-18h</p>
           <div className="Footer__logo-box">
             <img className="Footer__logo" src={Logo} alt="logo" />
           </div>

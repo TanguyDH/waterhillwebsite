@@ -21,7 +21,7 @@ export default () => {
       className="ProductsBackground"
     >
       <h2 className="ProductsBackground__title">
-        Donec congue placerat accumsan.
+       Produits
       </h2>
     </BackgroundImage>
   )

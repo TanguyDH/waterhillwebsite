@@ -6,7 +6,7 @@
     export default class Contact extends Component {
         render() {
             return (
-              <Layout pathname={this.props.location.pathname} blue={true}>
+              <Layout pathname={this.props.location.pathname} blue={true} bg={true} >
                 <ContactUs />
               </Layout>
             )

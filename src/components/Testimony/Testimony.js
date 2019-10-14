@@ -2,7 +2,7 @@ import React from 'react'
 import './Testimony.scss';
 import TestimonyItem from './TestimonyItem/TestimonyItem';
 import Slider from "react-slick";
-import video from '../../assets/video/Cascade - 7334 (1).mp4';
+// import video from '../../assets/video/Cascade - 7334 (1).mp4';
 import boris from '../../assets/img/testimony/boris.jpg';
 import elisabeth from '../../assets/img/testimony/elisabeth.jpg';
 import geraldine from '../../assets/img/testimony/geraldine.jpg';
@@ -40,11 +40,7 @@ class Testimony extends React.Component {
     
       return (
         <div className="testimony">
-          <div className="testimony__bg">
-            <video autoPlay loop className="testimony__video" src={video} >
-             
-            </video>
-          </div>
+         
           <div className="testimony__content">
             <h3 className="testimony__title">Costumers Reviews</h3>
 
@@ -90,3 +86,10 @@ class Testimony extends React.Component {
 }
 
 export default Testimony;
+
+
+// <div className="testimony__bg">
+//   <video autoPlay loop className="testimony__video" src={video} >
+
+//   </video>
+// </div>

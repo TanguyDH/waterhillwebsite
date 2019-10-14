@@ -23,6 +23,7 @@ export default (props) => {
         <ProductSelect moq={props.moq} />
       </div>
       <ProductQuestion />
+     
       <ProductText article={props.article} />
     </div>
   )

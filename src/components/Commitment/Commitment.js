@@ -76,10 +76,13 @@ export default () => {
                 </BackgroundImage>
               </div>
               <div className="section">
-                <BackgroundImage fluid={data.image2.childImageSharp.fluid} className="Commitment__section2">
+                <BackgroundImage
+                  fluid={data.image2.childImageSharp.fluid}
+                  className="Commitment__section2"
+                >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>Nous compensons 200% de notre empreinte carbone</h3>
+                      <h3>Nous compensons 100% de notre empreinte carbone</h3>
                       <p>
                         Nous nous engageons à neutraliser notre empreinte
                         carbone grâce à nos actions de reforestation.
@@ -95,44 +98,51 @@ export default () => {
                   </div>
                 </BackgroundImage>
               </div>
+
               <div className="section">
-                <BackgroundImage fluid={data.image3.childImageSharp.fluid} className="Commitment__section3">
+                <BackgroundImage
+                  fluid={data.image3.childImageSharp.fluid}
+                  className="Commitment__section3"
+                >
                   <div className="Commitment__content">
-                    <h3>Waterhill, collabore avec...</h3>
-                    <div className="Commitment__logos">
-                      <div className="Commitment__logos1">
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://cfpnet.be/"
-                        >
-                          <img src={Cpf} alt="Cpf" />
-                        </a>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://www.fieb-viwf.be/"
-                        >
-                          <img src={FIEBVIWF} alt="FIEBVIWF" />
-                        </a>
+                    <Fade bottom>
+                      <h3>Waterhill, collabore avec...</h3>
+                      <div className="Commitment__logos">
+                        <div>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://cfpnet.be/"
+                          >
+                            <img src={Cpf} alt="Cpf" />
+                          </a>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.fieb-viwf.be/"
+                          >
+                            <img src={FIEBVIWF} alt="FIEBVIWF" />
+                          </a>
+                        </div>
+
+                        <div>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://grainedevie.org/en/index.php"
+                          >
+                            <img src={GraindeDeVie} alt="GraindeDeVie" />
+                          </a>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.fostplus.be/"
+                          >
+                            <img src={Fost} alt="fost" />
+                          </a>
+                        </div>
                       </div>
-                      <div className="Commitment__logo2">
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://grainedevie.org/en/index.php"
-                        >
-                          <img src={GraindeDeVie} alt="GraindeDeVie" />
-                        </a>
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href="https://www.fostplus.be/"
-                        >
-                          <img src={Fost} alt="fost" />
-                        </a>
-                      </div>
-                    </div>
+                    </Fade>
                   </div>
                 </BackgroundImage>
               </div>
