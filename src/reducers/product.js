@@ -1,12 +1,22 @@
 
 
-const notesReducer = (state, action) => {
+
+const productReducer = (state,action) => {
   switch (action.type) {
-    case "ALLOW_SPORT":
+    case "SELECT_SPORT":
       return {
-          sport: true
+        sport: true,
+        classic: false,
+      }
+    case "SELECT_CLASSIC":
+      return {
+        classic: true,
+        sport: false,
       }
     default:
       return state
   }
 }
+
+
+export { productReducer as default }

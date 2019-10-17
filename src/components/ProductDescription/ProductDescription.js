@@ -11,9 +11,13 @@ import ProductContext from "../../context/ProductContext"
 
 
 export default (props) => {
-  const [productState,dispatchDispatch] = useReducer(productReducer)
+  const [productState, dispatchDispatch] = useReducer(productReducer, {
+    sport: false,
+    classic: false,
+  }
+)
   return (
-    <ProductContext.Provider value={{ productState, dispatchDispatch}}>
+    <ProductContext.Provider value={{ productState, dispatchDispatch }}>
       <div className="ProductDescription">
         <div className="ProductDescription__header">
           <span>Bouteilles {props.description1}</span>
@@ -22,7 +26,12 @@ export default (props) => {
           </span>
         </div>
         <div className="ProductDescription__main">
-          <ProductGallery doc={props.doc} gallery={props.gallery} />
+          <ProductGallery
+            doc={props.doc}
+            gallery={props.gallery}
+            galleryClassicCap={props.galleryClassicCap}
+            gallerySportCap={props.gallerySportCap}
+          />
           <ProductSelect moq={props.moq} />
         </div>
         <ProductQuestion />

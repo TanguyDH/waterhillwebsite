@@ -19,6 +19,16 @@ export const query = graphql`
                  url
                }
              }
+             gallerySportCap {
+               file {
+                 url
+               }
+             }
+             galleryClassicCap {
+               file {
+                 url
+               }
+             }
              doc {
                file {
                  url
@@ -35,6 +45,8 @@ export const query = graphql`
           article={props.data.contentfulProduct.article.json}
           description1={props.data.contentfulProduct.description1}
           gallery={props.data.contentfulProduct.gallery}
+          galleryClassicCap={props.data.contentfulProduct.galleryClassicCap}
+          gallerySportCap={props.data.contentfulProduct.gallerySportCap}
           price={props.data.contentfulProduct.price}
           moq={props.data.contentfulProduct.moq}
           doc={props.data.contentfulProduct.doc}
