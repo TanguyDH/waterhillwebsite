@@ -18,7 +18,7 @@ export default (props) => {
     })
   }
   const onChangeColors = () => {
-    if (productState.sport) {
+    if ( productState.sport) {
       return props.colorsCapSport;
     }
     else if (productState.classic) {
