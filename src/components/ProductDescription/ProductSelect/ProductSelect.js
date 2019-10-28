@@ -11,12 +11,7 @@ import PopupRate from '../PopupRate/PopupRate';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
-  const openModal = () => {
-    productDispatch({
-      type: "MODAL_SWITCH",
-      modalState: true
-    })
-  }
+  
   const onChangeColors = () => {
     if ( productState.sport) {
       return props.colorsCapSport;
@@ -34,16 +29,37 @@ export default (props) => {
     { value: "Bouchon sport", label: "Bouchon sport" },
   ]
 
+  const productDispatchSport = () => {
+    productDispatch({
+      type: "SELECT_SPORT",
+    })
+    productDispatch({
+      type: "SELECT_COLOR",
+      color: 0
+    })
+  }
+
+  const productDispatchClassic = () => {
+    productDispatch({
+      type: "SELECT_CLASSIC",
+    })
+    productDispatch({
+      type: "SELECT_COLOR",
+      color: 0
+    })
+  }
+
   const plugType = [
     {
       value: <div>Bouchon classique</div>,
       label: (
         <div
-          onClick={() =>
-            productDispatch({
-              type: "SELECT_SPORT",
-            })
-          }
+          // onClick={() =>
+          //   productDispatch({
+          //     type: "SELECT_SPORT",
+          //   })
+          // }
+          onClick={productDispatchSport}
         >
           Bouchon classique
         </div>
@@ -53,11 +69,12 @@ export default (props) => {
       value: <sapn>Bouchon sport</sapn>,
       label: (
         <div
-          onClick={() =>
-            productDispatch({
-              type: "SELECT_CLASSIC",
-            })
-          }
+          // onClick={() =>
+          //   productDispatch({
+          //     type: "SELECT_CLASSIC",
+          //   })
+          // }
+          onClick={productDispatchClassic}
         >
           Bouchon sport
         </div>
