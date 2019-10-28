@@ -11,6 +11,9 @@ export const query = graphql`
              description1
              price
              moq
+             colorsCap {colors}
+            colorsCapClassic {colors}
+             colorsCapSport {colors}
              article {
                json
              }
@@ -50,6 +53,9 @@ export const query = graphql`
           price={props.data.contentfulProduct.price}
           moq={props.data.contentfulProduct.moq}
           doc={props.data.contentfulProduct.doc}
+          colorsCap={props.data.contentfulProduct.colorsCap.colors}
+          colorsCapClassic={props.data.contentfulProduct.colorsCapClassic.colors}
+          colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}
         />
       </Layout>
     )

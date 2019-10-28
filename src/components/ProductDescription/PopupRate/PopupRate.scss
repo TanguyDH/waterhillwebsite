@@ -1,0 +1,103 @@
+
+
+.PopupRate {
+    display: flex;
+    height: 100%;
+
+
+    &__button {
+         background-color: green;
+         width: 100%;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: .4rem;
+        transition: all .2s;
+        position: relative;
+        transition: all ease .5s;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__title {
+      font-size: 2rem;
+      text-align: center;
+      color: green;
+      font-weight: 700;
+    }
+    &__info {
+        width: 50%;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        color: white;
+        &-title {
+            display: flex;
+            align-items: center;
+            span {
+                font-size: 5.5rem;
+                margin: 1rem;
+                font-weight: 500;
+            }
+            h3 {
+                line-height: 25px;
+            }
+        }
+        &-list {
+            div {
+                display: flex;
+              align-content: center;
+                margin: .5rem 0;
+                span {
+                    color: green;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+     &__form {
+         padding: 2rem;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        div {
+              margin: 1rem 0;
+            display: flex;
+            flex-direction: column;
+            label {
+                font-size: 1.4rem;
+            }
+              input {
+            padding: .8rem;
+            border:  solid #999 1px;
+            border-radius: 3px;
+            &:focus {
+                 border:  solid #333 1px;
+            }
+        }
+        }
+
+        button {
+              background-color: green;
+         width: 100%;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: .4rem;
+        transition: all .2s;
+        position: relative;
+        transition: all ease .5s;
+        border: none;
+        margin:  2rem 0;
+        cursor: pointer;
+        }
+      
+    }
+}

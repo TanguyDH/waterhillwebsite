@@ -4,15 +4,30 @@ import { Link } from 'gatsby';
 import Select from "react-select"
 import ProductContext from '../../../context/ProductContext';
 import ChooseColor from '../../UI/ChooseColor/ChooseColor';
-
+import PopupRate from '../PopupRate/PopupRate';
 
 
 
 export default (props) => {
 
-  const { dispatchDispatch } = useContext(ProductContext)
-
-
+  const { productState, productDispatch } = useContext(ProductContext);
+  const openModal = () => {
+    productDispatch({
+      type: "MODAL_SWITCH",
+      modalState: true
+    })
+  }
+  const onChangeColors = () => {
+    if (productState.sport) {
+      return props.colorsCapSport;
+    }
+    else if (productState.classic) {
+      return props.colorsCapClassic;
+    }
+    else {
+      return props.colorsCap;
+    }
+  }
 
   const quantity = [
     { value: "Bouchon classique", label: "Bouchon classique" },
@@ -25,7 +40,7 @@ export default (props) => {
       label: (
         <div
           onClick={() =>
-            dispatchDispatch({
+            productDispatch({
               type: "SELECT_SPORT",
             })
           }
@@ -39,7 +54,7 @@ export default (props) => {
       label: (
         <div
           onClick={() =>
-            dispatchDispatch({
+            productDispatch({
               type: "SELECT_CLASSIC",
             })
           }
@@ -181,7 +196,7 @@ export default (props) => {
       </div>
       <div>
         <span>Couleurs :</span>
-        <ChooseColor />
+        <ChooseColor colorsCap={onChangeColors()} />
       </div>
       <div>
         <span>Etiquette :</span>
@@ -207,9 +222,10 @@ export default (props) => {
           available in sparkling water *
                          </p>
       </div>
-      <button className="ProductSelect__button ProductSelect__button-2">
-        Get my price
-                       </button>
+      
+  
+        <PopupRate />
+     
     </div>
   )
   

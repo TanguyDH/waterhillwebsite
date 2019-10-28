@@ -4,6 +4,7 @@ import {Link} from 'gatsby';
 import Img from "gatsby-image"
 
 
+
 export default (props) => {
   return (
     <Link to={`/blog/${props.id}`} className="Blog">

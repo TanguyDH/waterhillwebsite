@@ -41,7 +41,7 @@ export default (props) => {
 
     return (
       <div className="ProductGallery">
-        <ImageGallery startIndex={0} items={selectImages()} />
+        <ImageGallery startIndex={productState.color} items={selectImages()} />
         <button className="ProductGallery__button ProductGallery__button-1">
           Download my template
         </button>

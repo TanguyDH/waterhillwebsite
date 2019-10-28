@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react'
+import React, {useReducer, useState} from 'react'
 import './ProductDescription.scss';
 
 import ProductText from "./ProductText/ProductText"
@@ -11,13 +11,13 @@ import ProductContext from "../../context/ProductContext"
 
 
 export default (props) => {
-  const [productState, dispatchDispatch] = useReducer(productReducer, {
+  const [productState, productDispatch] = useReducer(productReducer, {
     sport: false,
-    classic: false,
+    classic: false
   }
 )
   return (
-    <ProductContext.Provider value={{ productState, dispatchDispatch }}>
+    <ProductContext.Provider value={{ productState, productDispatch }}>
       <div className="ProductDescription">
         <div className="ProductDescription__header">
           <span>Bouteilles {props.description1}</span>
@@ -32,7 +32,7 @@ export default (props) => {
             galleryClassicCap={props.galleryClassicCap}
             gallerySportCap={props.gallerySportCap}
           />
-          <ProductSelect moq={props.moq} />
+          <ProductSelect  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
         <ProductQuestion />
 
