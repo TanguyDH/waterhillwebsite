@@ -12,7 +12,7 @@ export default class ChooseCountry extends Component {
                  state = {
                    modalIsOpen: false,
                      region: "Belgique",
-                     imgFlag: ''
+                   imgFlag: belgium
                  }
 
                  closeModal = () => {
@@ -22,7 +22,7 @@ export default class ChooseCountry extends Component {
                  openModal = () => {
                    this.setState({ modalIsOpen: true })
                  }
-      onChangeCountry = (imgFlag) => {
+  onChangeCountry = (flagText) => {
         this.setState({ region: flagText,  modalIsOpen:false })
        } 
 
