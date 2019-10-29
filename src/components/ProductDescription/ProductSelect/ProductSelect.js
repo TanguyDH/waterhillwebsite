@@ -54,12 +54,7 @@ export default (props) => {
       value: <div>Bouchon classique</div>,
       label: (
         <div
-          // onClick={() =>
-          //   productDispatch({
-          //     type: "SELECT_SPORT",
-          //   })
-          // }
-          onClick={productDispatchSport}
+          onClick={productDispatchClassic}
         >
           Bouchon classique
         </div>
@@ -69,12 +64,7 @@ export default (props) => {
       value: <sapn>Bouchon sport</sapn>,
       label: (
         <div
-          // onClick={() =>
-          //   productDispatch({
-          //     type: "SELECT_CLASSIC",
-          //   })
-          // }
-          onClick={productDispatchClassic}
+          onClick={productDispatchSport}
         >
           Bouchon sport
         </div>
@@ -95,7 +85,7 @@ export default (props) => {
           to="/product/PET-330ml"
         >
           Bouteilles PET 330ml
-                         </Link>
+          </Link>
       ),
       label: (
         <Link
@@ -128,15 +118,15 @@ export default (props) => {
       value: (
         <Link
           className="ProductDescription__bottleLink"
-          to="/product/végetales-PET-390ml"
+          to="/product/VEGETALE-PET-390ml"
         >
           Bouteilles végétales PET 390ml
-                         </Link>
+       </Link>
       ),
       label: (
         <Link
           className="ProductDescription__bottleLink"
-          to="/product/végetales-PET-390ml"
+          to="/product/VEGETALE-PET-390ml"
         >
           Bouteilles végétales PET 390ml
                          </Link>

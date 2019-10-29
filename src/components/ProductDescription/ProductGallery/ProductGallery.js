@@ -28,10 +28,10 @@ export default (props) => {
 
     const  selectImages = () => {
       if (productState.sport) {
-        return galleryClassicCapImages
+        return gallerySportCapImages
       }
       else if (productState.classic) {
-        return gallerySportCapImages
+        return galleryClassicCapImages 
        }else {
         return images
        }

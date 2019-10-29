@@ -32,11 +32,12 @@ export default (props) => {
             galleryClassicCap={props.galleryClassicCap}
             gallerySportCap={props.gallerySportCap}
           />
-          <ProductSelect  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
+          <ProductSelect plugType={props.plugType}  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
         <ProductQuestion />
 
         <ProductText article={props.article} />
+      
       </div>
     </ProductContext.Provider>
   )

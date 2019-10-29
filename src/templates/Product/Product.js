@@ -11,6 +11,7 @@ export const query = graphql`
              description1
              price
              moq
+             plugType {sport, classic}
              colorsCap {colors}
             colorsCapClassic {colors}
              colorsCapSport {colors}
@@ -56,6 +57,7 @@ export const query = graphql`
           colorsCap={props.data.contentfulProduct.colorsCap.colors}
           colorsCapClassic={props.data.contentfulProduct.colorsCapClassic.colors}
           colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}
+          plugType={props.data.contentfulProduct.plugType}
         />
       </Layout>
     )
