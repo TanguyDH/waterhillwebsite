@@ -6,7 +6,7 @@ import Box from './Box/Box';
 export default () => {
   return (
     <div className="Vision">
-      <h3 className="Vision__title">WaterHill Concept</h3>
+      <h3 className="Vision__title">Le concept Waterhill</h3>
       <div className="Vision__content">
         <Carousel />
         <Box />

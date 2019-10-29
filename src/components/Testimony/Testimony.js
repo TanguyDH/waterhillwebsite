@@ -42,7 +42,7 @@ class Testimony extends React.Component {
         <div className="testimony">
          
           <div className="testimony__content">
-            <h3 className="testimony__title">Costumers Reviews</h3>
+            <h3 className="testimony__title">QUE PENSENT-ILS DE NOUS ?</h3>
 
             <Slider {...settings}>
               <TestimonyItem

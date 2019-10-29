@@ -8,6 +8,7 @@ import Fost from "../../assets/img/logo/logo_fost.png"
 import Cpf from "../../assets/img/logo/cfp-2014.png"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
+import anime from '../../assets/img/OK_animate[1].gif';
 
 // const pluginWrapper = () => {
 //   require("./static/fullpage.scrollHorizontally.min.js")
@@ -65,7 +66,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>Waterhill, notre vision du futur</h3>
+                      <h3>Waterhill, notre vision du futur <img src={anime} alt='' /></h3>
                       <p>
                         Une vision ambitieuse du développement durable autour de
                         3 piliers : La ressource en eau, l’empreinte carbone et

@@ -7,7 +7,7 @@ import { FaGem, FaHeart, FaSuitcase, FaRecycle, FaTruck } from "react-icons/fa"
 export default () => {
   return (
     <div className="WhyUs">
-      <h2 className="WhyUs__title">Pourquoi WaterHill</h2>
+      <h2 className="WhyUs__title">Pourquoi choisir WaterHill ?</h2>
 
       <div className="WhyUs__content">
         <div className="WhyUs__item">
@@ -28,7 +28,7 @@ export default () => {
           <h4 className="WhyUs__word">CONTRÔLE DE QUALITE </h4>
           <p className="WhyUs__p">
             Chez Waterhill, nous inspectons chaque commande avant son expédition
-            pour assurer à ses clients les meilleurs résultats possibles.
+            pour assurer à nos clients les meilleurs résultats possibles.
           </p>
         </div>
 

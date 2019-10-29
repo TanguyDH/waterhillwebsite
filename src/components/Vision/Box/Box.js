@@ -18,7 +18,7 @@ handleClick() {
     return (
       <div className="Box">
         <Text show={this.state.show} />
-        <button onClick={() => this.handleClick()}>{this.state.show ? 'Read Less' : 'Read More'}</button>
+        <button onClick={() => this.handleClick()}>{this.state.show ? 'Lire Moins' : 'Plus d’info'}</button>
       </div>
     )
   }

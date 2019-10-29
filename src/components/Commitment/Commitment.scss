@@ -11,12 +11,23 @@
             
         h3 {
             font-size: 4rem;
+            font-size: 2.5vw;
             margin-bottom: 2rem;
+            margin-bottom: 1.8vw;
+           
             font-weight: 600;
              font-family: 'Roboto Slab', sans-serif;
              line-height: 40px;
+              line-height: 2.5vw;
         
 
+              img {
+                  width: 3.5rem;
+              }
+
+        }
+        p {
+            font-size: 1vw;
         }
 
     }

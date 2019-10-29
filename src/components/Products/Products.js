@@ -34,8 +34,8 @@ const Products = () => {
         <h3 className="products__title">
           <span>Water Hill,</span>
           <TextLoop>
-            <span>your drink partner.</span>
-            <span>your communication tool.</span>
+            <span>votre partenaire boissons.</span>
+            <span>votre outil de communication.</span>
           </TextLoop>
         </h3>
         <div className="products__content">
@@ -52,7 +52,7 @@ const Products = () => {
         </div>
 
         <Link to="/products" className="products__seeMore">
-          <span>See More</span> <FaAngleRight className="products__icon" />
+          <span>VOIR PLUS</span> <FaAngleRight className="products__icon" />
         </Link>
       </div>
     )
