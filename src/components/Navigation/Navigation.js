@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Navigation.scss';
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
-// import ChooseCountry from "../UI/ChooseCountry/ChooseCountry";
+import ChooseCountry from "../ChooseCountry/ChooseCountry";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import {Link} from 'gatsby';
@@ -92,14 +92,16 @@ class Navigation extends Component {
           >
             NOUS CONTACTER
           </Link>
-
+       
           <div
             style={{ color: this.state.theposition < 0.005 }}
             className="navigation__contact2"
           >
+          
             <a className="navigation__tel" href="tel:+025243476">
               +32 489 11 99 11
             </a>
+
             <strong>/</strong>
             <a
               href="https://api.whatsapp.com/send?phone=32489119911&text=Bonjour WaterHill! J’ai une question au sujet de .... "
@@ -117,7 +119,7 @@ class Navigation extends Component {
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-            
+            <ChooseCountry />
           </div>
           <a
             rel="noopener noreferrer"
