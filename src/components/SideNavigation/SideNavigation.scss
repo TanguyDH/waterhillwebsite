@@ -17,7 +17,8 @@
     padding: .5rem;
     width: 100%;
     font-size: 1.2rem;
-    z-index: 10000;
+    // z-index: 10000;
+     z-index: 30;
     display: flex;
     justify-content: space-between;
     }
@@ -25,5 +26,27 @@
         width: 4rem;
         height: auto;
         margin: 0 2rem;
+    }
+    .SideNavigation__hamburger {
+        font-size: 4rem;
+         margin: 0 2rem;
+    }
+    .SideNavigation__modal {
+          position: absolute;
+        top: 0;
+       right:0;
+    width: 75%;
+    height: 100vh;
+    background-color: white;
+      nav {
+          display: flex;
+          flex-direction: column;
+      }
+    
+
+    }
+
+    .SideNavigation__link  {
+        color: black !important;
     }
 }
