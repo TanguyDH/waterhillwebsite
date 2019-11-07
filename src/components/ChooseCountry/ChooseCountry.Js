@@ -6,17 +6,18 @@ import 'react-flags-select/css/react-flags-select.css';
 export default () => {
   return (
     <div className="ChooseCountry">
-      <ReactFlagsSelect
-        defaultCountry="FR" 
-        countries={[ "GB", "FR",'NL' ]}
-        customLabels={{ "GB": "EN", "FR": "FR", "NL":'NL'}}
-        showSelectedLabel={false} />
+    
+        choose
     </div>
   )
 }
 
 
-
+// <ReactFlagsSelect
+//   defaultCountry="FR"
+//   countries={["GB", "FR", 'NL']}
+//   customLabels={{ "GB": "EN", "FR": "FR", "NL": 'NL' }}
+//   showSelectedLabel={false} />
 
 // import React, { Component } from 'react'
 // import "./ChooseCountry.scss";
