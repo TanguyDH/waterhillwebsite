@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './Navigation.scss';
+import ChooseCountry from "../ChooseCountry/ChooseCountry";
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
-import ChooseCountry from "../ChooseCountry/ChooseCountry";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import {Link} from 'gatsby';
