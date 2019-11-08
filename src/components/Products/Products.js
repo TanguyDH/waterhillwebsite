@@ -34,8 +34,8 @@ const Products = () => {
         <h3 className="products__title">
           <span>Water Hill,</span>
           <TextLoop>
-            <span>votre partenaire boissons.</span>
-            <span>votre outil de communication.</span>
+            <span>votre partenaire boissons</span>
+            <span>votre outil de communication</span>
           </TextLoop>
         </h3>
         <div className="products__content">

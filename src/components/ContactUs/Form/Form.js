@@ -7,18 +7,18 @@ export default () => {
       <div className="Form__content">
         <h4 className="Form__title">Contact</h4>
         <div className="Form__contact">
-          <a href="tel:+32489119911">Phone: +32 489 11 99 11</a>
+          <a href="tel:+32489119911">Téléphone: +32 489 11 99 11</a>
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
         </div>
 
         <div className="Form__form">
           <div className="Form__inputBox">
-            <label>Name *</label>
+            <label>Nom *</label>
             <input type="text" placeholder="Name" />
           </div>
 
           <div className="Form__inputBox">
-            <label>Phone *</label>
+            <label>Téléphone *</label>
             <input type="text" placeholder="Phone" />
           </div>
 
@@ -28,7 +28,7 @@ export default () => {
           </div>
 
           <div className="Form__inputBox">
-            <label>Comment</label>
+            <label>Commentaire</label>
             <textarea type="text" placeholder="Comment" />
           </div>
 

@@ -21,7 +21,7 @@ class ProductQuestion extends React.Component {
             transitionTime={200}
             trigger={
               <div className="ProductQuestion__trigger">
-                <p>Donec congue placerat accumsan ?</p>
+                <p>Pouvons-nous produire plusieurs visuels pour la même commande?</p>
                 <span>
                   <IoIosArrowDown />
                 </span>
@@ -29,14 +29,11 @@ class ProductQuestion extends React.Component {
             }
           >
           <div className="ProductQuestion__content">
-           <p>
-              This is the collapsible content. It can be any element or React
-              component you like.
+              <p>
+                Moyennant un léger surcoût pour "changement d'étiquette", il est possible d'imprimer plusieurs visuels pour une même commande.
+                Il vous suffit de nous envoyer les différents visuels que vous souhaitez imprimer ainsi que le nombre de bouteilles souhaitées par version. pour plus d'informations n'hésitez pas à nous contacter.
             </p>
-            <p>
-              It can even be another Collapsible component. Check out the next
-              section!
-            </p>
+          
           </div>
            
           </Collapsible>
@@ -44,7 +41,7 @@ class ProductQuestion extends React.Component {
             transitionTime={200}
             trigger={
               <div className="ProductQuestion__trigger">
-                <p>accumsan Donec congue placerat ?</p>
+                <p>Pouvons-nous être livrés à plusieurs endroits?</p>
                 <span>
                   <IoIosArrowDown />
                 </span>
@@ -52,13 +49,9 @@ class ProductQuestion extends React.Component {
             }
           >
              <div className="ProductQuestion__content">
-           <p>
-              This is the collapsible content. It can be any element or React
-              component you like.
-            </p>
-            <p>
-              It can even be another Collapsible component. Check out the next
-              section!
+              <p>
+               Nous livrons partout en Europe dans un délai pouvant aller de 24h à 4 jours ouvrables maximum.
+                Nous pouvons vous livrer à partir de 72 bouteilles
             </p>
           </div>
           </Collapsible>

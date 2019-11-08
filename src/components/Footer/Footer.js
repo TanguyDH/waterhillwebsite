@@ -13,7 +13,7 @@ const Footer = () => (
         <h4>Newsletter</h4>
         <div className="Footer__inputbox">
           <input type="text" placeholder="Email" />
-          <button>Send</button>
+          <button>Envoyer</button>
         </div>
         <div className="Footer__checkbox">
           <p>
@@ -23,12 +23,12 @@ const Footer = () => (
             du site Web.
           </p>
         </div>
-        <div className="Footer__flag">choose</div>
+       
       </div>
 
       <div className="Footer__box">
         <div className="Footer__joinus">
-          <h4>Join Us</h4>
+          <h4>Rejoignez-nous</h4>
           <div>
             <a
               rel="noopener noreferrer"
@@ -61,10 +61,10 @@ const Footer = () => (
       </div>
 
       <div className="Footer__contactus">
-        <h4>Contact Us</h4>
+        <h4>Contactez-nous</h4>
         <div>
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
-          <a href="tel:+32489119911">Phone: +32 489 11 99 11</a>
+          <a href="tel:+32489119911">Téléphone: +32 489 11 99 11</a>
           <p>Lund - Vend 8h-22h, Sam 9h-18h</p>
           <div className="Footer__logo-box">
             <img className="Footer__logo" src={Logo} alt="logo" />
@@ -74,7 +74,7 @@ const Footer = () => (
     </div>
 
     <div className="Footer__finish">
-      ©waterHill {new Date().getFullYear()}. Tous droits réservés.
+      ©WaterHill {new Date().getFullYear()}. Tous droits réservés.
     </div>
   </footer>
 )

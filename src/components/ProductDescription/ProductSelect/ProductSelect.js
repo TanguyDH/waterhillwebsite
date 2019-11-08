@@ -82,45 +82,9 @@ export default (props) => {
       value: (
         <Link
           className="ProductDescription__bottleLink"
-          to="/product/PET-330ml"
-        >
-          Bouteilles PET 330ml
-          </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-330ml"
-        >
-          Bouteilles PET 330ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-500ml"
-        >
-          Bouteilles PET 500ml
-                         </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-500ml"
-        >
-          Bouteilles PET 500ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
           to="/product/VEGETALE-PET-390ml"
         >
-          Bouteilles végétales PET 390ml
+          Bouteilles PLA végétal  390ml
        </Link>
       ),
       label: (
@@ -128,25 +92,7 @@ export default (props) => {
           className="ProductDescription__bottleLink"
           to="/product/VEGETALE-PET-390ml"
         >
-          Bouteilles végétales PET 390ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/TETRAPAK-500ml"
-        >
-          Bouteilles TETRAPAK 500ml
-                         </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/TETRAPAK-500ml"
-        >
-          TETRAPAK 500ml
+          Bouteilles PLA végétal 390ml
                          </Link>
       ),
     },
@@ -182,10 +128,64 @@ export default (props) => {
           className="ProductDescription__bottleLink"
           to="/product/VERRE-750ml"
         >
-          Bouteilles VERRE 500ml
+          Bouteilles VERRE 750ml
                          </Link>
       ),
     },
+    {
+      value: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/TETRAPAK-500ml"
+        >
+          Bouteilles TETRAPAK 500ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/TETRAPAK-500ml"
+        >
+          TETRAPAK 500ml
+                         </Link>
+      ),
+    },
+    {
+      value: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/PET-330ml"
+        >
+          Bouteilles PET 330ml
+          </Link>
+      ),
+      label: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/PET-330ml"
+        >
+          Bouteilles PET 330ml
+                         </Link>
+      ),
+    },
+    {
+      value: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/PET-500ml"
+        >
+          Bouteilles PET 500ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/PET-500ml"
+        >
+          Bouteilles PET 500ml
+                         </Link>
+      ),
+    }
   ]
   return (
     <div className="ProductSelect">
@@ -221,13 +221,13 @@ export default (props) => {
       <div className="ProductSelect__sample">
         <input type="checkbox" />
         <a>
-          Want to test this article? Ask for a sample free! *
-                         </a>
+         Voulez-vous tester cet article? Demandez un échantillon gratuit! *
+        </a>
       </div>
       <div>
         <p className="ProductSelect__sparklingWater">
-          available in sparkling water *
-                         </p>
+         Disponible en eau gazeuse *
+        </p>
       </div>
       
   

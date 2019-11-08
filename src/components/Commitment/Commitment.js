@@ -43,6 +43,15 @@ export default () => {
           }
         }
       }
+      image4: file(
+        relativePath: { eq: "assets/img/commitment/commitment4.jpeg" }
+      ) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
@@ -66,7 +75,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>Waterhill, notre vision du futur <img src={anime} alt='' /></h3>
+                      <h3>Waterhill, notre vision du futur</h3>
                       <p>
                         Une vision ambitieuse du développement durable autour de
                         3 piliers : La ressource en eau, l’empreinte carbone et
@@ -95,6 +104,25 @@ export default () => {
                       >
                         <img src={GraindeDeVie} alt="GraindeDeVie" />
                       </a>
+                    </Fade>
+                  </div>
+                </BackgroundImage>
+              </div>
+
+              <div className="section">
+                <BackgroundImage
+                  fluid={data.image4.childImageSharp.fluid}
+                  className="Commitment__section4"
+                >
+                  <div className="Commitment__content">
+                    <Fade bottom>
+                      <h3>L'économie circulaire, le présent et l'avenir de Waterhill</h3>
+                      <p>
+                        Prendre soin de l'environnement est une réalité quotidienne chez Waterhill. C'est pourquoi nos premières bouteilles 100% végétales à base de bagasse de canne à sucre sont désormais disponibles. De cette manière, aucun nouveau plastique n'est utilisé et aucun nouveau déchet n'est généré. L'économie circulaire est dans l'ADN de Waterhill.
+                      </p>
+
+                      <img src={anime} alt='' />
+                      
                     </Fade>
                   </div>
                 </BackgroundImage>

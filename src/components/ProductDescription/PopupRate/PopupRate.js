@@ -23,7 +23,7 @@ export default () => {
       
               <div className='PopupRate__info'>
                   <div className='PopupRate__info-title'>
-                   <span>5</span>
+                   <span>6</span>
                    <h3>
                    bonnes raisons de <br></br>
                     travailler avec nous          
@@ -51,16 +51,20 @@ export default () => {
                             <span> <FaRegCheckCircle /></span>
                           <p>Exclusivement réservé aux revendeurs</p>
                     </div>
+              <div>
+                <span> <FaRegCheckCircle /></span>
+                <p>Exclusivement réservé aux revendeurs</p>
+              </div>
                  </div>
               </div>
               <div className='PopupRate__form'>
                   <h3 className='PopupRate__title'>Obtenir mon prix</h3>
                   <div>
-                     <label>Name</label>
+                     <label>Nom</label>
                       <input type='text' placeholder='Name' />
                   </div>
                   <div>
-                      <label>Phone</label>
+                  <label>Téléphone</label>
                       <input type='text' placeholder='Phone' />
                   </div>
                   <div>
@@ -68,7 +72,7 @@ export default () => {
                       <input type='text' placeholder='Email' />
                   </div>
                 
-                  <button>Envoyé</button>
+                  <button>Envoyer</button>
               </div>
        </div>
       </Modal>

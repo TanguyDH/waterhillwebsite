@@ -11,7 +11,7 @@ const caseStudies = [1,2,3,4,5,6];
      return (
        <div className="caseStudies">
          <div className="caseStudies__content">
-           <h3 className="caseStudies__title"> Ils nous ont fait confiance.</h3>
+           <h3 className="caseStudies__title">Ils nous ont fait confiance</h3>
            <div className="caseStudies__list">
              {caseStudies.map((index) => {
                return (

@@ -43,7 +43,14 @@ export default (props) => {
       <div className="ProductGallery">
         <ImageGallery startIndex={productState.color} items={selectImages()} />
         <button className="ProductGallery__button ProductGallery__button-1">
-          Download my template
+          <a
+            href={props.doc[1] && props.doc[1].file.url}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          Télécharger mon modèle
+          </a>
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
           <a
@@ -52,11 +59,11 @@ export default (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Technical sheet
+            Fiche technique
           </a>
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
-          Download photos
+         Télécharger les photos
         </button>
       </div>
     )
