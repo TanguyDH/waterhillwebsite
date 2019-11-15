@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Navigation.scss';
 import SelectLanguage from '../SelectLanguage/SelectLanguage';
-import ChooseCountry from "../ChooseCountry/ChooseCountry"
+import SelelectCountry from "../SelelectCountry/SelelectCountry.Js"
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
 import { FaInstagram } from "react-icons/fa";
@@ -93,12 +93,11 @@ class Navigation extends Component {
           >
             NOUS CONTACTER
           </Link>
-       
+
           <div
             style={{ color: this.state.theposition < 0.005 }}
             className="navigation__contact2"
           >
-          
             <a className="navigation__tel" href="tel:+025243476">
               +32 489 11 99 11
             </a>
@@ -120,7 +119,7 @@ class Navigation extends Component {
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-            <ChooseCountry />
+            <SelelectCountry />
           </div>
           <a
             rel="noopener noreferrer"
