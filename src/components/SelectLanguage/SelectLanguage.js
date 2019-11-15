@@ -8,8 +8,8 @@ export default () => {
       <div className="SelectLanguage">
       <ReactFlagsSelect
           defaultCountry="FR"
-          countries={["GB", "FR", 'NL']}
-          customLabels={{ "GB": "EN", "FR": "FR", "NL": 'NL' }}
+        countries={["GB", "BE", "FR", "NL"]}
+        customLabels={{ "GB": "Anglais", "BE": "Français", "FR": "Français", "NL": "Nederlands" }}
           showSelectedLabel={false} />
       </div>
   )

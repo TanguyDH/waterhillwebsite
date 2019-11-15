@@ -54,6 +54,7 @@
     "react-slick": "^0.24.0",
     "react-text-loop": "^2.0.2",
     "react-toggle-display": "^2.2.0",
+    "react-tooltip": "^3.11.1",
     "react-video-cover": "^1.2.2",
     "slick-carousel": "^1.8.1"
   },

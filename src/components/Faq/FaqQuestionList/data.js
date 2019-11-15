@@ -278,5 +278,22 @@ export default [
         vous répondrons toujours dans les deux heures.
       </p>,
     ],
-  }
+  },
+  {
+    question:
+      "Les eaux minérales naturelles ont-elles un statut particulier basé sur des aspects légaux ?",
+    response: [
+      <p>
+        VRAI Les eaux minérales naturelles font l’objet d’une réglementation européenne
+        (Directive européenne 2009/54/CE du 18 juin 2009) qui précise les critères stricts
+        auxquels elles doivent répondre. Parmi les principales caractéristiques,
+        il y a la pureté originelle et la stabilité de la composition 
+        minérale. Seules les eaux minérales naturelles doivent réunir ces deux critères. Le processus pour
+        l’obtention du label « eaux minérales naturelles » est établi selon les directives européennes et ce label est
+        reconnu par le Ministre de la Santé Publique, sur avis du Conseil Supérieur de la Santé.
+      </p>,
+    ],
+  },
 ]
+
+

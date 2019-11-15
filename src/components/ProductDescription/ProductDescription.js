@@ -34,7 +34,7 @@ export default (props) => {
           />
           <ProductSelect plugType={props.plugType}  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
-        <ProductQuestion />
+        <ProductQuestion questions={props.questions} />
 
         <ProductText article={props.article} />
       

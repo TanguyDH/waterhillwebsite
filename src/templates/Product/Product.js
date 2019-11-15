@@ -33,6 +33,7 @@ export const query = graphql`
                  url
                }
              }
+            questions {allQuestions {answer, question}  }
              doc {
                file {
                  url
@@ -57,6 +58,7 @@ export const query = graphql`
           colorsCap={props.data.contentfulProduct.colorsCap.colors}
           colorsCapClassic={props.data.contentfulProduct.colorsCapClassic.colors}
           colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}
+          questions={props.data.contentfulProduct.questions}
           plugType={props.data.contentfulProduct.plugType}
         />
       </Layout>

@@ -9,6 +9,7 @@ import Cpf from "../../assets/img/logo/cfp-2014.png"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 import anime from '../../assets/img/OK_animate[1].gif';
+import ReactTooltip from "react-tooltip"
 
 // const pluginWrapper = () => {
 //   require("./static/fullpage.scrollHorizontally.min.js")
@@ -116,13 +117,21 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>L'économie circulaire, le présent et l'avenir de Waterhill</h3>
+                      <h3>
+                        L'économie circulaire, le présent et l'avenir de
+                        Waterhill
+                      </h3>
                       <p>
-                        Prendre soin de l'environnement est une réalité quotidienne chez Waterhill. C'est pourquoi nos premières bouteilles 100% végétales à base de bagasse de canne à sucre sont désormais disponibles. De cette manière, aucun nouveau plastique n'est utilisé et aucun nouveau déchet n'est généré. L'économie circulaire est dans l'ADN de Waterhill.
+                        Prendre soin de l'environnement est une réalité
+                        quotidienne chez Waterhill. C'est pourquoi nos premières
+                        bouteilles 100% végétales à base de bagasse de canne à
+                        sucre sont désormais disponibles. De cette manière,
+                        aucun nouveau plastique n'est utilisé et aucun nouveau
+                        déchet n'est généré. L'économie circulaire est dans
+                        l'ADN de Waterhill.
                       </p>
 
-                      <img src={anime} alt='' />
-                      
+                      <img src={anime} alt="" />
                     </Fade>
                   </div>
                 </BackgroundImage>
@@ -142,6 +151,7 @@ export default () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://cfpnet.be/"
+                            data-tip="Active depuis 1981 dans le secteur de la représentation douanière, CFP est notre partenaire privilégié en matière de législation douanière, d'Eco-taxes et d'accises."
                           >
                             <img src={Cpf} alt="Cpf" />
                           </a>
@@ -149,6 +159,7 @@ export default () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.fieb-viwf.be/"
+                            data-tip="La FIEB est la Fédération de l’Industrie belge des Eaux et Boissons rafraîchissantes. Elle représente les entreprises qui mettent des boissons non-alcoolisées sur le marché belge, plus particulièrement tous types d’eau en bouteille (eau minérale naturelle, eau de source et eau de table), la large gamme des boissons rafraîchissantes ainsi que les boissons énergisantes et sportives."
                           >
                             <img src={FIEBVIWF} alt="FIEBVIWF" />
                           </a>
@@ -159,6 +170,7 @@ export default () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://grainedevie.org/en/index.php"
+                            data-tip="Graine de vie est une Organisation Non Gouvernementale (ONG), qui poursuit pour objectif la compensation de l’empreinte écologique des habitants de nos pays industrialisés par la plantation d’arbres dans des pays en voie de développement et plus précisément à Madagascar."
                           >
                             <img src={GraindeDeVie} alt="GraindeDeVie" />
                           </a>
@@ -166,6 +178,8 @@ export default () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.fostplus.be/"
+                            data-tip="Fost Plus est l'organisme national responsable de la collecte et du recyclage des emballages ménagers en Belgique. 
+                                     Ils recyclent chaque année près de 90 % de tous emballages, mis sur le marché."
                           >
                             <img src={Fost} alt="fost" />
                           </a>
@@ -173,6 +187,7 @@ export default () => {
                       </div>
                     </Fade>
                   </div>
+                  <ReactTooltip className='Commitment__tooltip' />
                 </BackgroundImage>
               </div>
             </ReactFullpage.Wrapper>

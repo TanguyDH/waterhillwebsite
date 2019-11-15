@@ -9,7 +9,8 @@ class ProductQuestion extends React.Component {
  }
 
   render() {
-    const { activeIndex } = this.state
+    console.log(this.props.questions);
+    const { activeIndex } = this.state;
     return (
       <div className="ProductQuestion">
         <h3 className="ProductQuestion__title">
@@ -17,44 +18,32 @@ class ProductQuestion extends React.Component {
           <span>Questions / Réponses :</span> <hr></hr>
         </h3>
         <div>
-          <Collapsible
-            transitionTime={200}
-            trigger={
-              <div className="ProductQuestion__trigger">
-                <p>Pouvons-nous produire plusieurs visuels pour la même commande?</p>
-                <span>
-                  <IoIosArrowDown />
-                </span>
+          {this.props.questions ? this.props.questions.allQuestions.map(({answer, question}) => {
+          return (
+            <Collapsible
+              transitionTime={200}
+              trigger={
+                <div className="ProductQuestion__trigger">
+                  <p>{question}</p>
+                  <span>
+                    <IoIosArrowDown />
+                  </span>
+                </div>
+              }
+            >
+              <div className="ProductQuestion__content">
+                <p>
+                  {answer.map((a) => {
+                    return <p style={{marginBottom:'2px'}}>{a}</p>
+                  })}
+              </p>
+
               </div>
-            }
-          >
-          <div className="ProductQuestion__content">
-              <p>
-                Moyennant un léger surcoût pour "changement d'étiquette", il est possible d'imprimer plusieurs visuels pour une même commande.
-                Il vous suffit de nous envoyer les différents visuels que vous souhaitez imprimer ainsi que le nombre de bouteilles souhaitées par version. pour plus d'informations n'hésitez pas à nous contacter.
-            </p>
-          
-          </div>
-           
-          </Collapsible>
-          <Collapsible
-            transitionTime={200}
-            trigger={
-              <div className="ProductQuestion__trigger">
-                <p>Pouvons-nous être livrés à plusieurs endroits?</p>
-                <span>
-                  <IoIosArrowDown />
-                </span>
-              </div>
-            }
-          >
-             <div className="ProductQuestion__content">
-              <p>
-               Nous livrons partout en Europe dans un délai pouvant aller de 24h à 4 jours ouvrables maximum.
-                Nous pouvons vous livrer à partir de 72 bouteilles
-            </p>
-          </div>
-          </Collapsible>
+
+            </Collapsible>
+          )
+        }): ''}
+        
         </div>
       </div>
     )

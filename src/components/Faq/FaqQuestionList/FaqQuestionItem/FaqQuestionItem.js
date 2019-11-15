@@ -20,7 +20,7 @@ export default (props) => {
               }
           >
              <div className='faqQuestionItem__content'>
-                  {props.response}
+                <p>  {props.response}</p>
              </div> 
           </Collapsible>
 
