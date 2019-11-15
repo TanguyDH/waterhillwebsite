@@ -8,65 +8,65 @@
 
 
 
-// .ChooseCountry {
-//     position: relative;
+.ChooseCountry {
+    position: relative;
 
-//     &__close {
-//         position: absolute;
-//         top: .5rem;
-//         right: 1rem;
-//         font-size: 2rem;
-//         cursor: pointer;
+    &__close {
+        position: absolute;
+        top: .5rem;
+        right: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
 
-//     }
+    }
 
-//     &__collapsible {
-//         margin-left: 4rem;
-//     }
+    &__collapsible {
+        margin-left: 4rem;
+    }
 
-//     &__choose {
-//         cursor: pointer;
-//         font-weight: 800;
-//         display: flex;
-//         align-items: center;
-//     }
+    &__choose {
+        cursor: pointer;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+    }
 
-//     &__content {
-//         margin-left: 2rem;
-//     }
+    &__content {
+        margin-left: 2rem;
+    }
 
-//     &__flag {
-//         width: 2rem;
-//         margin-right: 1rem;
-//     }
+    &__flag {
+        width: 2rem;
+        margin-right: 1rem;
+    }
 
 
-//     &__modal {
-//          position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%,-50%);
-//     width:  40rem;
-//     // height: 40rem;
-//     background-color: #ffffff;
-//     border-radius: 15px;
-//     padding: 4rem;
-//      font-size: 1.7rem;
-//     h3 {
-//         font-size: 3rem;
-//         margin-bottom: 2rem;
+    &__modal {
+         position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:  40rem;
+    // height: 40rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 4rem;
+     font-size: 1.7rem;
+    h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
         
-//     }
-//     h5 {
-//         font-weight: 900;
-//          font-size: 1.7rem;
-//     }
+    }
+    h5 {
+        font-weight: 900;
+         font-size: 1.7rem;
+    }
 
-//     li {
-//         margin: 1rem 2rem;
-//         cursor: pointer;
+    li {
+        margin: 1rem 2rem;
+        cursor: pointer;
 
-//     }
+    }
 
-//     }
-// }
+    }
+}

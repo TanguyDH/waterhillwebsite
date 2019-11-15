@@ -17,33 +17,36 @@
 import React, { Component } from 'react'
 import "./ChooseCountry.scss";
 import Modal from "react-modal"
-import belgium from  '../../../assets/img/flags/belgium.png';
-import france from "../../../assets/img/flags/france.png"
-import luxembourg from "../../../assets/img/flags/luxembourg.png"
-import netherlands from "../../../assets/img/flags/netherlands.png"
+import belgium from  '../../assets/img/flags/belgium.png';
+import france from "../../assets/img/flags/france.png"
+import luxembourg from "../../assets/img/flags/luxembourg.png"
+import netherlands from "../../assets/img/flags/netherlands.png"
 import { IoMdClose} from 'react-icons/io';
 
 
 export default class ChooseCountry extends Component {
                  state = {
                    modalIsOpen: false,
-                     region: "Belgique",
-                   imgFlag: belgium
+                   region: "Belgique",
+                   imgFlag: belgium,
                  }
 
                  closeModal = () => {
-                   this.setState({ modalIsOpen: false });
+                   this.setState({ modalIsOpen: false })
                  }
 
                  openModal = () => {
                    this.setState({ modalIsOpen: true })
                  }
-  onChangeCountry = (flagText) => {
-        this.setState({ region: flagText,  modalIsOpen:false })
-       } 
+                 onChangeCountry = (flagText, imgFlag) => {
+                   this.setState({
+                     region: flagText,
+                     imgFlag: imgFlag,
+                     modalIsOpen: false,
+                   })
+                 }
 
                  render() {
-                
                    return (
                      <div className="ChooseCountry">
                        <p
@@ -75,7 +78,7 @@ export default class ChooseCountry extends Component {
                            <ul>
                              <li
                                onClick={() =>
-                                 this.onChangeCountry( "Belgique")
+                                 this.onChangeCountry("Belgique", belgium)
                                }
                              >
                                <img
@@ -88,7 +91,7 @@ export default class ChooseCountry extends Component {
 
                              <li
                                onClick={() =>
-                                 this.onChangeCountry( "France")
+                                 this.onChangeCountry("France", france)
                                }
                              >
                                <img
@@ -100,7 +103,7 @@ export default class ChooseCountry extends Component {
                              </li>
                              <li
                                onClick={() =>
-                                 this.onChangeCountry( "Pays-Bas")
+                                 this.onChangeCountry("Pays-Bas", netherlands)
                                }
                              >
                                <img
@@ -112,7 +115,7 @@ export default class ChooseCountry extends Component {
                              </li>
                              <li
                                onClick={() =>
-                                 this.onChangeCountry( "Luxembourg")
+                                 this.onChangeCountry("Luxembourg", luxembourg)
                                }
                              >
                                <img

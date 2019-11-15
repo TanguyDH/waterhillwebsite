@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Navigation.scss';
 import SelectLanguage from '../SelectLanguage/SelectLanguage';
+import ChooseCountry from "../ChooseCountry/ChooseCountry"
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
 import { FaInstagram } from "react-icons/fa";
@@ -119,7 +120,7 @@ class Navigation extends Component {
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-            <SelectLanguage />
+            <ChooseCountry />
           </div>
           <a
             rel="noopener noreferrer"
