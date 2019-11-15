@@ -24,7 +24,7 @@ import netherlands from "../../assets/img/flags/netherlands.png"
 import { IoMdClose} from 'react-icons/io';
 
 
-export default class ChooseCountry extends Component {
+export default class SelelectCountry extends Component {
                  state = {
                    modalIsOpen: false,
                    region: "Belgique",
