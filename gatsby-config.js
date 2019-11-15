@@ -32,17 +32,17 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto Slab`,
-            variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`]
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Roboto Slab`,
+    //         variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`]
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
