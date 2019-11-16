@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Navigation.scss';
-import SelelectCountry from "../SelelectCountry/SelelectCountry"
+import SelectLanguage from "../SelectLanguage/SelectLanguage"
 
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
@@ -119,7 +119,7 @@ class Navigation extends Component {
           className="navigation__plus"
         >
           <div style={{ margin: "0 10px" }}>
-            <SelelectCountry />
+            <SelectLanguage />
           </div>
           <a
             rel="noopener noreferrer"
