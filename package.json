@@ -13,9 +13,11 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@brainhubeu/react-carousel": "^1.10.17",
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "@fullpage/react-fullpage": "^0.1.16",
+    "babel-preset-gatsby": "^0.2.22",
     "env-cmd": "^9.0.3",
     "gatsby": "^2.11.7",
     "gatsby-background-image": "^0.8.14",
