@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Navigation.scss';
-import SelectLanguage from '../SelectLanguage/SelectLanguage';
 import SelelectCountry from "../SelelectCountry/SelelectCountry"
+
 import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import logoBlue from "../../assets/img/logoLandscapeBlue.png"
 import { FaInstagram } from "react-icons/fa";

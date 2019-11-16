@@ -15,7 +15,7 @@
 
 
 import React, { Component } from 'react'
-import "./ChooseCountry.scss";
+import "./SelelectCountry.scss"
 import Modal from "react-modal"
 import belgium from  '../../assets/img/flags/belgium.png';
 import france from "../../assets/img/flags/france.png"
