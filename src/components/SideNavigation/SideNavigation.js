@@ -23,7 +23,7 @@ export default () => {
       >
 
       <nav>
-    hjbhjvj
+    
           <Link className="SideNavigation__link" to="/products">
             produits
           </Link>
