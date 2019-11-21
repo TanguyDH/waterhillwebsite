@@ -294,6 +294,120 @@ export default [
       </p>,
     ],
   },
+  {
+    question:
+      "Toutes les eaux peuvent-elles revendiquer une teneur particulière en certains minéraux ?",
+    response: [
+      <p>
+        FAUX Seules les eaux minérales naturelles sont tenues à une composition
+        physico-chimique stable. Le long parcours souterrain des eaux minérales
+        naturelles leur confère leur minéralisation particulière; chaque eau
+        ayant sa propre composition spécifique et donc son goût spécifique. On
+        distingue trois types d’allégations relatives au degré de minéralisation
+        : très faiblement minéralisée (0 à 50 mg de minéraux par litre),
+        faiblement minéralisée (50 à 500 mg de minéraux par litre), et riche en
+        minéraux (plus de 1500 mg de minéraux par litre). Quant aux eaux
+        contenant 500 à 1500 mg de minéraux par litre, elles sont considérées
+        comme moyennement minéralisées. Les eaux minérales naturelles sont aussi
+        les seules à pouvoir revendiquer une teneur particulière en un minéral
+        ou oligo-élément, selon des critères stricts (Par exemple « calcique »
+        correspond à au moins 150 mg de calcium par litre). Grâce à sa stabilité
+        dans le temps et aux mesures de protection dont elle fait l’objet, l’eau
+        minérale naturelle qui sera bue dans 50 ans par nos petits-enfants sera
+        toujours la même que celle que nous buvons aujourd’hui… pure et
+        naturelle.
+      </p>,
+    ],
+  },
+  {
+    question:
+      "Toutes les eaux permettent-elles de répondre de manière équivalente à des besoins spécifiques ?",
+    response: [
+      <p>
+        FAUX Seules les eaux minérales naturelles se distinguent par leur
+        composition physicochimique spécifique et stable, ce qui détermine leurs
+        propriétés éventuelles. Ainsi, pour les personnes qui présentent des
+        déficiences en calcium ou en magnésium, il sera utile de compléter
+        l’apport avec des eaux minérales naturelles calciques (teneur en calcium
+        supérieure à 150 mg/l) et/ou magnésiennes (teneur en magnésium
+        supérieure à 50 mg/l), les sportifs gagneront à boire une eau minérale
+        naturelle qui contient du sodium, alors qu’en cas d’hypertension, ce
+        sont les eaux minérales naturelles pauvres en sodium (allégation «
+        convient pour un régime pauvre en sodium ») qui seront privilégiées.
+      </p>,
+    ],
+  },
+   {
+    question:
+      "Toutes les eaux plates en bouteille peuvent-elles convenir pour l’alimentation des nourrissons ?",
+    response: [
+     "FAUX La mention « convient pour la préparation des aliments pour les nourrissons » ne peut figurer que pour les eaux minérales naturelles et les eaux de source pauvres en minéraux, et qui répondent de surcroit à plusieurs exigences supplémentaires du Conseil Supérieur de la Santé. Ces critères sont une haute pureté microbiologique permanente, un résidu sec < 500 mg/l, un taux de nitrates < 25 mg/l (la limite étant 50 mg/l pour l’eau potable), un taux de nitrites < 0,1 mg/l, de sodium < 50 mg/l et de fluor < 1 mg/l. "
+    ],
+  },
+   {
+    question:
+      "L’eau minérale naturelle doit-elle être pure à la source, donc non traitée ?",
+    response: [
+      `VRAI Une eau minérale naturelle doit être d’origine souterraine et s’être constituée à l’abri de tout risque de pollution. Elle doit être 1 EFSA, Dietary reference values for water, scientific opinion of the panel on dietetic products, nutrition and allergies, 2010. 2 PNNS-B, une initiative du Ministère des Affaires sociales et de la Santé publique. Elle doit être saine dès l’origine et ne peut avoir été perturbée par la moindre contamination d’origine humaine. Elle est donc pure à la source et ne peut subir aucun traitement par la suite… jusqu’au consommateur. L’eau de source, quant à elle, doit également être potable à la source.`
+    ]
+  },
+  {
+    question:
+      "Le repère de consommation d’un litre et demi d’eau n’a pas de sens.",
+    response: [
+      `FAUX Les besoins varient en fonction de paramètres tels que la température, l’activité, le degré d’humidité de l’air, etc. et ils peuvent être fortement accrus en fonction des situations.Toutefois, comme le préconise l’Autorité européenne de Sécurité des Aliments (EFSA)1, les valeurs repères pour l’apport hydrique total sont, pour les adultes, de 2 litres pour les femmes et de 2,5 litres pour les hommes, dont 70 à 80 % proviennent des boissons. La valeur de 1,5 litre par jour est donc un repère pratique à utiliser pour l’adulte et c’est d’ailleurs la quantité d’eau recommandée quotidiennement par le Conseil supérieur de la Santé. Cette recommandation est reprise dans le Plan National Nutrition et Santé Belge. Ce repère est d’autant plus d’actualité que, comme en témoigne l’enquête de consommation alimentaire Belge, en prenant l’ensemble des boissons dites de base qui figurent au bas de la pyramide alimentaire, seulement 26,2 % des Belges âgés de 15 ans et plus atteignent la recommandation de 1,5 litre par jour.`
+    ]
+  },
+  {
+    question:
+      "Toutes les eaux proviennent t’elles d’une source souterraine ?",
+    response: [
+      `FAUX Contrairement à l’eau du robinet, seules les eaux minérales naturelles et les eaux de source ont une origine « exclusivement » souterraine, sont préservées depuis des décennies de la pollution d’origine humaine et ne peuvent être traitées chimiquement. L’eau minérale naturelle et l’eau de source doivent être embouteillées à la source mais seule l’eau minérale naturelle présente une pureté originelle et une composition minérale stable dans le temps.`
+    ]
+  },
+  {
+    question:
+      "Toutes les eaux minérales naturelles sont-elles riches en minéraux ?",
+    response: [
+      `FAUX C’est la nature elle-même qui filtre les eaux minérales naturelles et qui en détermine leur teneur en minéraux. Selon leurs parcours, elles présentent des caractéristiques très variées en termes de goût, mais aussi de composition en minéraux. Les eaux minérales naturelles peuvent être très faiblement minéralisées (résidu sec < 50 mg/l), faiblement minéralisées (< 500 mg/l), de minéralisation moyenne (500 à 1500 mg/l) ou fortement minéralisées (> 1500 mg/l). Elles peuvent aussi faire valoir une teneur particulière en un ou plusieurs minéraux et/ou oligo-éléments. `
+    ]
+  },
+  {
+    question:
+      "L’eau minérale naturelle contient des additifs pour garantir sa fraîcheur ?",
+    response: [
+      `FAUX Le label « eau minérale naturelle » impose entre autres critères, une pureté originelle (chimique et bactériologique) et cette pureté originelle doit être conservée jusqu’à la livraison de la bouteille au consommateur. Les eaux de source sont aussi soumises à l’obtention d’un « label » et à des exigences de qualité. Des analyses sont constamment effectuées tant sur l’eau même que sur les matériaux utilisés qui peuvent entrer en contact avec elle. La bouteille en plastique, comme la bouteille en verre, garantit la sécurité alimentaire du produit et la qualité de l’eau depuis le moment où elle est captée jusqu’au moment de sa consommation, en passant par les phases de stockage, de transport et de distribution. Contrairement à l’eau de distribution, aucune substance chimique ne peut être ajoutée ni à l’eau minérale naturelle ni à l’eau de source. `
+    ]
+  },
+  {
+    question:
+      "Une eau minérale naturelle peut-elle avoir été enrichie en calcium ?",
+    response: [
+      `FAUX La bouteille d’eau minérale naturelle qui est livrée au consommateur contient uniquement de l’eau minérale naturelle telle qu’elle jaillit à la source. Le calcium, tout comme les autres matières minérales, contenu en quantités plus ou moins élevées dans les eaux minérales naturelles provient exclusivement d’un enrichissement naturel de l’eau lors de son parcours souterrain. Aucune substance ne peut avoir été ajoutée, au risque de perdre l’appellation « eau minérale naturelle ». `
+    ]
+  },
+  {
+    question:
+      "La biodisponibilité des minéraux de l’eau minérale naturelle est-elle élevée ?",
+    response: [
+      `VRAI Les eaux minérales naturelles peuvent compléter utilement la couverture en différents minéraux et/ou oligo-éléments. La biodisponibilité des matières minérales a fait l’objet de différents travaux scientifiques qui ont permis de bousculer certains clichés. Ainsi, dans le domaine du calcium, les études récentes arrivent aujourd’hui à la conclusion que le calcium des eaux minérales calciques est au moins aussi bien absorbé que celui du lait. Il en va de même pour le magnésium des eaux minérales naturelles magnésiennes, qui est absorbé à un taux similaire à celui des préparations pharmaceutiques. `
+    ]
+  },
+  {
+    question:
+      "La mention de la composition analytique sur la bouteille est uniquement obligatoire pour les eaux minérales naturelles ?",
+    response: [
+      `VRAI Pour les eaux minérales naturelles et les eaux de source, l’étiquetage doit obligatoirement mentionner le nom de la source et le lieu d’exploitation. Toutefois, seules les eaux minérales naturelles sont tenues de mentionner la composition analytique. Celle-ci reprend les minéraux les plus représentatifs de l’eau et leurs quantités par litre. Cette composition est constante pour chaque eau minérale et lui procure son goût unique. La composition analytique de l’eau minérale naturelle est constamment contrôlée. `
+    ]
+  },
+  {
+    question:
+      "La composition minérale de l’eau minérale naturelle peut-elle varier fortement en fonction des marques ? ",
+    response: [
+      `VRAI Chaque eau minérale naturelle présente une composition minérale stable mais sa teneur en minéraux varie d’une marque d’eau minérale à l’autre, en fonction de la source et de la géologie du sous-sol dans lequel l’eau est puisée. La composition minérale unique de chaque marque d’eau minérale naturelle peut contribuer à rencontrer des besoins particuliers en matière de santé. Les consommateurs peuvent choisir des eaux ayant une teneur minérale spécifique (par exemple teneur en calcium, magnésium, bicarbonates, fluor ou eau pauvre en sodium), selon leurs goûts ou certains besoins nutritionnels. Le tableau ci-dessous donne un aperçu de la classification des eaux minérales naturelles. Classification des eaux minérales selon la teneur d’un minéral ou d’un oligo-élément particulier Allégation Critère Propriétés - Exigences Très faiblement minéralisée 0-50 mg/l de sels minéraux Faiblement minéralisée 50-500 mg/l de sels minéraux Moyennement minéralisée 500-1500 mg/l de sels minéraux Riche en sels minéraux Plus de 1500 mg/l de sels minéraux Bicarbonatée Plus de 600 mg/l de bicarbonates Les bicarbonates facilitent la digestion et régulent l’équilibre acide/ base de nos cellules. Sulfatée Plus de 200 mg/l de sulfates Les sulfates exercent un effet laxatif léger à dose élevée. Chlorurée Plus de 200 mg/l de chlorures Les chlorures participent à l’équilibre hydrique des cellules. Ils entrent également dans la composition des sucs gastriques. Calcique Plus de 150 mg/l de calcium Le calcium est un composant essentiel des os et des dents. Il intervient également dans des processus importants dans notre organisme. Allégation Critère Propriétés - Exigences Magnésienne Plus de 50 mg/l de magnésium Le magnésium favorise la fixation du calcium sur les os. Le magnésium est un minéral important pour la santé car il stimule environ 300 processus enzymatiques. Fluorée Plus de 1 mg/l de fluor Le fluor est un oligo-élément indispensable à la santé dentaire. Ferrugineuse Plus de 1 mg/l de fer bivalent Le fer est un minéral essentiel pour la vie. Il est présent dans toute cellule vivante. Il renforce le système immunitaire, apporte de l’énergie et augmente l’acuité mentale. Acidulée Plus de 250 mg/l de gaz carbonique libre Sodique Plus de 200 mg/l de sodium Le sodium conserve le niveau d’hydratation de nos cellules. Convient pour la préparation des aliments des nourrissons* Avis favorable du Conseil Supérieur de la Santé Une haute pureté microbiologique permanente, un résidu sec < 500 mg/l, un taux de nitrates < 25 mg/l, un taux de nitrites < 0,1 mg/l, de sodium < 50 mg/l et de fluor < 1 mg/l. Convient pour un régime pauvre en sodium Teneur en sodium inférieure à 20 mg/l Peut être laxative Examen et avis favorable préalable du Conseil Supérieur e la Santé et éventuellement de l’Académie Royale de Médecine Peut être diurétique Stimule la digestion * peut également être utilisé pour l’eau de source.`
+    ]
+  }
+  
 ]
 
 
