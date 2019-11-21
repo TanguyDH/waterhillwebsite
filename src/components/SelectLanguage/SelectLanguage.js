@@ -96,7 +96,7 @@ export default class SelectLanguage extends Component {
                                  <li
                                    className="ChooseCountry__language"
                                    onClick={() =>
-                                     this.onChangeCountry("Belgique", belgium)
+                                     this.onChangeCountry("Francais", belgium)
                                    }
                                  >
                                    Francais
@@ -104,7 +104,7 @@ export default class SelectLanguage extends Component {
                                  <li
                                    className="ChooseCountry__language"
                                    onClick={() =>
-                                     this.onChangeCountry("Belgique", belgium)
+                                     this.onChangeCountry("Nederlands", belgium)
                                    }
                                  >
                                    Nederlands
@@ -129,7 +129,7 @@ export default class SelectLanguage extends Component {
                                  <li
                                    className="ChooseCountry__language"
                                    onClick={() =>
-                                     this.onChangeCountry("France", france)
+                                     this.onChangeCountry("Francais", france)
                                    }
                                  >
                                    Francais
