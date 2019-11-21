@@ -1,10 +1,9 @@
 import React, { Component } from "react"
 import './SelectLanguage.scss';
-// import ReactFlagsSelect from 'react-flags-select';
-// import 'react-flags-select/css/react-flags-select.css';
 import Modal from "react-modal"
 import belgium from "../../assets/img/flags/belgium.png"
 import france from "../../assets/img/flags/france.png"
+import europe from '../../assets/img/flags/europe.png';
 import luxembourg from "../../assets/img/flags/luxembourg.png"
 import netherlands from "../../assets/img/flags/netherlands.png"
 import { IoMdClose } from "react-icons/io"
@@ -110,14 +109,6 @@ export default class SelectLanguage extends Component {
                                  >
                                    Nederlands
                                  </li>
-                                 <li
-                                   className="ChooseCountry__language"
-                                   onClick={() =>
-                                     this.onChangeCountry("Belgique", belgium)
-                                   }
-                                 >
-                                   English
-                                 </li>
                                </ul>
                              </Collapsible>
 
@@ -142,6 +133,32 @@ export default class SelectLanguage extends Component {
                                    }
                                  >
                                    Francais
+                                 </li>
+                               </ul>
+                             </Collapsible>
+
+
+                             <Collapsible
+                               transitionTime={200}
+                               trigger={
+                                 <li>
+                                   <img
+                                     className="ChooseCountry__flag"
+                                     src={europe}
+                                     alt="france"
+                                   />
+                                   English
+                                 </li>
+                               }
+                             >
+                               <ul>
+                                 <li
+                                   className="ChooseCountry__language"
+                                   onClick={() =>
+                                     this.onChangeCountry("English", europe)
+                                   }
+                                 >
+                                   English
                                  </li>
                                </ul>
                              </Collapsible>

@@ -30,7 +30,10 @@
     }
 
     &__flag {
+        border-radius: 50%;
+        object-fit: cover;
         width: 2rem;
+        height: 2rem;
         margin-right: 1rem;
     }
 
