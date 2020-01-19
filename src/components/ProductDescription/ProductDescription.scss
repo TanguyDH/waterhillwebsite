@@ -92,3 +92,38 @@
 
     }
 }
+
+
+@media only screen and (max-width: 1300px)  {
+
+
+.ProductDescription {
+    padding: 2rem;
+    width: 100%;
+    margin: 8rem auto 0 auto;
+
+   
+}
+
+}
+
+@media only screen and (max-width: 800px)  {
+
+
+.ProductDescription {
+    padding: 2rem;
+    width: 100%;
+    margin: 8rem auto 0 auto;
+
+     &__main {
+           display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    }
+
+   
+}
+
+}
+

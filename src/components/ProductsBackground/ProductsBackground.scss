@@ -21,3 +21,19 @@
 
     }
 }
+
+
+
+@media only screen and (max-width: 1000px)  {
+ 
+
+.ProductsBackground {
+    &__title {
+      top: 50%;
+      left: 50%;
+      font-size: 4rem ;
+    }
+}
+
+
+}

@@ -24,16 +24,42 @@ class Testimony extends React.Component {
   )
     
     render() {
-      const responsive = {
-        0: { items: 1 },
-        1024: { items: 3 },
-      }
+      // const responsive = {
+      //   0: { items: 1 },
+      //   1024: { items: 3 },
+      // }
       var settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1400,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
         // nextArrow: <SampleNextArrow />,
         // prevArrow: <SamplePrevArrow />
       };
@@ -44,7 +70,7 @@ class Testimony extends React.Component {
           <div className="testimony__content">
             <h3 className="testimony__title">QUE PENSENT-ILS DE NOUS ?</h3>
 
-            <Slider {...settings}>
+            <Slider  {...settings}>
               <TestimonyItem
                 text="« Waterhill s’adapte toujours à notre demande et à notre budget, et ce tout en offrant un produit personnalisé de qualité. Je vous les recommande ! »"
                 name="Géraldine S. – D’Ieteren"

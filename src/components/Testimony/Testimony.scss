@@ -12,6 +12,7 @@
     //  ;
     position: relative;
        padding: 6rem 0rem 2rem 0;
+      
 
     &__bg {
           position: absolute;
@@ -83,6 +84,16 @@
    
         }
     }
+}
+
+
+@media only screen and (max-width: 1400px) {
+   .testimony {
+        &__content {
+        width: 100%;
+    }
+   }
+
 }
 
 

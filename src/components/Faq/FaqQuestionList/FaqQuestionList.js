@@ -40,7 +40,7 @@ export default (props) => {
     })
   }
 
-  console.log('sisiisisis', datas.allContentfulFaq.edges);
+
   return (
     <div className="faqQuestionList">
       {selector(data, props.text).map(({question, response}) => {

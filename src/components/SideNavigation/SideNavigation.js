@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'gatsby';
+import SelectLanguage from '../SelectLanguage/SelectLanguage';
 
 export default () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,18 +29,21 @@ export default () => {
       >
 
       <nav>
+          <Link className="SideNavigation__link" to="/">
+            Home
+          </Link>
     
           <Link className="SideNavigation__link" to="/products">
-            produits
+            Produits
           </Link>
           <Link className="SideNavigation__link" to="/commitment">
-            engagement
+            Engagement
           </Link>
           <Link className="SideNavigation__link" to="/blog">
-            blog
+            Blog
           </Link>
           <Link className="SideNavigation__link" to="/faq">
-            faq
+            Faq
           </Link>
           <Link
             className="SideNavigation__link"
@@ -47,7 +51,9 @@ export default () => {
           >
             NOUS CONTACTER
           </Link>
-
+        
+          <SelectLanguage />
+         
           <div
             className="SideNavigation__contact2"
           >
