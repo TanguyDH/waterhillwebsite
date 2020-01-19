@@ -13,8 +13,13 @@ export default () => {
 
   return (
     <div className='SideNavigation'>
-      <img className='SideNavigation__logo' src={logo} alt='logo' />
-      <div className='SideNavigation__hamburger' onClick={() => setSidebarOpen(true)}><span><MdDragHandle /></span></div>
+       <Link to='/'><img className='SideNavigation__logo' src={logo} alt='logo' /></Link>
+      <div className='SideNavigation__hamburger' onClick={() => setSidebarOpen(true)}>
+      <div>
+          <div className="one"></div>
+          <div className="two"></div>
+      </div>
+      </div>
       <Modal
         isOpen={sidebarOpen}
         onRequestClose={() => setSidebarOpen(false)}

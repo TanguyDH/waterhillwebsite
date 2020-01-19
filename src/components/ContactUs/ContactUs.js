@@ -19,7 +19,7 @@ export default () => {
   return (
     <div className='ContactUs'>
 
-    <Form />
+   <Form />
 
       <BackgroundImage fluid={data.file.childImageSharp.fluid} className='ContactUs__image'>
     </BackgroundImage>

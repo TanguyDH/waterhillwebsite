@@ -61,6 +61,9 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.20.0",
+    "netlify-lambda": "^1.6.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "react-alice-carousel": "^1.15.1"
   },
