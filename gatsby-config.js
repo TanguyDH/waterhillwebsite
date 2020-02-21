@@ -32,13 +32,23 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto Slab`,
+          `source sans pro\:100,200,300,400,400i,600,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
     //     fonts: [
     //       {
     //         family: `Roboto Slab`,
-    //         variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`]
+    //         variants: [`100`, `200`, `300`, `400`, `500`, `600`, `700`],
     //       },
     //     ],
     //   },

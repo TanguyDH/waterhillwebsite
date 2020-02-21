@@ -12,13 +12,14 @@
     //  ;
     position: relative;
        padding: 6rem 0rem 2rem 0;
+ 
       
 
     &__bg {
           position: absolute;
     top: 0;
     bottom: 0;
-    // height: 100%;
+ 
     width: 100%;
     z-index: -1;
     // opacity: .5;
@@ -33,11 +34,8 @@
         //  background-position: left; 
        
     }
-    &__video{
-        width: 100%;
-        // object-fit: contain;
-        // height: 100%;
-    }
+   
+     
       
    
     &__content {
@@ -95,6 +93,12 @@
    }
 
 }
+// @media only screen and (max-width: 834px) {
+//    .testimony {
+//        margin-top: 15rem;
+//    }
+
+// }
 
 
 //  <div>

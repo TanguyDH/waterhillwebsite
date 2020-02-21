@@ -4,8 +4,9 @@ import { FaArrowLeft, FaArrowRight} from 'react-icons/fa';
 import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import {IoIosClose} from 'react-icons/io';
-import logo from '../../../assets/img/logobentley.png';
-import auto from '../../../assets/img/auto.jpg';
+// import logo from '../../../assets/img/logobentley.png';
+import logo from '../../../assets/img/porsche-logo.png';
+import auto from '../../../assets/img/auto2.jpeg';
 import bg from "../../../assets/img/bg4.jpg"
 import auto2 from '../../../assets/img/auto2.jpg';
 import {Link} from 'gatsby';
@@ -35,10 +36,10 @@ class CaseStudie extends Component {
         return (
           <React.Fragment>
             <div onClick={this.openModal} className={className}>
-              <img className="caseStudie__img" src={auto} alt="MainImage" />
+              <img className="caseStudie__img" src={this.props.mainImage} alt="MainImage" />
               <div className="caseStudie__part2">
                 
-                  <img className="caseStudie__logo" src={logo} alt="logo" />
+                  <img className="caseStudie__logo" src={this.props.logo} alt="logo" />
                 
               </div>
             </div>
@@ -81,7 +82,7 @@ class CaseStudie extends Component {
                 </Carousel>
 
                 <div className="Modal__description">
-                  <h3>Mercedes</h3>
+                  <h3>{this.props.brandName}</h3>
                   <h4>Situation event</h4>
                   <p>
                     Donec congue placerat accumsan. Curabitur neque ligula,
