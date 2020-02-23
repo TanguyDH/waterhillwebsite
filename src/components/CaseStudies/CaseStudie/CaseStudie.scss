@@ -50,7 +50,7 @@
     }
     &__logo {
         padding: 1rem;
-        width: 45%;  
+        width: 35%;  
         object-fit: contain;
         position: absolute;
         top: 50%;
@@ -72,6 +72,20 @@
         grid-column-start: 1;
         grid-column-end: 1;
     }
+    .caseStudie {
+      &--1 {
+           .caseStudie__logo {
+            padding-top: 0;
+        }
+         &__logo {
+        padding: 1rem;
+       
+        
+    }
+
+      }
+    }
+    
 }
 
 
