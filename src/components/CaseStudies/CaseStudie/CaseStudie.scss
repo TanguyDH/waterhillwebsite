@@ -8,7 +8,9 @@
      transition: all ease .2s;
      cursor: pointer;
       overflow: hidden;
+      height: 50rem;
       &--1 {
+            height: 100%;
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
@@ -19,7 +21,7 @@
         }
         
         .caseStudie__logo {
-            padding-top: 15rem;
+            // padding-top: 15rem;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -33,16 +35,16 @@
 
 
      &__img {
-        //  height: 20rem;
+        //  max-height: 40rem;
         width: 100%;
-         max-height: 90%;
+         max-height: 75%;
           object-fit: cover;
          border-top-right-radius: 5px;
          border-top-left-radius: 5px;
      }
     &__part2{
-       height: 10%;
-       height: 15rem;
+       height: 25%;
+    //    max-height: 20rem;
          width: 100%;
          text-align: center;  
          position: relative;   
@@ -75,7 +77,7 @@
     .caseStudie {
       &--1 {
            .caseStudie__logo {
-            padding-top: 0;
+            // padding-top: 0;
         }
          &__logo {
         padding: 1rem;

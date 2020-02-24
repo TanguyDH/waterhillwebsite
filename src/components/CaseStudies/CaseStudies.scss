@@ -2,7 +2,7 @@
 .caseStudies {
     width: 100%;
     margin:  0 auto 0rem auto;
-    padding: 8rem 2rem 16rem 2rem;
+    padding: 8rem 2rem 24rem 2rem;
     // background-color: #eee;
          background-color: #fafafc;
 }
@@ -30,9 +30,11 @@
 .caseStudies__list {
    
     display: grid;
-    grid-template-rows: 25% 25% 25%;
-    grid-template-columns: 32% 32% 32% ;
-    grid-gap: 2%;
+    grid-template-rows: 31% 31% 31%;
+    grid-template-columns: 31% 31% 31% ;
+    grid-gap: 4%;
+
+
 }
 
 
