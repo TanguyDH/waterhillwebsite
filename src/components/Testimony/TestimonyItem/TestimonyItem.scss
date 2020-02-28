@@ -6,12 +6,14 @@
      font-size: 2rem;
      margin: 1rem;
      color: white;
+    
     //  background-color: white;
 
    
      &__name {
          margin-left: 1rem;
            font-weight: 500;
+             color: var(--color-primary);
          
      }
      &__pofile {
@@ -34,6 +36,7 @@
 
      &__text {
           color: white;
+           color: var(--color-primary);
           font-weight: 500;
          margin-top: 1rem;
 

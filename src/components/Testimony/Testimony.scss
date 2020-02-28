@@ -1,7 +1,7 @@
 
 .testimony {
     // background: #e1f0fa;
-      background-image: url('../../assets/img/testimony/bg.jpeg');
+      background-image: url('../../assets/img/testimony/bg2.jpg');
       background-size: cover;
     //   background-attachment: fixed; 
     // background-position: center; 
@@ -53,6 +53,7 @@
     // background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
     // -webkit-background-clip: text;
     color: white;
+    color: var(--color-primary);
     letter-spacing: .2rem;
     transition: all .2s;
     // &:hover {
