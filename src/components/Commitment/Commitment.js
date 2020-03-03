@@ -37,7 +37,7 @@ export default () => {
           }
         }
       }
-      image3: file(relativePath: { eq: "assets/img/commitment/hands.jpg" }) {
+      image3: file(relativePath: { eq: "assets/img/commitment/hands2.jpeg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp

@@ -86,7 +86,7 @@
           z-index: 9;
          position: absolute;
         top: 45%;
-        left: 75%;
+        left: 30%;
         transform: translate(-50%,-50%);
         text-align: center;
      
@@ -123,10 +123,15 @@
                   font-weight: 400;
                   color: white;
                   font-size: 3.5rem;
+                  font-size: 1.8vw;
                    font-family: 'Roboto Slab'; 
                   margin-bottom: 5rem; 
-                  line-height: 45px; 
-                  text-align: start;  
+                  line-height: 45px;
+                  line-height: 2vw; 
+                  text-align: start; 
+                  span {
+                      
+                  } 
               }
               div {
                   margin-top: 0rem;
@@ -143,6 +148,7 @@
                       .mainBackground__number {
                           font-weight: 900;
                           font-size: 5rem;
+                          font-size: 3vw;
                           padding: 0;
                           margin: 0;
                         }
@@ -150,6 +156,7 @@
                            padding: 0;
                            margin: 0;
                           font-size: 1.7rem;
+                           font-size: 1vw;
                           font-weight: 300;
                           font-style: italic;
                       }

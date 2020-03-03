@@ -25,7 +25,7 @@ const  MainBackground = () =>  {
           }
         }
       }
-      image2: file(relativePath: { eq: "assets/img/mainBackground/bg2.jpg" }) {
+      image2: file(relativePath: { eq: "assets/img/mainBackground/bg5.jpeg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -98,9 +98,7 @@ const  MainBackground = () =>  {
                       Nous compensons <br></br>{" "}
                       <span
                         style={{
-                          fontWeight: "Bold",
-                          letterSpacing: "5px",
-                          fontSize: "40px",
+                          fontWeight: "Bold"
                         }}
                       >
                         100%
