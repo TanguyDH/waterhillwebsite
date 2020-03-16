@@ -12,7 +12,7 @@ const Products = () => {
  
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProduct(sort: { fields: order, order: ASC }) {
+      allContentfulProduct(sort: { fields: order, order: ASC}, limit: 6) {
         edges {
           node {
             name
