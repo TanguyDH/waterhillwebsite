@@ -12,6 +12,13 @@ import insta17 from "../../assets/img/BER_0510.jpg"
 import insta18 from "../../assets/img/socialNetwork/insta17.jpeg"
 import InfiniteCarousel from 'react-leaf-carousel';
 
+// const InfiniteCarousel = (() => {
+//   if (typeof window !== 'undefined') {
+//     return require('react-leaf-carousel')
+//   }
+// })()
+
+
 
 
   const SocialNetwork = () => {
