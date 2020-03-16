@@ -2,6 +2,8 @@ import React from 'react'
 import './Product.scss';
 import Layout from '../../components/Layout/Layout';
 import ProductDescription from '../../components/ProductDescription/ProductDescription';
+
+
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -61,6 +63,7 @@ export const query = graphql`
           questions={props.data.contentfulProduct.questions}
           plugType={props.data.contentfulProduct.plugType}
         />
+      
       </Layout>
     )
 } 
