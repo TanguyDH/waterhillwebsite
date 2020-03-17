@@ -11,7 +11,6 @@ import insta14 from "../../assets/img/socialNetwork/insta14.jpg"
 import insta16 from "../../assets/img/socialNetwork/insta16.jpg";
 import insta17 from "../../assets/img/BER_0510.jpg"
 import insta18 from "../../assets/img/socialNetwork/insta17.jpeg"
-import InfiniteCarousel from 'react-leaf-carousel';
 import Slider from "react-slick";
 
 
