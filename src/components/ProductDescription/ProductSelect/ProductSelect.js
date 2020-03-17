@@ -199,10 +199,13 @@ export default (props) => {
       </div>
       <div>
         <span>Type de bouchon :</span>
-        <Select options={plugType} />
+        {props.colorsCapSport.length === 0 ? 
+        <div className="ProductSelect__plug">
+            Bouchon classique
+        </div> : <Select options={plugType} />}
       </div>
       <div>
-        <span>Couleurs :</span>
+        <span>Couleur de bouchon :</span>
         <ChooseColor colorsCap={onChangeColors()} />
       </div>
       <div>

@@ -21,6 +21,15 @@
     
     }
 
+    &__plug {
+        font-size: 1.4rem;
+          border: 1px solid #444;
+                padding: .4rem 1rem;
+                border-radius: 3px;
+                opacity: .7;
+                color: #444;
+    }
+
     &__input{
         font-size: 1.6rem;
         display: block;
