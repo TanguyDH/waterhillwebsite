@@ -24,6 +24,7 @@ const SocialNetwork = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
+    pauseOnHover: false,
     autoplaySpeed: 3000,
     responsive: [
       {
