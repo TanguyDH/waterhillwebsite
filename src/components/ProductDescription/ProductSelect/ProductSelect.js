@@ -11,6 +11,32 @@ import PopupRate from '../PopupRate/PopupRate';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
+
+  const onchangeName = () => {
+    if (props.pathname === '/product/PLA-VEGETAL-390ml') {
+      return 'Bouteilles pla vegetal 390ml';
+    }
+    if (props.pathname === '/product/VERRE-330ml') {
+      return 'Bouteilles verre 330ml';
+    }
+    if (props.pathname === '/product/VERRE-750ml') {
+      return 'Bouteilles verre 750ml';
+    }
+    if (props.pathname === '/product/TETRAPAK-500ml') {
+      return 'Bouteilles tetrapak 500ml';
+    }
+    if (props.pathname === '/product/PET-330ml') {
+      return 'Bouteilles pet 330ml';
+    }
+    if (props.pathname === '/product/PET-500ml') {
+      return 'Bouteilles pet 500ml';
+    }
+    else {
+      return ''
+    }
+   
+
+  }
   
   const onChangeColors = () => {
     if ( productState.sport) {
@@ -82,17 +108,17 @@ export default (props) => {
       value: (
         <Link
           className="ProductDescription__bottleLink"
-          to="/product/VEGETALE-PET-390ml"
+          to="/product/PLA-VEGETAL-390ml"
         >
-          Bouteilles PLA végétal  390ml
+       Bouteilles PLA 100% végétal 390ml  
        </Link>
       ),
       label: (
         <Link
           className="ProductDescription__bottleLink"
-          to="/product/VEGETALE-PET-390ml"
+          to="/product/PLA-VEGETAL-390ml"
         >
-          Bouteilles PLA végétal 390ml
+        Bouteilles PLA 100% végétal 390ml
                          </Link>
       ),
     },
@@ -191,7 +217,24 @@ export default (props) => {
     <div className="ProductSelect">
       <div>
         <span>Modèle :</span>
-        <Select options={modele} />
+        <Select defaultValue={[{
+          value: (
+            <div
+              className="ProductDescription__bottleLink"
+
+            >
+              {onchangeName()}
+            </div>
+          ),
+          label: (
+            <div
+              className="ProductDescription__bottleLink"
+
+            >
+              {onchangeName()}
+            </div>
+          ),
+        }]} options={modele} />
       </div>
       <div className="ProductSelect__moq">
         <span>Quantité minimale :</span>
@@ -201,7 +244,7 @@ export default (props) => {
         <span>Type de bouchon :</span>
         {props.colorsCapSport.length === 0 ? 
         <div className="ProductSelect__plug">
-            Bouchon classique
+            {props.pathname === '/product/PLA-VEGETAL-390ml' ? 'Bouchon 100% végétal classique' : "Bouchon classique"} 
         </div> : <Select options={plugType} />}
       </div>
       <div>
@@ -229,7 +272,7 @@ export default (props) => {
       </div>
       <div>
         <p className="ProductSelect__sparklingWater">
-         Disponible en eau gazeuse *
+          {props.pathname === '/product/PLA-VEGETAL-390ml' ? '' : "Disponible en eau gazeuse *"}  
         </p>
       </div>
       

@@ -44,7 +44,7 @@ export default (props) => {
   return (
     <div className="faqQuestionList">
       {selector(data, props.text).map(({question, response}) => {
-              return <FaqQuestionItem question={question} response={response} />
+        return <FaqQuestionItem key={question} question={question} response={response} />
       })}
     </div>
   

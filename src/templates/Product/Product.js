@@ -11,6 +11,7 @@ export const query = graphql`
            contentfulProduct(name: { eq: $name }) {
              name
              description1
+             description
              price
              moq
              plugType {sport, classic}
@@ -47,9 +48,11 @@ export const query = graphql`
 
  const Product = (props) => {
     return (
-      <Layout blue={true}>
+      <Layout  blue={true}>
         <ProductDescription
+          pathname={props.location.pathname}
           article={props.data.contentfulProduct.article.json}
+          description={props.data.contentfulProduct.description}
           description1={props.data.contentfulProduct.description1}
           gallery={props.data.contentfulProduct.gallery}
           galleryClassicCap={props.data.contentfulProduct.galleryClassicCap}

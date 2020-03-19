@@ -16,11 +16,12 @@ export default (props) => {
     classic: false
   }
 )
+
   return (
     <ProductContext.Provider value={{ productState, productDispatch }}>
       <div className="ProductDescription">
         <div className="ProductDescription__header">
-          <span>Bouteilles {props.description1}</span>
+          <span>Bouteilles {props.description.toLowerCase()} {props.description1}</span>
           <span>
             à partir de <strong>{props.price}</strong>
           </span>
@@ -32,7 +33,7 @@ export default (props) => {
             galleryClassicCap={props.galleryClassicCap}
             gallerySportCap={props.gallerySportCap}
           />
-          <ProductSelect plugType={props.plugType}  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
+          <ProductSelect pathname={props.pathname}  plugType={props.plugType}  colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
         <ProductQuestion questions={props.questions} />
 

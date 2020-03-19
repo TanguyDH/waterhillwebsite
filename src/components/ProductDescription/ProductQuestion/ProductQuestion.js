@@ -9,7 +9,6 @@ class ProductQuestion extends React.Component {
  }
 
   render() {
-    console.log(this.props.questions);
     const { activeIndex } = this.state;
     return (
       <div className="ProductQuestion">
@@ -33,8 +32,8 @@ class ProductQuestion extends React.Component {
             >
               <div className="ProductQuestion__content">
                 <p>
-                  {answer.map((a) => {
-                    return <p style={{marginBottom:'2px'}}>{a}</p>
+                  {answer.map((a, index) => {
+                    return <p key={index} style={{marginBottom:'2px'}}>{a}</p>
                   })}
               </p>
 
