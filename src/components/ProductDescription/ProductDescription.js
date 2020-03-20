@@ -21,7 +21,7 @@ export default (props) => {
     <ProductContext.Provider value={{ productState, productDispatch }}>
       <div className="ProductDescription">
         <div className="ProductDescription__header">
-          <span>Bouteilles {props.description.toLowerCase()} {props.description1}</span>
+          <span>Bouteilles {props.description} {props.description1}</span>
           <span>
             à partir de <strong>{props.price}</strong>
           </span>

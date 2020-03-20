@@ -14,22 +14,22 @@ export default (props) => {
 
   const onchangeName = () => {
     if (props.pathname === '/product/PLA-VEGETAL-390ml') {
-      return 'Bouteilles pla vegetal 390ml';
+      return 'Bouteilles PLA 100% vegetal 390ml';
     }
     if (props.pathname === '/product/VERRE-330ml') {
-      return 'Bouteilles verre 330ml';
+      return 'Bouteilles VERRE 330ml';
     }
     if (props.pathname === '/product/VERRE-750ml') {
-      return 'Bouteilles verre 750ml';
+      return 'Bouteilles VERRE 750ml';
     }
     if (props.pathname === '/product/TETRAPAK-500ml') {
-      return 'Bouteilles tetrapak 500ml';
+      return 'Bouteilles TETRAPAK 500ml';
     }
     if (props.pathname === '/product/PET-330ml') {
-      return 'Bouteilles pet 330ml';
+      return 'Bouteilles PET 330ml';
     }
     if (props.pathname === '/product/PET-500ml') {
-      return 'Bouteilles pet 500ml';
+      return 'Bouteilles PET 500ml';
     }
     else {
       return ''
@@ -99,8 +99,8 @@ export default (props) => {
   ]
 
   const label = [
-    { value: "PP Transparent", label: "PP Transparent" },
-    { value: "PP Full Colour", label: "PP Full Colour" },
+    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
+    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
   ]
 
   const modele = [
@@ -253,7 +253,9 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        <Select options={label} />
+        <Select defaultValue={[
+          { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color" }
+        ]} options={label} />
       </div>
       <div>
         <span>Quantité :</span>
