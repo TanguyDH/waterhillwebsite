@@ -22,6 +22,12 @@ export default (props) => {
     if (props.pathname === '/product/VERRE-750ml') {
       return 'Bouteilles VERRE 750ml';
     }
+    if (props.pathname === '/product/RPET-330ml') {
+      return 'Bouteilles RPET 330ml';
+    }
+    if (props.pathname === '/product/RPET-500ml') {
+      return 'Bouteilles RPET 500ml';
+    }
     if (props.pathname === '/product/TETRAPAK-500ml') {
       return 'Bouteilles TETRAPAK 500ml';
     }
@@ -102,6 +108,11 @@ export default (props) => {
     { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
     { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
   ]
+  const water = [
+    { value: "Eau plate", label:"Eau plate" },
+     { value: "Eau gazeuse", label: "Eau gazeuse" }
+  ]
+
 
   const modele = [
     {
@@ -155,6 +166,42 @@ export default (props) => {
           to="/product/VERRE-750ml"
         >
           Bouteilles VERRE 750ml
+                         </Link>
+      ),
+    },
+    {
+      value: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/RPET-330ml"
+        >
+          Bouteilles RPET 330ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/RPET-330ml"
+        >
+         Bouteilles RPET 330ml
+                         </Link>
+      ),
+    },
+    {
+      value: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/RPET-500ml"
+        >
+          Bouteilles RPET 500ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductDescription__bottleLink"
+          to="/product/RPET-500ml"
+        >
+          Bouteilles RPET 500ml
                          </Link>
       ),
     },
@@ -236,6 +283,16 @@ export default (props) => {
           ),
         }]} options={modele} />
       </div>
+      <div>
+        <span>Type d'eau :</span>
+        {props.pathname === '/product/PLA-VEGETAL-390ml' ? 
+          <div className="ProductSelect__plug">
+           Eau plate
+          </div>
+         : <Select defaultValue={[
+          { value: "Eau plate", label: "Eau plate" }
+        ]} options={water} /> }
+      </div>
       <div className="ProductSelect__moq">
         <span>Quantité minimale :</span>
         <p>{props.moq}</p>
@@ -272,11 +329,7 @@ export default (props) => {
          Voulez-vous tester cet article? Demandez un échantillon gratuit! *
         </a>
       </div>
-      <div>
-        <p className="ProductSelect__sparklingWater">
-          {props.pathname === '/product/PLA-VEGETAL-390ml' ? '' : "Disponible en eau gazeuse *"}  
-        </p>
-      </div>
+     
       
   
         <PopupRate />
@@ -286,3 +339,10 @@ export default (props) => {
   
 }
 
+
+
+// <div>
+//   <p className="ProductSelect__sparklingWater">
+//     {props.pathname === '/product/PLA-VEGETAL-390ml' ? '' : "Disponible en eau gazeuse *"}
+//   </p>
+// </div>
