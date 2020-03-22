@@ -11,7 +11,7 @@ import PopupRate from '../PopupRate/PopupRate';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
-
+  // console.log('sisisisisiisis', props.capType);
   const onchangeName = () => {
     if (props.pathname === '/product/PLA-VEGETAL-390ml') {
       return 'Bouteilles PLA 100% vegetal 390ml';
@@ -105,8 +105,8 @@ export default (props) => {
   ]
 
   const label = [
-    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
-    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
+    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
+    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
   ]
   const water = [
     { value: "Eau plate", label:"Eau plate" },
@@ -301,7 +301,8 @@ export default (props) => {
         <span>Type de bouchon :</span>
         {props.colorsCapSport.length === 0 ? 
         <div className="ProductSelect__plug">
-            {props.pathname === '/product/PLA-VEGETAL-390ml' ? 'Bouchon 100% végétal classique' : "Bouchon classique"} 
+            {props.pathname === '/product/PLA-VEGETAL-390ml' ? 'Bouchon 100% végétal classique' :
+              `Bouchon ${props.pathname === '/product/VERRE-330ml' || props.pathname === '/product/VERRE-750ml' ? 'métal': ""} classique`} 
         </div> : <Select options={plugType} />}
       </div>
       <div>
@@ -311,7 +312,7 @@ export default (props) => {
       <div>
         <span>Etiquette :</span>
         <Select defaultValue={[
-          { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "PP Full Color 100% BIODÉGRADABLE" : "PP Full Color" }
+          { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" }
         ]} options={label} />
       </div>
       <div>

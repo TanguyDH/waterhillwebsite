@@ -36,6 +36,7 @@ export const query = graphql`
                  url
                }
              }
+              capType    {capType{value, label}}
             questions {allQuestions {answer, question}  }
              doc {
                file {
@@ -64,6 +65,7 @@ export const query = graphql`
           colorsCapClassic={props.data.contentfulProduct.colorsCapClassic.colors}
           colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}
           questions={props.data.contentfulProduct.questions}
+          capType={props.data.contentfulProduct.capType}
           plugType={props.data.contentfulProduct.plugType}
         />
       
