@@ -8,8 +8,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import { Link } from 'gatsby';
-import GraindeDeVie from '../../assets/img/transparent-GDV.png';
-import Video from '../../assets/img/mainBackground/bgVideo.mp4';
+import GraindeDeVie from '../../assets/img/mainBackground/logoGraine.png';
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -94,31 +93,8 @@ const  MainBackground = () =>  {
               >
                 <div className="mainBackground__content">
                   <div>
-                    <h3>
-                      Nous compensons <br></br>{" "}
-                      <span
-                        style={{
-                          fontWeight: "Bold"
-                        }}
-                      >
-                        100%
-                      </span>{" "}
-                      <br></br>de notre empreinte carbone.
-                    </h3>
-                    <div>
-                      <div>
-                        <span className="mainBackground__number">2400</span>
-                        <span className="mainBackground__legend">
-                          Nbr d'arbres plantés
-                        </span>
-                      </div>
-                      <div>
-                        <span className="mainBackground__number">240K</span>
-                        <span className="mainBackground__legend">
-                          Nbr de CO2 compensé
-                        </span>
-                      </div>
-                    </div>
+                    <img className="mainBackground__logoGraine" src={GraindeDeVie} alt='Logo Graine de vie' />
+                   
                     <Link className="mainBackground__button2" to="commitment">
                       Plus d'info
                     </Link>
@@ -179,3 +155,39 @@ export default MainBackground;
 //                       />
 //                     </a>
 //                   </div>
+
+
+
+
+
+
+
+
+
+
+
+// <h3>
+//   Nous compensons <br></br>{" "}
+//   <span
+//     style={{
+//       fontWeight: "Bold"
+//     }}
+//   >
+//     100%
+//                       </span>{" "}
+//   <br></br>de notre empreinte carbone.
+//                     </h3>
+//   <div>
+//     <div>
+//       <span className="mainBackground__number">2400</span>
+//       <span className="mainBackground__legend">
+//         Nbr d'arbres plantés
+//                         </span>
+//     </div>
+//     <div>
+//       <span className="mainBackground__number">240K</span>
+//       <span className="mainBackground__legend">
+//         Nbr de CO2 compensé
+//                         </span>
+//     </div>
+//   </div>

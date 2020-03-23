@@ -43,6 +43,7 @@ export const query = graphql`
                  url
                }
              }
+              quantity {quantity {value, label}}
            }
          }
        `
@@ -66,6 +67,7 @@ export const query = graphql`
           colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}
           questions={props.data.contentfulProduct.questions}
           capType={props.data.contentfulProduct.capType}
+          quantity={props.data.contentfulProduct.quantity}
           plugType={props.data.contentfulProduct.plugType}
         />
       

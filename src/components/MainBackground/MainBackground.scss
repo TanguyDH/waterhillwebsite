@@ -79,35 +79,37 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    //   background-image: url(../../assets/img/mainBackground/bg2.jpg);
   background-size: cover;
     background-position: 50% 50%;
     .mainBackground__content {
           z-index: 9;
          position: absolute;
-        top: 45%;
-        left: 30%;
+        top: 43%;
+        left: 32%;
         transform: translate(-50%,-50%);
         text-align: center;
+
      
-        // height: 100%;
-        // .mainBackground__logoGraindeDeVie {
-        //     img {
-        //            width: 20rem;
-        //            position: absolute;
-        //            top: 80%;
-        //           left: -15%;
-        //     }
-        // }
         
         div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .mainBackground__logoGraine {
+                width: 30vw;
+                margin-bottom: 2rem;
+            }
                .mainBackground__button2 {
                           border: none;
                           padding: .8rem 3rem;
+                           padding: .5vw 1.5vw;
                           background-color: white;
                           color: var(--color-primary);
                           font-size: 1.7rem;
+                          font-size: 1.3vw;
                           border-radius: 30px;
+                          border-radius: 20vw;
                           transition: all .5s;
 
                           &:hover {
@@ -117,52 +119,7 @@
                       }
              z-index: 9;
               margin-bottom: 2rem;
-             
-              h3 {
-                 
-                  font-weight: 400;
-                  color: white;
-                  font-size: 3.5rem;
-                  font-size: 1.8vw;
-                   font-family: 'Roboto Slab'; 
-                  margin-bottom: 5rem; 
-                  line-height: 45px;
-                  line-height: 2vw; 
-                  text-align: start; 
-                  span {
-                      
-                  } 
-              }
-              div {
-                  margin-top: 0rem;
-                  display: flex;
-                  justify-content: center;
-                  div {
-                      margin: 0 1rem;
-                      display: flex;
-                      flex-direction: column;
-                      color: white;
-                       font-family: 'Roboto Slab';
-                      
-                     
-                      .mainBackground__number {
-                          font-weight: 900;
-                          font-size: 5rem;
-                          font-size: 3vw;
-                          padding: 0;
-                          margin: 0;
-                        }
-                      .mainBackground__legend {
-                           padding: 0;
-                           margin: 0;
-                          font-size: 1.7rem;
-                           font-size: 1vw;
-                          font-weight: 300;
-                          font-style: italic;
-                      }
-                   
-                  }
-              }
+            
             
         }
                
@@ -363,3 +320,62 @@
                       
 //                    }
 //                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+            //   h3 {
+                 
+            //       font-weight: 400;
+            //       color: white;
+            //       font-size: 3.5rem;
+            //       font-size: 1.8vw;
+            //        font-family: 'Roboto Slab'; 
+            //       margin-bottom: 5rem; 
+            //       line-height: 45px;
+            //       line-height: 2vw; 
+            //       text-align: start; 
+            //       span {
+                      
+            //       } 
+            //   }
+            //   div {
+            //       margin-top: 0rem;
+            //       display: flex;
+            //       justify-content: center;
+            //       div {
+            //           margin: 0 1rem;
+            //           display: flex;
+            //           flex-direction: column;
+            //           color: white;
+            //            font-family: 'Roboto Slab';
+                      
+                     
+            //           .mainBackground__number {
+            //               font-weight: 900;
+            //               font-size: 5rem;
+            //               font-size: 3vw;
+            //               padding: 0;
+            //               margin: 0;
+            //             }
+            //           .mainBackground__legend {
+            //                padding: 0;
+            //                margin: 0;
+            //               font-size: 1.7rem;
+            //                font-size: 1vw;
+            //               font-weight: 300;
+            //               font-style: italic;
+            //           }
+                   
+            //       }
+            //   }

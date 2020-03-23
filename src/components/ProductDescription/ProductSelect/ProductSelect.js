@@ -317,12 +317,8 @@ export default (props) => {
       </div>
       <div>
         <span>Quantité :</span>
-        <input
-          className="ProductSelect__input"
-          type="number"
-          //  value={this.props.moq}
-          placeholder={`${props.moq} - 10 000 unités`}
-        />
+        <Select options={props.quantity.quantity} />
+        
       </div>
       <div className="ProductSelect__sample">
         <input type="checkbox" />
@@ -347,3 +343,13 @@ export default (props) => {
 //     {props.pathname === '/product/PLA-VEGETAL-390ml' ? '' : "Disponible en eau gazeuse *"}
 //   </p>
 // </div>
+
+
+
+
+// <input
+//   className="ProductSelect__input"
+//   type="number"
+//   //  value={this.props.moq}
+//   placeholder={`${props.moq} - 10 000 unités`}
+// />
