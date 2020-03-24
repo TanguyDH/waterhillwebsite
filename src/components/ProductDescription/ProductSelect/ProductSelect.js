@@ -311,9 +311,15 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
+        {props.pathname === '/product/TETRAPAK-500ml' ? 
+        <div className="ProductSelect__plug">
+         Impression full color 360°
+        </div>
+        :
         <Select defaultValue={[
           { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" }
         ]} options={label} />
+        }
       </div>
       <div>
         <span>Quantité :</span>

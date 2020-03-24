@@ -99,8 +99,8 @@ class Navigation extends Component {
             style={{ color: this.state.theposition < 0.005 }}
             className="navigation__contact2"
           >
-            <a className="navigation__tel" href="tel:+025243476">
-              +32 489 11 99 11
+            <a className="navigation__tel" href="tel:+3281220440">
+            +32 81 220 440
             </a>
 
             <strong>/</strong>

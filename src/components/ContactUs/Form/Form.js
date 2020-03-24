@@ -1,5 +1,7 @@
 import React from 'react';
 import './Form.scss';
+import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
+import { FaFacebookMessenger } from "react-icons/fa";
 
 export default () => {
   return (
@@ -7,7 +9,8 @@ export default () => {
       <div className="Form__content">
         <h4 className="Form__title">Contact</h4>
         <div className="Form__contact">
-          <a href="tel:+32489119911">Téléphone: +32 489 11 99 11</a>
+          <a href="tel:+32489119911">Téléphone: +32 81 220 440</a>
+          <a href="tel:+32489119911">Mobile: + 32 489 11 99 11</a>
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
         </div>
 
@@ -34,6 +37,30 @@ export default () => {
 
           <button className="Form__send">Envoyer</button>
         </div>
+
+        <div className="Form__or">
+         <div></div>
+          <span>OU</span>
+         <div></div>
+        </div>
+
+        <div className="Form__others">
+          <a href="https://api.whatsapp.com/send?phone=32489119911&text=Bonjour WaterHill! J’ai une question au sujet de .... "
+            target="_blank"
+            rel="noopener noreferrer"
+            className="Form__whatsapp"
+            ><IoLogoWhatsapp /></a>
+          <a href="https://www.facebook.com/messages/t/162834650561379"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="Form__messenger"
+            ><FaFacebookMessenger /></a>
+          <a href="mailto:contact@waterhill.be"
+            className="Form__mail"
+          ><IoMdMail /></a>
+        </div>
+
+
       </div>
     </div>
   )
