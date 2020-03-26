@@ -28,6 +28,11 @@
       transition: transform .5s ease;
        margin: 0 auto;
     text-align: center;
+    transform: scale(.9);
+       &:hover  {
+         
+               transform: scale(1);
+          }
     
     
 }
