@@ -14,29 +14,32 @@ export default () => {
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
         </div>
 
-        <div className="Form__form">
+        <form 
+          action="https://formspree.io/xzbvozar"
+          method="POST"
+        className="Form__form">
           <div className="Form__inputBox">
             <label>Nom *</label>
-            <input type="text" placeholder="Name" />
+            <input name='name' type="text" placeholder="Name" />
           </div>
 
           <div className="Form__inputBox">
             <label>Téléphone *</label>
-            <input type="text" placeholder="Phone" />
+            <input name='phone' type="text" placeholder="Phone" />
           </div>
 
           <div className="Form__inputBox">
             <label>Email *</label>
-            <input type="text" placeholder="Email" />
+            <input name='email' type="text" placeholder="Email" />
           </div>
 
           <div className="Form__inputBox">
             <label>Commentaire</label>
-            <textarea type="text" placeholder="Comment" />
+            <textarea name='comment' type="text" placeholder="Comment" />
           </div>
 
-          <button className="Form__send">Envoyer</button>
-        </div>
+          <button type="submit" className="Form__send">Envoyer</button>
+        </form>
 
         <div className="Form__or">
          <div></div>

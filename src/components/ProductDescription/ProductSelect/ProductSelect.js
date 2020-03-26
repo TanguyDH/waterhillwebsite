@@ -1,10 +1,12 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import './ProductSelect.scss';
 import { Link } from 'gatsby';
 import Select from "react-select"
 import ProductContext from '../../../context/ProductContext';
 import ChooseColor from '../../UI/ChooseColor/ChooseColor';
 import PopupRate from '../PopupRate/PopupRate';
+import DatePicker from '../../UI/DatePicker/DatePicker';
+
 
 
 
@@ -264,34 +266,34 @@ export default (props) => {
     <div className="ProductSelect">
       <div>
         <span>Modèle :</span>
-        <Select defaultValue={[{
-          value: (
-            <div
-              className="ProductDescription__bottleLink"
-
-            >
-              {onchangeName()}
-            </div>
-          ),
-          label: (
-            <div
-              className="ProductDescription__bottleLink"
-
-            >
-              {onchangeName()}
-            </div>
-          ),
-        }]} options={modele} />
+        <Select
+          defaultValue={[
+            {
+              value: (
+                <div className="ProductDescription__bottleLink">
+                  {onchangeName()}
+                </div>
+              ),
+              label: (
+                <div className="ProductDescription__bottleLink">
+                  {onchangeName()}
+                </div>
+              ),
+            },
+          ]}
+          options={modele}
+        />
       </div>
       <div>
         <span>Type d'eau :</span>
-        {props.pathname === '/product/PLA-VEGETAL-390ml' ? 
-          <div className="ProductSelect__plug">
-           Eau plate
-          </div>
-         : <Select defaultValue={[
-          { value: "Eau plate", label: "Eau plate" }
-        ]} options={water} /> }
+        {props.pathname === "/product/PLA-VEGETAL-390ml" ? (
+          <div className="ProductSelect__plug">Eau plate</div>
+        ) : (
+          <Select
+            defaultValue={[{ value: "Eau plate", label: "Eau plate" }]}
+            options={water}
+          />
+        )}
       </div>
       <div className="ProductSelect__moq">
         <span>Quantité minimale :</span>
@@ -299,11 +301,20 @@ export default (props) => {
       </div>
       <div>
         <span>Type de bouchon :</span>
-        {props.colorsCapSport.length === 0 ? 
-        <div className="ProductSelect__plug">
-            {props.pathname === '/product/PLA-VEGETAL-390ml' ? 'Bouchon 100% végétal classique' :
-              `Bouchon ${props.pathname === '/product/VERRE-330ml' || props.pathname === '/product/VERRE-750ml' ? 'métal': ""} classique`} 
-        </div> : <Select options={plugType} />}
+        {props.colorsCapSport.length === 0 ? (
+          <div className="ProductSelect__plug">
+            {props.pathname === "/product/PLA-VEGETAL-390ml"
+              ? "Bouchon 100% végétal classique"
+              : `Bouchon ${
+                  props.pathname === "/product/VERRE-330ml" ||
+                  props.pathname === "/product/VERRE-750ml"
+                    ? "métal"
+                    : ""
+                } classique`}
+          </div>
+        ) : (
+          <Select options={plugType} />
+        )}
       </div>
       <div>
         <span>Couleur de bouchon :</span>
@@ -311,32 +322,42 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        {props.pathname === '/product/TETRAPAK-500ml' ? 
-        <div className="ProductSelect__plug">
-         Impression full color 360°
-        </div>
-        :
-        <Select defaultValue={[
-          { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" }
-        ]} options={label} />
-        }
+        {props.pathname === "/product/TETRAPAK-500ml" ? (
+          <div className="ProductSelect__plug">Impression full color 360°</div>
+        ) : (
+          <Select
+            defaultValue={[
+              {
+                value:
+                  props.pathname === "/product/PLA-VEGETAL-390ml"
+                    ? "Full Color 100% BIODÉGRADABLE"
+                    : "PP Full Color",
+                label:
+                  props.pathname === "/product/PLA-VEGETAL-390ml"
+                    ? "Full Color 100% BIODÉGRADABLE"
+                    : "PP Full Color",
+              },
+            ]}
+            options={label}
+          />
+        )}
       </div>
       <div>
         <span>Quantité :</span>
         <Select options={props.quantity.quantity} />
-        
+      </div>
+      <div>
+        <span>Date de livraison souhaité :</span>
+         <DatePicker />
       </div>
       <div className="ProductSelect__sample">
         <input type="checkbox" />
         <a>
-         Voulez-vous tester cet article? Demandez un échantillon gratuit! *
+          Voulez-vous tester cet article? Demandez un échantillon gratuit! *
         </a>
       </div>
-     
-      
-  
-        <PopupRate />
-     
+
+      <PopupRate />
     </div>
   )
   
