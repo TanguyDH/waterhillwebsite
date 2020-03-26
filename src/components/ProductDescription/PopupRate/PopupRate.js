@@ -76,7 +76,7 @@ export default () => {
             </div>
           </div>
           <div className="PopupRate__form">
-            <h3 className="PopupRate__title">Obtenir mon prix</h3>
+            <h3 className="PopupRate__title">Obtenir mon prix !</h3>
             <div>
               <label>Nom</label>
               <input type="text" placeholder="Name" />
