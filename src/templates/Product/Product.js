@@ -14,7 +14,7 @@ export const query = graphql`
              description
              price
              moq
-             plugType {sport, classic}
+           
              colorsCap {colors}
             colorsCapClassic {colors}
              colorsCapSport {colors}
@@ -44,6 +44,10 @@ export const query = graphql`
                }
              }
               quantity {quantity {value, label}}
+               typeOfWater{ typeOfWater {label, value}}
+               typeOfWaterDefault { typeOfWaterDefault {label, value}}
+                label  {label {value, label}}
+                 labelDefault  {labelDefault {value, label}}
            }
          }
        `
@@ -68,7 +72,10 @@ export const query = graphql`
           questions={props.data.contentfulProduct.questions}
           capType={props.data.contentfulProduct.capType}
           quantity={props.data.contentfulProduct.quantity}
-          plugType={props.data.contentfulProduct.plugType}
+           typeOfWater={props.data.contentfulProduct.typeOfWater}
+          typeOfWaterDefault={props.data.contentfulProduct.typeOfWaterDefault}
+          label={props.data.contentfulProduct.label}
+          labelDefault={props.data.contentfulProduct.labelDefault}
         />
       
       </Layout>

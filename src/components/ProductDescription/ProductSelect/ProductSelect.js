@@ -58,10 +58,7 @@ export default (props) => {
     }
   }
 
-  const quantity = [
-    { value: "Bouchon classique", label: "Bouchon classique" },
-    { value: "Bouchon sport", label: "Bouchon sport" },
-  ]
+
 
   const productDispatchSport = () => {
     productDispatch({
@@ -109,10 +106,6 @@ export default (props) => {
   const label = [
     { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
     { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
-  ]
-  const water = [
-    { value: "Eau plate", label:"Eau plate" },
-     { value: "Eau gazeuse", label: "Eau gazeuse" }
   ]
 
 
@@ -267,6 +260,7 @@ export default (props) => {
       <div>
         <span>Modèle :</span>
         <Select
+          onChange={(v) => console.log(v)}
           defaultValue={[
             {
               value: (
@@ -286,14 +280,8 @@ export default (props) => {
       </div>
       <div>
         <span>Type d'eau :</span>
-        {props.pathname === "/product/PLA-VEGETAL-390ml" ? (
-          <div className="ProductSelect__plug">Eau plate</div>
-        ) : (
-          <Select
-            defaultValue={[{ value: "Eau plate", label: "Eau plate" }]}
-            options={water}
-          />
-        )}
+        <Select defaultValue={props.typeOfWaterDefault.typeOfWaterDefault} options={props.typeOfWater.typeOfWater} />
+       
       </div>
       <div className="ProductSelect__moq">
         <span>Quantité minimale :</span>
@@ -322,29 +310,15 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        {props.pathname === "/product/TETRAPAK-500ml" ? (
-          <div className="ProductSelect__plug">Impression full color 360°</div>
-        ) : (
-          <Select
-            defaultValue={[
-              {
-                value:
-                  props.pathname === "/product/PLA-VEGETAL-390ml"
-                    ? "Full Color 100% BIODÉGRADABLE"
-                    : "PP Full Color",
-                label:
-                  props.pathname === "/product/PLA-VEGETAL-390ml"
-                    ? "Full Color 100% BIODÉGRADABLE"
-                    : "PP Full Color",
-              },
-            ]}
-            options={label}
-          />
-        )}
+        <Select defaultValue={props.labelDefault.labelDefault} options={props.label.label} />
+       
       </div>
       <div>
         <span>Quantité :</span>
-        <Select options={props.quantity.quantity} />
+        <Select
+          onChange={(v) => console.log("Quantité", v)}
+         options={props.quantity.quantity}
+          />
       </div>
       <div>
         <span>Date de livraison souhaité :</span>

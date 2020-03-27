@@ -13,7 +13,7 @@
         text-decoration: none;
         padding: 1rem 4rem;
         display: inline-block;
-        border-radius: .4rem;
+        border-radius: 10rem;
         transition: all .2s;
         position: relative;
         transition: all ease .5s;
@@ -74,10 +74,11 @@
             }
               input {
             padding: .8rem;
-            border:  solid #999 1px;
-            border-radius: 3px;
+            border: none;
+            border-bottom:  solid #999 1px;
+            // border-radius: 3px;
             &:focus {
-                 border:  solid #333 1px;
+                border-bottom: solid #333 1px;
             }
         }
         }
@@ -90,7 +91,7 @@
         text-decoration: none;
         padding: 1rem 4rem;
         display: inline-block;
-        border-radius: .4rem;
+        border-radius: 10rem;
         transition: all .2s;
         position: relative;
         transition: all ease .5s;
