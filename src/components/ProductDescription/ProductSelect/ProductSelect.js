@@ -244,8 +244,8 @@ export default (props) => {
       </div>
       <div>
         <span>Type de bouchon :</span>
-        <Select defaultValue={props.capTypeDefault.capTypeDefault} options={props.capType.capType} />
-        
+   
+
         {props.colorsCapSport.length === 0 ? (
           <div className="ProductSelect__plug">
             {props.pathname === "/product/PLA-VEGETAL-390ml"
@@ -311,3 +311,7 @@ export default (props) => {
 //   //  value={this.props.moq}
 //   placeholder={`${props.moq} - 10 000 unités`}
 // />
+
+
+
+    //  <Select defaultValue={props.capTypeDefault.capTypeDefault} options={props.capType.capType} />
