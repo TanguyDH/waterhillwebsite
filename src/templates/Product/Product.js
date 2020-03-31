@@ -48,6 +48,8 @@ export const query = graphql`
                typeOfWaterDefault { typeOfWaterDefault {label, value}}
                 label  {label {value, label}}
                  labelDefault  {labelDefault {value, label}}
+                 capType {capType {label, value}}
+         capTypeDefault {capTypeDefault {label, value}}
            }
          }
        `
@@ -76,6 +78,8 @@ export const query = graphql`
           typeOfWaterDefault={props.data.contentfulProduct.typeOfWaterDefault}
           label={props.data.contentfulProduct.label}
           labelDefault={props.data.contentfulProduct.labelDefault}
+          capType={props.data.contentfulProduct.capType}
+          capTypeDefault={props.data.contentfulProduct.capTypeDefault}
         />
       
       </Layout>

@@ -33,7 +33,7 @@ export default (props) => {
             galleryClassicCap={props.galleryClassicCap}
             gallerySportCap={props.gallerySportCap}
           />
-          <ProductSelect label={props.label} labelDefault={props.labelDefault} typeOfWater={props.typeOfWater} typeOfWaterDefault={props.typeOfWaterDefault} quantity={props.quantity} pathname={props.pathname} capType={props.capType}   colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
+          <ProductSelect capType={props.capType} capTypeDefault={props.capTypeDefault} label={props.label} labelDefault={props.labelDefault} typeOfWater={props.typeOfWater} typeOfWaterDefault={props.typeOfWaterDefault} quantity={props.quantity} pathname={props.pathname} capType={props.capType}   colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
         <ProductQuestion questions={props.questions} />
 

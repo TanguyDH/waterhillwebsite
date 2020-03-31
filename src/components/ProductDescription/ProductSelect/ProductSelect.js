@@ -13,7 +13,7 @@ import DatePicker from '../../UI/DatePicker/DatePicker';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
-  // console.log('sisisisisiisis', props.capType);
+
   const onchangeName = () => {
     if (props.pathname === '/product/PLA-VEGETAL-390ml') {
       return 'Bouteilles PLA 100% vegetal 390ml';
@@ -32,12 +32,6 @@ export default (props) => {
     }
     if (props.pathname === '/product/TETRAPAK-500ml') {
       return 'Bouteilles TETRAPAK 500ml';
-    }
-    if (props.pathname === '/product/PET-330ml') {
-      return 'Bouteilles PET 330ml';
-    }
-    if (props.pathname === '/product/PET-500ml') {
-      return 'Bouteilles PET 500ml';
     }
     else {
       return ''
@@ -103,10 +97,7 @@ export default (props) => {
     },
   ]
 
-  const label = [
-    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Transparent 100% BIODÉGRADABLE" : "PP Transparent" },
-    { value: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color", label: props.pathname === '/product/PLA-VEGETAL-390ml' ? "Full Color 100% BIODÉGRADABLE" : "PP Full Color" },
-  ]
+ 
 
 
   const modele = [
@@ -217,42 +208,6 @@ export default (props) => {
           TETRAPAK 500ml
                          </Link>
       ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-330ml"
-        >
-          Bouteilles PET 330ml
-          </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-330ml"
-        >
-          Bouteilles PET 330ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-500ml"
-        >
-          Bouteilles PET 500ml
-                         </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/PET-500ml"
-        >
-          Bouteilles PET 500ml
-                         </Link>
-      ),
     }
   ]
   return (
@@ -289,6 +244,8 @@ export default (props) => {
       </div>
       <div>
         <span>Type de bouchon :</span>
+        <Select defaultValue={props.capTypeDefault.capTypeDefault} options={props.capType.capType} />
+        
         {props.colorsCapSport.length === 0 ? (
           <div className="ProductSelect__plug">
             {props.pathname === "/product/PLA-VEGETAL-390ml"
