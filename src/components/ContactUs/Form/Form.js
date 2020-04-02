@@ -8,12 +8,7 @@ export default () => {
     <div className="Form">
       <div className="Form__content">
         <h4 className="Form__title">Contact</h4>
-        <div className="Form__contact">
-          <a href="tel:+32489119911">Téléphone: +32 81 220 440</a>
-          <a href="tel:+32489119911">Mobile: + 32 489 11 99 11</a>
-          <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
-        </div>
-
+      
         <form 
           action="https://formspree.io/xzbvozar"
           method="POST"
@@ -68,3 +63,12 @@ export default () => {
     </div>
   )
 }
+
+
+
+
+  // <div className="Form__contact">
+  //         <a href="tel:+32489119911">Téléphone: +32 81 220 440</a>
+  //         <a href="tel:+32489119911">Mobile: + 32 489 11 99 11</a>
+  //         <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
+  //       </div>
