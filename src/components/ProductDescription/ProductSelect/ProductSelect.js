@@ -73,6 +73,7 @@ export default (props) => {
       color: 0
     })
   }
+  
 
   const plugType = [
     {
@@ -96,6 +97,8 @@ export default (props) => {
       ),
     },
   ]
+
+  const switchCap = props.pathname === "/product/RPET-330ml" || props.pathname === "/product/RPET-500ml" ? [productDispatchClassic, productDispatchSport] : [() => {}];
 
  
 
@@ -210,6 +213,7 @@ export default (props) => {
       ),
     }
   ]
+  console.log('kerkalkgjr', props.capType.capType);
   return (
     <div className="ProductSelect">
       <div>
@@ -245,21 +249,15 @@ export default (props) => {
       <div>
         <span>Type de bouchon :</span>
    
-
-        {props.colorsCapSport.length === 0 ? (
-          <div className="ProductSelect__plug">
-            {props.pathname === "/product/PLA-VEGETAL-390ml"
-              ? "Bouchon 100% végétal classique"
-              : `Bouchon ${
-                  props.pathname === "/product/VERRE-330ml" ||
-                  props.pathname === "/product/VERRE-750ml"
-                    ? "métal"
-                    : ""
-                } classique`}
-          </div>
-        ) : (
-          <Select options={plugType} />
-        )}
+        <Select defaultValue={props.capTypeDefault.capTypeDefault} 
+          options={props.capType.capType.map((capType, index) => {
+            return {
+              value: capType.value,
+              label: <div onClick={switchCap[index]} >{capType.label}</div>
+            }
+          })} 
+          />
+      
       </div>
       <div>
         <span>Couleur de bouchon :</span>
@@ -314,4 +312,4 @@ export default (props) => {
 
 
 
-    //  <Select defaultValue={props.capTypeDefault.capTypeDefault} options={props.capType.capType} />
+     
