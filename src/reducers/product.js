@@ -1,6 +1,4 @@
 
-
-
 const productReducer = (state,action) => {
   switch (action.type) {
     case "SELECT_SPORT":
@@ -18,7 +16,13 @@ const productReducer = (state,action) => {
     case "SELECT_COLOR":
       return {
         ...state,
-        color: action.color
+        color: action.color,
+        hexa: action.hexa
+      }
+    case "SET_DATE":
+      return {
+        ...state,
+        date: action.date
       }
     default:
       return state

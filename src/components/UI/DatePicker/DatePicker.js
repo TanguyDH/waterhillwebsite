@@ -10,7 +10,14 @@ export default class DatePicker extends Component {
                    date: moment().add('days', 7)._d
                  }
 
-                 onChange = date => this.setState({ date })
+
+                 onChange = date => {
+                   this.setState({ date })
+                   this.props.productDispatch({
+                     type: "SET_DATE",
+                      date
+                   })
+                 }
 
                  render() {
                  

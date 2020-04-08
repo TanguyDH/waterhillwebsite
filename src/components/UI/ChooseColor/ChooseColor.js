@@ -2,7 +2,7 @@ import React, { Component,useContext, useState} from 'react'
 import './ChooseColor.scss';
 import ProductContext from '../../../context/ProductContext';
 import { IoMdCheckmark} from 'react-icons/io';
-
+import ReactTooltip from 'react-tooltip'
 
 export default (props) => {
   const [colorSelect, onChangeColor] = useState('')
@@ -11,8 +11,10 @@ export default (props) => {
     onChangeColor(color);
     productDispatch({
       type: "SELECT_COLOR",
-      color: index
+      color: index,
+      hexa: color
     })
+    console.log(color)
   } 
 
   return (
@@ -22,6 +24,7 @@ export default (props) => {
            return <span></span>
          }
         return (
+          <p data-tip="blanc" data-background-color="#fff" data-place="bottom">
           <div
             onClick={() => onClickColor(color, index)}
             className="ChooseColor__item"
@@ -35,6 +38,8 @@ export default (props) => {
                 ""
               )}
           </div>
+            <ReactTooltip  />
+          </p>
         )
       })}
     </div>

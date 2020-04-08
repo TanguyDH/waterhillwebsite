@@ -10,9 +10,19 @@ import DatePicker from '../../UI/DatePicker/DatePicker';
 
 
 
+
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
+  console.log('productState', productState);
+  const [model, setModel] = useState('');
+  const [typeOfWater, setTypeOfWater] = useState('');
+  const [capType, setCapType] = useState('');
+  const [label, setLabel] = useState('');
+  const [quantity, setQuantity] = useState('');
+
+  console.log( model, typeOfWater, capType, label, quantity);
+
 
   const onchangeName = () => {
     if (props.pathname === '/product/PLA-VEGETAL-390ml') {
@@ -75,28 +85,7 @@ export default (props) => {
   }
   
 
-  const plugType = [
-    {
-      value: <div>Bouchon classique</div>,
-      label: (
-        <div
-          onClick={productDispatchClassic}
-        >
-          Bouchon classique
-        </div>
-      ),
-    },
-    {
-      value: <sapn>Bouchon sport</sapn>,
-      label: (
-        <div
-          onClick={productDispatchSport}
-        >
-          Bouchon sport
-        </div>
-      ),
-    },
-  ]
+  
 
   const switchCap = props.pathname === "/product/RPET-330ml" || props.pathname === "/product/RPET-500ml" ? [productDispatchClassic, productDispatchSport] : [() => {}];
 
@@ -107,7 +96,7 @@ export default (props) => {
     {
       value: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/PLA-VEGETAL-390ml"
         >
        Bouteilles PLA 100% végétal 390ml  
@@ -115,7 +104,7 @@ export default (props) => {
       ),
       label: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/PLA-VEGETAL-390ml"
         >
         Bouteilles PLA 100% végétal 390ml
@@ -125,43 +114,7 @@ export default (props) => {
     {
       value: (
         <Link
-          className="ProductDescription__bottleLink"
-          to="/product/VERRE-330ml"
-        >
-          Bouteilles VERRE 330ml
-                         </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/VERRE-330ml"
-        >
-          Bouteilles VERRE 330ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/VERRE-750ml"
-        >
-          Bouteilles VERRE 750ml
-                         </Link>
-      ),
-      label: (
-        <Link
-          className="ProductDescription__bottleLink"
-          to="/product/VERRE-750ml"
-        >
-          Bouteilles VERRE 750ml
-                         </Link>
-      ),
-    },
-    {
-      value: (
-        <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/RPET-330ml"
         >
           Bouteilles RPET 330ml
@@ -169,17 +122,17 @@ export default (props) => {
       ),
       label: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/RPET-330ml"
         >
-         Bouteilles RPET 330ml
+          Bouteilles RPET 330ml
                          </Link>
       ),
     },
     {
       value: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/RPET-500ml"
         >
           Bouteilles RPET 500ml
@@ -187,7 +140,7 @@ export default (props) => {
       ),
       label: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/RPET-500ml"
         >
           Bouteilles RPET 500ml
@@ -197,7 +150,44 @@ export default (props) => {
     {
       value: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
+          to="/product/VERRE-330ml"
+        >
+          Bouteilles VERRE 330ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductSelect__bottleLink"
+          to="/product/VERRE-330ml"
+        >
+          Bouteilles VERRE 330ml
+                         </Link>
+      ),
+    },
+    {
+      value: (
+        <Link
+          className="ProductSelect__bottleLink"
+          to="/product/VERRE-750ml"
+        >
+          Bouteilles VERRE 750ml
+                         </Link>
+      ),
+      label: (
+        <Link
+          className="ProductSelect__bottleLink"
+          to="/product/VERRE-750ml"
+        >
+          Bouteilles VERRE 750ml
+                         </Link>
+      ),
+    },
+   
+    {
+      value: (
+        <Link
+          className="ProductSelect__bottleLink"
           to="/product/TETRAPAK-500ml"
         >
           Bouteilles TETRAPAK 500ml
@@ -205,7 +195,7 @@ export default (props) => {
       ),
       label: (
         <Link
-          className="ProductDescription__bottleLink"
+          className="ProductSelect__bottleLink"
           to="/product/TETRAPAK-500ml"
         >
           TETRAPAK 500ml
@@ -213,7 +203,9 @@ export default (props) => {
       ),
     }
   ]
-  console.log('kerkalkgjr', props.capType.capType);
+
+
+ 
   return (
     <div className="ProductSelect">
       <div>
@@ -223,23 +215,24 @@ export default (props) => {
           defaultValue={[
             {
               value: (
-                <div className="ProductDescription__bottleLink">
+                <div className="ProductSelect__bottleLink">
                   {onchangeName()}
                 </div>
               ),
               label: (
-                <div className="ProductDescription__bottleLink">
+                <div className="ProductSelect__bottleLink">
                   {onchangeName()}
                 </div>
               ),
             },
           ]}
           options={modele}
+          onChange={(value) => setModel(value.value.props.children)}
         />
       </div>
       <div>
         <span>Type d'eau :</span>
-        <Select defaultValue={props.typeOfWaterDefault.typeOfWaterDefault} options={props.typeOfWater.typeOfWater} />
+        <Select onChange={(value) => { setTypeOfWater(value.value)}} defaultValue={props.typeOfWaterDefault.typeOfWaterDefault} options={props.typeOfWater.typeOfWater} />
        
       </div>
       <div className="ProductSelect__moq">
@@ -249,8 +242,9 @@ export default (props) => {
       <div>
         <span>Type de bouchon :</span>
    
-        <Select defaultValue={props.capTypeDefault.capTypeDefault} 
+        <Select onChange={(value) => { setCapType(value.value)}} defaultValue={props.capTypeDefault.capTypeDefault} 
           options={props.capType.capType.map((capType, index) => {
+            
             return {
               value: capType.value,
               label: <div onClick={switchCap[index]} >{capType.label}</div>
@@ -265,19 +259,21 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        <Select defaultValue={props.labelDefault.labelDefault} options={props.label.label} />
+        <Select onChange={(value) => setLabel(value.value)} defaultValue={props.labelDefault.labelDefault} options={props.label.label} />
        
       </div>
       <div>
         <span>Quantité :</span>
         <Select
-          onChange={(v) => console.log("Quantité", v)}
+          onChange={(value) => setQuantity(value.value)}
          options={props.quantity.quantity}
           />
       </div>
       <div>
         <span>Date de livraison souhaité :</span>
-         <DatePicker />
+     
+        <DatePicker productDispatch={productDispatch} />
+      
       </div>
       <div className="ProductSelect__sample">
         <input type="checkbox" />
