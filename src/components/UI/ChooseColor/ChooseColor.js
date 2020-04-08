@@ -20,17 +20,17 @@ export default (props) => {
   return (
     <div className="ChooseColor">
       {props.colorsCap.map((color, index) => {
-         if(color === '') {
+        if (color.hexa === '') {
            return <span></span>
          }
         return (
-          <p data-tip="blanc" data-background-color="#fff" data-place="bottom">
+          <p data-tip={color.color} data-background-color="#fff" >
           <div
-            onClick={() => onClickColor(color, index)}
+              onClick={() => onClickColor(color.hexa, index)}
             className="ChooseColor__item"
-            style={{ backgroundColor: `${color}` }}
+              style={{ backgroundColor: `${color.hexa}` }}
           >
-            {colorSelect === color ? (
+              {colorSelect === color.hexa ? (
               <span>
                 <IoMdCheckmark />
               </span>

@@ -15,12 +15,14 @@ export const query = graphql`
              price
              moq
            
-             colorsCap {colors}
-            colorsCapClassic {colors}
-             colorsCapSport {colors}
+             colorsCap {colors {hexa, color}}
+            colorsCapClassic {colors {hexa, color}}
+             colorsCapSport {colors {hexa, color}}
+
              article {
                json
              }
+             
              gallery {
                file {
                  url
