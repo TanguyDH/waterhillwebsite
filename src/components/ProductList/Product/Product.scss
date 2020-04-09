@@ -55,7 +55,10 @@
     font-weight: bold;
     text-transform: uppercase;
     color: rgb(61, 61, 61);
-  
+    
+    &:hover,:link,:focus {
+         color: rgb(61, 61, 61);
+    }
 
 }
 
