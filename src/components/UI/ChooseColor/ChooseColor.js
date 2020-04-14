@@ -24,7 +24,7 @@ export default (props) => {
            return <span></span>
          }
         return (
-          <p data-tip={color.color} data-background-color="#fff" >
+          <p data-tip={color.color}  >
           <div
               onClick={() => onClickColor(color.hexa, index)}
             className="ChooseColor__item"
