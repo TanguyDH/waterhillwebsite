@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 export default () => {
     const data = useStaticQuery(graphql`
       query {
-        allContentfulBlog {
+        allContentfulBlog (sort: { fields: date, order: DESC }) {
           edges {
             node {
               id
