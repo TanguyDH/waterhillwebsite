@@ -1,6 +1,14 @@
 
 
+   .Commitment__logo {
+        width: 15vw;
+        margin-left: 1rem;
+   } 
+  
 .Commitment {
+
+  
+
      &__content {
         
         color: #fff;
@@ -21,9 +29,9 @@
             line-height: 3vw;
         
 
-              img {
-                  width: 3.5rem;
-              }
+            //   img {
+            //       width: 3.5rem;
+            //   }
 
         }
         p {
@@ -34,7 +42,7 @@
    &__section1 {
        .Commitment__content {
            position: absolute;
-        top: 35%;
+        top: 32%;
         left: 50%;
         transform: translate(-50%,-88%);
        }

@@ -6,6 +6,8 @@ import FIEBVIWF from "../../assets/img/logo/FIEBVIWF.png"
 import GraindeDeVie from "../../assets/img/transparent-GDV.png"
 import Fost from "../../assets/img/logo/logo_fost.png"
 import Cpf from "../../assets/img/logo/cfp-2014.png"
+
+import logoWhite from '../../assets/img/WH_logo_R_text_White.png';
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 import anime from '../../assets/img/OK_animate[1].gif';
@@ -76,7 +78,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>Waterhill, notre vision du futur</h3>
+                      <h3><img className="Commitment__logo" src={logoWhite} />, notre vision du futur</h3>
                       <p>
                         Une vision ambitieuse du développement durable autour de
                         3 piliers : La ressource en eau, l’empreinte carbone et
@@ -119,7 +121,7 @@ export default () => {
                     <Fade bottom>
                       <h3>
                         L'économie circulaire, le présent et l'avenir de
-                        Waterhill
+                        <img className="Commitment__logo" src={logoWhite} />
                       </h3>
                       <p>
                         Prendre soin de l'environnement est une réalité
@@ -144,7 +146,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3>Waterhill, collabore avec...</h3>
+                      <h3><img className="Commitment__logo" src={logoWhite} />, collabore avec...</h3>
                       <div className="Commitment__logos">
                         <div>
                           <a

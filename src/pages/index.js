@@ -6,7 +6,7 @@
   import Poducts from '../components/Products/Products';
   import CaseStudies from "../components/CaseStudies/CaseStudies"
   import Testimony from '../components/Testimony/Testimony';
-  // import SocialNetwork from '../components/SocialNetwork/SocialNetwork';
+import ContactCircle from '../components/ContactCircle/ContactCircle';
   import Vison from '../components/Vision/Vision';
 import WhyUs from '../components/WhyUs/WhyUs';
 
@@ -20,6 +20,7 @@ import WhyUs from '../components/WhyUs/WhyUs';
           <WhyUs />
           <CaseStudies />
           <Testimony />
+          <ContactCircle />
         </Layout>
       )
     }
