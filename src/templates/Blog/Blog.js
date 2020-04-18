@@ -26,6 +26,7 @@ import {
   WorkplaceShareButton,
 } from "react-share"
 import Img from "gatsby-image"
+import ContactCircle from '../../components/ContactCircle/ContactCircle';
 
 export const query = graphql`
          query($id: String!) {
@@ -80,6 +81,7 @@ const Blog = (props) => {
             </FacebookShareButton>
           </div>
         </div>
+        <ContactCircle />
       </Layout>
     )
 }

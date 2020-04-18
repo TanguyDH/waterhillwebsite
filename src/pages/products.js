@@ -3,7 +3,7 @@ import React, { Component } from 'react'
   import ProductsBackground from "../components/ProductsBackground/ProductsBackground";
   import ProductList from "../components/ProductList/ProductList";
 import SocialNetwork from '../components/SocialNetwork/SocialNetwork';
-
+import ContactCircle from '../components/ContactCircle/ContactCircle';
   export default class Products extends Component {
     render() {
       return (
@@ -11,6 +11,7 @@ import SocialNetwork from '../components/SocialNetwork/SocialNetwork';
           <ProductsBackground />
           <ProductList />
           <SocialNetwork />
+          <ContactCircle />
         </Layout>
       )
     }

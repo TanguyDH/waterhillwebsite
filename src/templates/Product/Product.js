@@ -2,7 +2,7 @@ import React from 'react'
 import './Product.scss';
 import Layout from '../../components/Layout/Layout';
 import ProductDescription from '../../components/ProductDescription/ProductDescription';
-
+import ContactCircle from '../../components/ContactCircle/ContactCircle';
 
 import { graphql } from "gatsby";
 
@@ -83,7 +83,8 @@ export const query = graphql`
           capType={props.data.contentfulProduct.capType}
           capTypeDefault={props.data.contentfulProduct.capTypeDefault}
         />
-      
+        <ContactCircle />
+
       </Layout>
     )
 } 

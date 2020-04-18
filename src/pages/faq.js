@@ -5,7 +5,7 @@
     import FaqHeader from "../components/Faq/FaqHeader/FaqHeader"
     import FaqQuestionList from "../components/Faq/FaqQuestionList/FaqQuestionList"
     // import SocialNetwork from "../components/SocialNetwork/SocialNetwork"
-
+import ContactCircle from '../components/ContactCircle/ContactCircle';
     export default class Faq extends Component {
         state = {
             text: ''
@@ -21,7 +21,7 @@
                 <Layout blue={true}>
                     <FaqHeader text={this.state.text} onTextChange={this.onTextChange} />
                     <FaqQuestionList text={this.state.text} />
-                
+                    <ContactCircle />
                 </Layout>
             )
         }
