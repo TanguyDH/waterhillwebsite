@@ -10,13 +10,17 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "start:lambda": "netlify-lambda serve functions",
+    "build:lambda": "netlify-lambda build functions",
+    "prod": "npm run build; npm run build:lamba"
   },
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@brainhubeu/react-carousel": "^1.10.17",
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "@fullpage/react-fullpage": "^0.1.16",
+    "axios": "^0.19.2",
     "babel-preset-gatsby": "^0.2.22",
     "env-cmd": "^9.0.3",
     "gatsby": "^2.11.7",
