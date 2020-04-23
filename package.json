@@ -64,7 +64,9 @@
     "react-toggle-display": "^2.2.0",
     "react-tooltip": "^3.11.1",
     "react-video-cover": "^1.2.2",
-    "slick-carousel": "^1.8.1"
+    "reshake": "^1.2.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "http-proxy-middleware": "^0.20.0",
