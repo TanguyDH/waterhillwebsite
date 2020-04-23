@@ -13,7 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "start:lambda": "netlify-lambda serve functions",
     "build:lambda": "netlify-lambda build functions",
-    "prod": "npm run build; npm run build:lamba"
+    "prod": "npm run build; npm run build:lambda"
   },
   "dependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
