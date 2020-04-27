@@ -3,7 +3,7 @@ import "./Footer.scss"
 import Logo from "../../assets/img/logo.png"
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa"
 // import ChooseCountry from '../UI/ChooseCountry/ChooseCountry';
-
+import { sentForm } from "../../../lib/functions";
 
 
 const Footer = () => (
@@ -62,6 +62,9 @@ const Footer = () => (
 
       <div className="Footer__contactus">
         <h4>Contactez-nous</h4>
+        <button onClick={() => {
+          sentForm() 
+        }}>buttttton</button>
         <div>
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
           <a href="tel:+3281220440">Téléphone : +32 81 220 440</a>

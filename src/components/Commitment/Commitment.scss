@@ -1,9 +1,11 @@
 
 
    .Commitment__logo {
-        width: 15vw;
+        width: 11vw;
         margin-left: 1rem;
    } 
+
+ 
   
 .Commitment {
 
@@ -78,7 +80,7 @@
         top: 75%;
         left: 50%;
         transform: translate(-50%,-88%);
-        img {
+        .Commitment__anime {
             margin-top: 4rem;
            width:  10vw;
        }
@@ -103,7 +105,7 @@
         margin-top: 30vh;
     }
     .Commitment__content {
-          
+        
         height: 100%;
        display: flex;
        flex-direction: column;

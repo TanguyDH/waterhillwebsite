@@ -133,7 +133,7 @@ export default () => {
                         l'ADN de Waterhill.
                       </p>
 
-                      <img src={anime} alt="" />
+                      <img className='Commitment__anime' src={anime} alt="" />
                     </Fade>
                   </div>
                 </BackgroundImage>
