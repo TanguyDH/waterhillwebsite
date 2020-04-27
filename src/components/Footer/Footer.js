@@ -62,10 +62,7 @@ const Footer = () => (
 
       <div className="Footer__contactus">
         <h4>Contactez-nous</h4>
-        <button onClick={() => {
-          sentForm() 
-        }}>buttttton</button>
-        <div>
+       
           <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
           <a href="tel:+3281220440">Téléphone : +32 81 220 440</a>
           <a href="tel:+32489119911">Mobile : +32 489 11 99 11</a>
@@ -84,3 +81,9 @@ const Footer = () => (
 )
 
 export default Footer;
+
+
+// <button onClick={() => {
+//   sentForm()
+// }}>buttttton</button>
+//   <div>
