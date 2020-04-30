@@ -13,10 +13,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import anime from '../../assets/img/OK_animate[1].gif';
 import ReactTooltip from "react-tooltip"
 
-// const pluginWrapper = () => {
-//   require("./static/fullpage.scrollHorizontally.min.js")
-// }
-// pluginWrapper = { pluginWrapper }
+
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -78,7 +75,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3><img className="Commitment__logo" src={logoWhite} />, notre vision du futur</h3>
+                      <h3><img className="Commitment__logo" src={logoWhite} alt="logo"  />, notre vision du futur</h3>
                       <p>
                         Une vision ambitieuse du développement durable autour de
                         3 piliers : La ressource en eau, l’empreinte carbone et
@@ -121,7 +118,7 @@ export default () => {
                     <Fade bottom>
                       <h3>
                         L'économie circulaire, le présent et l'avenir de
-                        <img className="Commitment__logo" src={logoWhite} />
+                        <img className="Commitment__logo" src={logoWhite} alt="logo" />
                       </h3>
                       <p>
                         Prendre soin de l'environnement est une réalité
@@ -133,7 +130,7 @@ export default () => {
                         l'ADN de Waterhill.
                       </p>
 
-                      <img className='Commitment__anime' src={anime} alt="" />
+                      <img className='Commitment__anime' src={anime} alt="anime" />
                     </Fade>
                   </div>
                 </BackgroundImage>
@@ -146,7 +143,7 @@ export default () => {
                 >
                   <div className="Commitment__content">
                     <Fade bottom>
-                      <h3><img className="Commitment__logo" src={logoWhite} />, collabore avec...</h3>
+                      <h3><img className="Commitment__logo" src={logoWhite} alt="whitelogo"  />, collabore avec...</h3>
                       <div className="Commitment__logos">
                         <div>
                           <a

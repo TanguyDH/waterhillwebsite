@@ -4,7 +4,6 @@ import { FaComments, FaFacebookMessenger, FaWhatsapp, FaEnvelope} from 'react-ic
 import { IoIosClose} from 'react-icons/io'
 import Fade from 'react-reveal/Fade';
 import Rotate from 'react-reveal/Rotate';
-import { Shake } from 'reshake'
 
 export default function componentName() {
     const [toggle, setToggle] = useState(false)

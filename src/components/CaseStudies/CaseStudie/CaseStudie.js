@@ -4,9 +4,6 @@ import { FaArrowLeft, FaArrowRight} from 'react-icons/fa';
 import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css"
 import {IoIosClose} from 'react-icons/io';
-// import logo from '../../../assets/img/logobentley.png';
-import logo from '../../../assets/img/porsche-logo.png';
-import auto from '../../../assets/img/auto2.jpeg';
 import bg from "../../../assets/img/bg4.jpg"
 import auto2 from '../../../assets/img/auto2.jpg';
 import {Link} from 'gatsby';

@@ -2,8 +2,7 @@ import React from "react"
 import "./Footer.scss"
 import Logo from "../../assets/img/logo.png"
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa"
-// import ChooseCountry from '../UI/ChooseCountry/ChooseCountry';
-import { sentForm } from "../../../lib/functions";
+
 
 
 const Footer = () => (
@@ -63,9 +62,12 @@ const Footer = () => (
       <div className="Footer__contactus">
         <h4>Contactez-nous</h4>
         <div>
-          <a href="mailto:contact@waterhill.be">contact@waterhill.be</a>
-          <a href="tel:+3281220440">Téléphone : +32 81 220 440</a>
-          <a href="tel:+32489119911">Mobile : +32 489 11 99 11</a>
+          <a rel="noopener noreferrer"
+            target="_blank" href="mailto:contact@waterhill.be">contact@waterhill.be</a>
+          <a rel="noopener noreferrer"
+            target="_blank" href="tel:+3281220440">Téléphone : +32 81 220 440</a>
+          <a rel="noopener noreferrer"
+            target="_blank" href="tel:+32489119911">Mobile : +32 489 11 99 11</a>
           <p>Lund - Vend 8h-22h, Sam 9h-18h</p>
           <div className="Footer__logo-box">
             <img className="Footer__logo" src={Logo} alt="logo" />
@@ -82,8 +84,3 @@ const Footer = () => (
 
 export default Footer;
 
-
-// <button onClick={() => {
-//   sentForm()
-// }}>buttttton</button>
-//   

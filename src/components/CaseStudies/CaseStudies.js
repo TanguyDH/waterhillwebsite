@@ -3,8 +3,6 @@ import './CaseStudies.scss'
 import CaseStudie from "./CaseStudie/CaseStudie"
 import { graphql, useStaticQuery } from "gatsby"
 
-const caseStudies = [1,2,3,4,5,6];
-// (sort: { fields: order, order: ASC }) 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
@@ -45,6 +43,7 @@ export default () => {
            
             return (
               <CaseStudie
+                key={edge.node.index}
                 index={edge.node.index}
                 mainImage={edge.node.mainImage.file.url}
                 logo={edge.node.logo.file.url}

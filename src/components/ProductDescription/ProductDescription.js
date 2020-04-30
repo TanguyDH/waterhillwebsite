@@ -1,8 +1,7 @@
-import React, {useReducer, useState} from 'react'
+import React, {useReducer} from 'react'
 import './ProductDescription.scss';
 
 import ProductText from "./ProductText/ProductText"
-// import ProductCarousel from './ProductCarousel/ProductCarousel';
 import ProductQuestion from'./ProductQuestion/ProductQuestion';
 import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductSelect from "./ProductSelect/ProductSelect";

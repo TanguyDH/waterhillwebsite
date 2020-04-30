@@ -9,7 +9,7 @@ class ProductQuestion extends React.Component {
  }
 
   render() {
-    const { activeIndex } = this.state;
+    
     return (
       <div className="ProductQuestion">
         <h3 className="ProductQuestion__title">

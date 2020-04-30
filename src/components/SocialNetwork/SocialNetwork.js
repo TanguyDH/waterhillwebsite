@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './SocialNetwork.scss';
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
+// import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import insta2 from "../../assets/img/socialNetwork/insta2.jpg"
 import insta7 from "../../assets/img/socialNetwork/insta7.jpg";
 import insta8 from "../../assets/img/socialNetwork/insta8.jpg"

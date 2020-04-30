@@ -2,28 +2,12 @@ import React from 'react'
 import './FaqQuestionList.scss';
 import FaqQuestionItem from "./FaqQuestionItem/FaqQuestionItem"
 import data from './data.js';
-import { graphql, useStaticQuery } from "gatsby"
 
 
 
 
 export default (props) => {
-  const datas = useStaticQuery(graphql`
-      query {
-       allContentfulFaq {
-       edges {
-        node {
-        faq {
-          faq {
-            question,
-            response
-          }
-        }
-      }
-    }
-  }
-  }
-  `)
+
   const selector = (data, text) => {
   
    

@@ -2,9 +2,6 @@ import React, { Component ,useState } from 'react'
 import './SideNavigation.scss';
 import logo from '../../assets/img/blueLogo.png'; 
 import Modal from "react-modal";
-import { MdDragHandle} from 'react-icons/md';
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import SelectLanguage from '../SelectLanguage/SelectLanguage';

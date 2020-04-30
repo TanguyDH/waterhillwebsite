@@ -4,8 +4,6 @@ import Modal from "react-modal"
 import belgium from "../../assets/img/flags/belgium.png"
 import france from "../../assets/img/flags/france.png"
 import europe from '../../assets/img/flags/europe.png';
-import luxembourg from "../../assets/img/flags/luxembourg.png"
-import netherlands from "../../assets/img/flags/netherlands.png"
 import { IoMdClose } from "react-icons/io"
 import Collapsible from "react-collapsible"
 

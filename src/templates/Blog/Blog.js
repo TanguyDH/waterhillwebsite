@@ -5,25 +5,8 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 // import SocialNetwork from '../../components/SocialNetwork/SocialNetwork';
 import {
-  EmailShareButton,
   FacebookShareButton,
-  FacebookIcon,
-  InstapaperShareButton,
-  LineShareButton,
-  LinkedinShareButton,
-  LivejournalShareButton,
-  MailruShareButton,
-  OKShareButton,
-  PinterestShareButton,
-  PocketShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TumblrShareButton,
-  TwitterShareButton,
-  ViberShareButton,
-  VKShareButton,
-  WhatsappShareButton,
-  WorkplaceShareButton,
+  FacebookIcon
 } from "react-share"
 import Img from "gatsby-image"
 import ContactCircle from '../../components/ContactCircle/ContactCircle';

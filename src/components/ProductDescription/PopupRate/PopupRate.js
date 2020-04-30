@@ -1,11 +1,10 @@
-import React, {useContext, useState} from 'react'
+import React, { useState} from 'react'
 import './PopupRate.scss';
 import Modal from "react-modal";
-import ProductContext from '../../../context/ProductContext';
 import { FaRegCheckCircle} from 'react-icons/fa';
-
+import axios from 'axios';
 export default () => {
-  const { productDispatch } = useContext(ProductContext)
+  // const { productDispatch } = useContext(ProductContext)
  const [modalState, setModal] = useState(false)
   
 
@@ -90,7 +89,9 @@ export default () => {
               <input type="text" placeholder="Email" />
             </div>
 
-            <button>Envoyer</button>
+            <button onClick={() =>{
+
+            }}>Envoyer</button>
           </div>
         </div>
       </Modal>
