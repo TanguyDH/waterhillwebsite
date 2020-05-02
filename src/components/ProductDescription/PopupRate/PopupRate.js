@@ -2,6 +2,7 @@ import React, { useState} from 'react'
 import './PopupRate.scss';
 import Modal from "react-modal";
 import { FaRegCheckCircle} from 'react-icons/fa';
+import { IoMdClose} from 'react-icons/io'
 import axios from 'axios';
 export default () => {
   // const { productDispatch } = useContext(ProductContext)
@@ -20,6 +21,7 @@ export default () => {
         className="Modal"
         overlayClassName="Overlay"
       >
+        <div onClick={() => setModal(false)} className="PopupRate__close"><IoMdClose /></div>
         <div className="PopupRate">
           <div className="PopupRate__info">
             <div className="PopupRate__info-title">
