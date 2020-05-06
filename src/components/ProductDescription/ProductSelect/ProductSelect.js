@@ -209,7 +209,7 @@ export default (props) => {
   return (
     <div className="ProductSelect">
       <div>
-        <span>Modèle :</span>
+        <span>Modèle : </span>
         <Select
           onChange={(v) => console.log(v)}
           defaultValue={[
@@ -231,7 +231,7 @@ export default (props) => {
         />
       </div>
       <div>
-        <span>Type d'eau :</span>
+        <span>Type d'eau :  </span>
         <Select onChange={(value) => { setTypeOfWater(value.value)}} defaultValue={props.typeOfWaterDefault.typeOfWaterDefault} options={props.typeOfWater.typeOfWater} />
        
       </div>

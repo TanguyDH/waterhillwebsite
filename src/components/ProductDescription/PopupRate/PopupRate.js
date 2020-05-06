@@ -18,7 +18,7 @@ export default () => {
       <Modal
         isOpen={modalState}
         onRequestClose={() => setModal(false)}
-        className="Modal"
+        className="PopupRateM"
         overlayClassName="Overlay"
       >
         <div onClick={() => setModal(false)} className="PopupRate__close"><IoMdClose /></div>

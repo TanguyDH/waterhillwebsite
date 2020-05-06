@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './CaseStudies.scss'
 import CaseStudie from "./CaseStudie/CaseStudie"
 import { graphql, useStaticQuery } from "gatsby"
+import { FaAngleRight} from 'react-icons/fa'
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -34,6 +35,8 @@ export default () => {
   }
 
     `)
+
+    const [toggle, setToggle] = useState(false)
   return (
     <div className="caseStudies">
       <div className="caseStudies__content">
@@ -48,11 +51,16 @@ export default () => {
                 mainImage={edge.node.mainImage.file.url}
                 logo={edge.node.logo.file.url}
                 brandName={edge.node.brandName}
+                toggle={toggle}
               />
             )
           })}
         </div>
+        <div className="caseStudies__seeMore">
+          <span onClick={() => setToggle(!toggle)}>{toggle ? 'VOIR MOINS' : 'VOIR PLUS'}</span> <FaAngleRight className="caseStudies__icon" />
+        </div>
       </div>
+     
     </div>
   )
 }

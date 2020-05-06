@@ -12,10 +12,18 @@
 font-size: 1.7rem;
 border-radius: 3px;
 padding: .3rem 1.5rem;
-border: 1px solid #999;
+border: 1px solid #ccc;
+font-weight: 300 !important;
+
 
 }
 
+
+.react-date-picker__inputGroup__leadingZero {
+    font-weight: 300 !important;
+    font-size: 1.7rem !important;
+    color: black !important;
+}
 
 .react-date-picker__inputGroup {
    
