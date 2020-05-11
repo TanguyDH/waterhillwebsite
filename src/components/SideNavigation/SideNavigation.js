@@ -1,6 +1,6 @@
 import React, { Component ,useState } from 'react'
 import './SideNavigation.scss';
-import logo from '../../assets/img/blueLogo.png'; 
+import logo from '../../assets/img/logoLandscapeBlue.png'; 
 import Modal from "react-modal";
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'gatsby';
