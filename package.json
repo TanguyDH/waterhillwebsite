@@ -44,6 +44,8 @@
     "mdbreact": "^4.18.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
+    "nodemailer": "^6.4.6",
+    "querystring": "^0.2.0",
     "react": "^16.8.6",
     "react-collapsible": "^2.6.0",
     "react-color": "^2.17.3",
@@ -71,7 +73,8 @@
     "react-video-cover": "^1.2.2",
     "reshake": "^1.2.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "twilio": "^3.43.0"
   },
   "devDependencies": {
     "http-proxy-middleware": "^0.20.0",

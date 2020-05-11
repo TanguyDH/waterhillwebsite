@@ -3,7 +3,8 @@ import './PopupRate.scss';
 import Modal from "react-modal";
 import { FaRegCheckCircle} from 'react-icons/fa';
 import { IoMdClose} from 'react-icons/io'
-import axios from 'axios';
+import { sentForm} from '../../../../lib/functions';
+
 export default () => {
   // const { productDispatch } = useContext(ProductContext)
  const [modalState, setModal] = useState(false)
@@ -92,7 +93,7 @@ export default () => {
             </div>
 
             <button onClick={() =>{
-
+              sentForm('ssisi');  
             }}>Envoyer</button>
           </div>
         </div>
