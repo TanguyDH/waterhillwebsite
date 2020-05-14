@@ -17,7 +17,7 @@ const Product = props => (
         <p className="product__title">{props.description}</p>
         <p className="product__description">{props.description1}</p>
       </div>
-      <FaAngleRight className="product__icon" />
+     
     </div>
   </Link>
 )

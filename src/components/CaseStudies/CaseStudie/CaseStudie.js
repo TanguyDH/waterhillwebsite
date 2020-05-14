@@ -31,7 +31,7 @@ class CaseStudie extends Component {
           this.props.index === 1 ? "caseStudie--1" : ""
         }`
       const className2 = `${
-        this.props.index >3 ? "caseStudie__none" : ""
+        this.props.index >6 ? "caseStudie__none" : ""
         }`
 
         return (
