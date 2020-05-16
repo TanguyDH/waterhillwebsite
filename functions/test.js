@@ -83,7 +83,7 @@ exports.handler = function(event, context, callback) {
     
 
     const mailOptions = {
-      from: email, // sender address
+      from: "tanguydeherdt@gmail.com", // sender address
       to: "tanguydeherdt@hotmail.com", // list of receivers
       subject: `Message from ${name} to FoodAllergyFriendly website`, // Subject line
       html: `${name} avec l'adresse ${email} et le numéro de téléphone ${phone} a écrit ceci: <br> <p>${message}</p>`, // plain text body
@@ -93,7 +93,8 @@ exports.handler = function(event, context, callback) {
       else console.log(info)
     })
   }
-  sendMail(name, email, phone, message)
+
+  sendMail(name, email, phone, message);
 
   callback(null, {
     statusCode: 200,
