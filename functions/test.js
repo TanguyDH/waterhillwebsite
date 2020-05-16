@@ -69,8 +69,6 @@ const nodemailer = require("nodemailer")
 
 exports.handler = function(event, context, callback) {
  
-
-  console.log(event.body);
   const { name, email, phone, message } = JSON.parse(event.body)
   const sendMail = (name, email, phone, message) => {
    
@@ -96,8 +94,13 @@ exports.handler = function(event, context, callback) {
     })
   }
   sendMail(name, email, phone, message)
+
   callback(null, {
     statusCode: 200,
     body: "Merci !",
   })
+
+
+
+
 }

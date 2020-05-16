@@ -22,7 +22,9 @@ export default () => {
         className="PopupRateM"
         overlayClassName="Overlay"
       >
-        <div onClick={() => setModal(false)} className="PopupRate__close"><IoMdClose /></div>
+        <div onClick={() => setModal(false)} className="PopupRate__close">
+          <IoMdClose />
+        </div>
         <div className="PopupRate">
           <div className="PopupRate__info">
             <div className="PopupRate__info-title">
@@ -92,9 +94,7 @@ export default () => {
               <input type="text" placeholder="Email" />
             </div>
 
-            <button onClick={() =>{
-              sentForm('ssisi');  
-            }}>Envoyer</button>
+            <button onClick={() => sentForm({})}>Envoyer</button>
           </div>
         </div>
       </Modal>
