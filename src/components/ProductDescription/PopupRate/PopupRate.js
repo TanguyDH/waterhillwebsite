@@ -94,7 +94,7 @@ export default () => {
               <input type="text" placeholder="Email" />
             </div>
 
-            <button onClick={sentForm({})}>Envoyer</button>
+            <button onClick={() => sentForm({})}>Envoyer</button>
           </div>
         </div>
       </Modal>
