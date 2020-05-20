@@ -74,6 +74,8 @@ exports.handler = function(event, context, callback) {
    
     const transporter = nodemailer.createTransport({
       service: "gmail",
+      port: 465,
+      secure: true,
       auth: {
         user: "tanguydeherdt@gmail.com",
         pass: "wendyam1806",
