@@ -94,13 +94,15 @@ exports.handler = function(event, context, callback) {
     })
   }
 
-  sendMail(name, email, phone, message);
+  return sendMail(name, email, phone, message).then(() => {
+    callback(null, {
+      statusCode: 200,
+      body: "Merci !",
+    })
 
-  callback(null, {
-    statusCode: 200,
-    body: "Merci !",
   })
 
+ 
 
 
 
