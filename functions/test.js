@@ -59,7 +59,9 @@ exports.handler = function (event, context, callback) {
   // const body = JSON.parse(event.body)
   // const message = body.message
 
-  client.setApiKey(process.env.SENDGRID_API_KEY)
+  // client.setApiKey(process.env.SENDGRID_API_KEY)
+
+  client.setApiKey('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')
 
   sendEmail(
     client,
@@ -86,8 +88,6 @@ exports.handler = function (event, context, callback) {
    
 //     const transporter = nodemailer.createTransport({
 //       service: "gmail",
-//       port: 465,
-//       secure: true,
 //       auth: {
 //         user: "tanguydeherdt@gmail.com",
 //         pass: "wendyam1806",
