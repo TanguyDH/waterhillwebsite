@@ -87,6 +87,9 @@ exports.handler = function(event, context, callback) {
   const sendMail = (name, email, phone, message) => {
    
     const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true, 
       service: "gmail",
       auth: {
         user: "tanguydeherdt@gmail.com",
