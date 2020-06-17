@@ -79,90 +79,90 @@
 
 
 
-const nodemailer = require("nodemailer")
+// const nodemailer = require("nodemailer")
 
-exports.handler = function(event, context, callback) {
+// exports.handler = function(event, context, callback) {
  
-  // const { name, email, phone, message } = JSON.parse(event.body)
-  const sendMail = (name, email, phone, message) => {
+//   // const { name, email, phone, message } = JSON.parse(event.body)
+//   const sendMail = (name, email, phone, message) => {
    
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false, 
-      service: "gmail",
-      auth: {
-        user: process.env.USER,
-        pass: process.env.PASS,
-      },
-    })
+//     const transporter = nodemailer.createTransport({
+//       host: 'smtp.gmail.com',
+//       port: 587,
+//       secure: false, 
+//       service: "gmail",
+//       auth: {
+//         user: process.env.USER,
+//         pass: process.env.PASS,
+//       },
+//     })
 
     
 
-    const mailOptions = {
-      from: "tanguydeherdt@gmail.com", // sender address
-      to: "tanguydeherdt@hotmail.com", // list of receivers
-      subject: `Message from ${name} to FoodAllergyFriendly website`, // Subject line
-      html: `${name} avec l'adresse ${email} et le numéro de téléphone ${phone} a écrit ceci: <br> <p>${message}</p>`, // plain text body
-    }
-    transporter.sendMail(mailOptions, function(err, info) {
-      if (err) console.log(err)
-      else console.log(info)
-    })
-  }
+//     const mailOptions = {
+//       from: "tanguydeherdt@gmail.com", // sender address
+//       to: "tanguydeherdt@hotmail.com", // list of receivers
+//       subject: `Message from ${name} to FoodAllergyFriendly website`, // Subject line
+//       html: `${name} avec l'adresse ${email} et le numéro de téléphone ${phone} a écrit ceci: <br> <p>${message}</p>`, // plain text body
+//     }
+//     transporter.sendMail(mailOptions, function(err, info) {
+//       if (err) console.log(err)
+//       else console.log(info)
+//     })
+//   }
 
-  // sendMail(name, email, phone, message);
-  sendMail();
+//   // sendMail(name, email, phone, message);
+//   sendMail();
 
-  callback(null, {
-    statusCode: 200,
-    body: "Merci !",
-  })
-
-
-
-
-}
+//   callback(null, {
+//     statusCode: 200,
+//     body: "Merci !",
+//   })
 
 
 
-// const sgMail = require('@sendgrid/mail');
 
-// exports.handler = function (event, context, callback) {
-
-//   // const emails = {
-//   //   Marketing: 'marketing@helloworld.com',
-//   //   Sales: 'sales@helloworld.com'
-//   // };
-
-//   const msg = {
-//     to: 'tanguydeherdt@hotmail.com',
-//     from: 'tanguydeherdt@hotmail.com',
-//     subject: 'New Contact Form Submission',
-//     text: 'text',
-//     html: 'html',
-//   };
+// }
 
 
-//   // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-//   sgMail.setApiKey("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")
 
-//   // Send the message.
-//    sgMail
-//     .send(msg)
-//     // .then(() => {
+const sgMail = require('@sendgrid/mail');
+
+exports.handler = function (event, context, callback) {
+
+  // const emails = {
+  //   Marketing: 'marketing@helloworld.com',
+  //   Sales: 'sales@helloworld.com'
+  // };
+
+  const msg = {
+    to: 'tanguydeherdt@gmail.com',
+    from: '	tanguydeherdt@hotmail.com ',
+    subject: 'New Contact Form Submission',
+    text: 'text',
+    html: 'html',
+  };
+
+
+  // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey("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")
+
+  // Send the message.
+   sgMail
+    .send(msg)
+    .then(() => {
  
-//     //   console.log(msg);
+      console.log(msg);
 
-//       // callback(null, {
-//       //   statusCode: 200,
-//       //   body: JSON.stringify(msg),
-//       // });
-//     // })
-//     // .catch(error => callback(error));
+      callback(null, {
+        statusCode: 200,
+        body: JSON.stringify(msg),
+      });
+    })
+    .catch(error => callback(error));
 
-//       callback(null, {
-//         statusCode: 200,
-//         body: JSON.stringify(msg),
-//       });
-// };
+      // callback(null, {
+      //   statusCode: 200,
+      //   body: JSON.stringify(msg),
+      // });
+};

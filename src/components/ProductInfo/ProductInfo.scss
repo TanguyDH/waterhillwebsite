@@ -1,0 +1,40 @@
+
+
+
+.ProductInfo {
+    width: 120rem;
+    margin: 0 auto;
+   
+
+    &__item {
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 6rem;
+    }
+     
+ 
+    &__text {
+        width: 38%;
+        display: flex;
+       justify-content: center;
+        flex-direction: column;
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color:  var(--color-primary);
+            font-weight: 500;
+            line-height: 32px;
+        }
+        p {
+             font-size: 1.6rem;
+             font-weight: 400;
+        }
+    }
+
+    img {
+       
+         width: 58%;
+         min-height: 45rem;
+         object-fit: cover;
+    }
+}
