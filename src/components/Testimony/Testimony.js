@@ -3,12 +3,16 @@ import './Testimony.scss';
 import TestimonyItem from './TestimonyItem/TestimonyItem';
 import Slider from "react-slick";
 // import video from '../../assets/video/Cascade - 7334 (1).mp4';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 import boris from '../../assets/img/testimony/boris.jpg';
 import elisabeth from '../../assets/img/testimony/elisabeth.jpg';
 import geraldine from '../../assets/img/testimony/geraldine.jpg';
 import serge from "../../assets/img/testimony/serge.jpg"
 import Leslie from "../../assets/img/testimony/Leslie.png"
 import caroline from "../../assets/img/testimony/caroline.jpg"
+
+import Carousel from "@brainhubeu/react-carousel"
+import "@brainhubeu/react-carousel/lib/style.css"
 
 
 
@@ -28,41 +32,41 @@ class Testimony extends React.Component {
       //   0: { items: 1 },
       //   1024: { items: 3 },
       // }
-      var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1400,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-        // nextArrow: <SampleNextArrow />,
-        // prevArrow: <SamplePrevArrow />
-      };
+      // var settings = {
+      //   dots: false,
+      //   infinite: true,
+      //   speed: 500,
+      //   slidesToShow: 3,
+      //   slidesToScroll: 1,
+      //   responsive: [
+      //     {
+      //       breakpoint: 1400,
+      //       settings: {
+      //         slidesToShow: 3,
+      //         slidesToScroll: 3,
+      //         infinite: true,
+      //         dots: true
+      //       }
+      //     },
+      //     {
+      //       breakpoint: 1024,
+      //       settings: {
+      //         slidesToShow: 2,
+      //         slidesToScroll: 2,
+      //         initialSlide: 2
+      //       }
+      //     },
+      //     {
+      //       breakpoint: 480,
+      //       settings: {
+      //         slidesToShow: 1,
+      //         slidesToScroll: 1
+      //       }
+      //     }
+      //   ]
+      //   // nextArrow: <SampleNextArrow />,
+      //   // prevArrow: <SamplePrevArrow />
+      // };
     
       return (
         <div className="testimony">
@@ -70,7 +74,23 @@ class Testimony extends React.Component {
           <div className="testimony__content">
             <h3 className="testimony__title">QUE PENSENT-ILS DE NOUS ?</h3>
 
-            <Slider  {...settings}>
+            <Carousel
+              slidesPerPage={3}
+              arrows
+              infinite
+              autoPlay={5000}
+              addArrowClickHandler
+              arrowLeft={
+                <div className="testimony__arrow testimony__arrow--next">
+                  <FaArrowAltCircleLeft />
+                </div>
+              }
+              arrowRight={
+                <div className="testimony__arrow testimony__arrow--prev">
+                  <FaArrowAltCircleRight />
+                </div>
+              }
+            >
               <TestimonyItem
                 text="« Waterhill s’adapte toujours à notre demande et à notre budget, et ce tout en offrant un produit personnalisé de qualité. Je vous les recommande ! »"
                 name="Géraldine S. – D’Ieteren"
@@ -101,7 +121,7 @@ class Testimony extends React.Component {
                 name="Serge C. – UCM"
                 profil={serge}
               />
-            </Slider>
+            </Carousel>
           </div>
 
          
@@ -112,6 +132,14 @@ class Testimony extends React.Component {
 }
 
 export default Testimony;
+
+
+
+
+// <Slider  {...settings}>
+
+
+
 
 
 // <div className="testimony__bg">

@@ -137,7 +137,7 @@ exports.handler = function (event, context, callback) {
 
   const msg = {
     to: 'tanguydeherdt@gmail.com',
-    from: '	tanguydeherdt@hotmail.com ',
+    from: 'tanguydeherdt@hotmail.com',
     subject: 'New Contact Form Submission',
     text: 'text',
     html: 'html',
@@ -145,7 +145,7 @@ exports.handler = function (event, context, callback) {
 
 
   // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  sgMail.setApiKey("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")
+  sgMail.setApiKey("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");
 
   // Send the message.
    sgMail

@@ -8,7 +8,19 @@
  
       
 
- 
+    &__arrow {
+        cursor: pointer;
+        font-size: 2.7rem;
+        color: var(--color-primary);
+
+        &--next {
+            margin-right: 2rem;
+        }
+
+        &--prev {
+             margin-left: 2rem;
+        }
+    }
       
    
     &__content {
