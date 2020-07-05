@@ -12,7 +12,7 @@ exports.handler = function(event, context, callback) {
       statusCode: 204,
     }
   }
-  const { name } = JSON.parse(event.body)
+  const { name, phone, email } = JSON.parse(event.body)
   // const params = querystring.parse(event.body)
   // const name = params.lang || "World"
   // console.log(event.queryStringParameters.name)
@@ -21,26 +21,23 @@ exports.handler = function(event, context, callback) {
 
   console.log(name)
 
-  const sendMail = (name) => {
-   
+  const sendMail = (name, phone, email) => {
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: "smtp.gmail.com",
       port: 587,
-      secure: false, 
+      secure: false,
       service: "gmail",
       auth: {
-        user: 'tanguydeherdt@gmail.com',
-        pass:  'wendyam1806',
+        user: "tanguydeherdt@gmail.com",
+        pass: "wendyam1806",
       },
     })
-
-    
 
     const mailOptions = {
       from: "tanguydeherdt@gmail.com", // sender address
       to: "deherdttanguy@gmail.com", // list of receivers
       subject: `waterhill`, // Subject line
-      html: `${name} avec l'adresse  et le numéro de téléphone  a écrit ceci: <br> </p>`, // plain text body
+      html: `${name} - ${phone} - ${email}  `, // plain text body
     }
     transporter.sendMail(mailOptions, function(err, info) {
       if (err) console.log(err)
@@ -48,7 +45,7 @@ exports.handler = function(event, context, callback) {
     })
   }
 
-  sendMail(name)
+  sendMail(name, phone, email)
 
   callback(null, {
     statusCode: 200,

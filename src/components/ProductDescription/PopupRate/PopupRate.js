@@ -16,11 +16,17 @@ export default () => {
  const [modalState, setModal] = useState(false)
 
   const [name, setName] = useState('')
+   const [phone, setPhone] = useState("")
+    const [email, setEmail] = useState("")
+
+  
     
   const sentForm = async () => {
       axios
         .post("/.netlify/functions/test", {
-          name: "Fred",
+          name: name,
+          phone: phone,
+          email: email
         })
         .then(function(response) {
           console.log(response)
@@ -112,7 +118,6 @@ export default () => {
             <div>
               <label>Nom</label>
               <input
-                name="name"
                 type="text"
                 placeholder="Name"
                 value={name}
@@ -121,11 +126,21 @@ export default () => {
             </div>
             <div>
               <label>Téléphone</label>
-              <input type="text" placeholder="Phone" />
+              <input
+                type="text"
+                placeholder="Phone"
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+              />
             </div>
             <div>
               <label>Email</label>
-              <input type="text" placeholder="Email" />
+              <input
+                type="text"
+                placeholder="Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
             </div>
 
             <button onClick={() => sentForm()}>Envoyer</button>
