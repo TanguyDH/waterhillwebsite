@@ -14,6 +14,8 @@ import axios from "axios"
 export default () => {
   // const { productDispatch } = useContext(ProductContext)
  const [modalState, setModal] = useState(false)
+
+  const [name, setName] = useState('')
     
   const sentForm = async () => {
       axios
@@ -32,7 +34,13 @@ export default () => {
 
   return (
     <React.Fragment>
-      <button className="PopupRate__button" onClick={() => setModal(true)}>
+      <button
+        className="PopupRate__button"
+        onClick={e => {
+          e.preventDefault()
+          setModal(true)
+        }}
+      >
         {" "}
         Obtenir mon prix
       </button>
@@ -103,7 +111,13 @@ export default () => {
             <h3 className="PopupRate__title">Obtenir mon prix !</h3>
             <div>
               <label>Nom</label>
-              <input type="text" placeholder="Name" />
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
             </div>
             <div>
               <label>Téléphone</label>
@@ -114,7 +128,7 @@ export default () => {
               <input type="text" placeholder="Email" />
             </div>
 
-            <button onClick={() => sentForm()}>Envoyer</button>
+            <button type="submit">Envoyer</button>
           </div>
         </div>
       </Modal>

@@ -207,11 +207,15 @@ export default (props) => {
 
  
   return (
-    <div className="ProductSelect">
+    <form
+      method="post"
+      action="/.netlify/functions/test"
+      className="ProductSelect"
+    >
       <div>
         <span>Modèle : </span>
         <Select
-          onChange={(v) => console.log(v)}
+          onChange={v => console.log(v)}
           defaultValue={[
             {
               value: (
@@ -227,13 +231,18 @@ export default (props) => {
             },
           ]}
           options={modele}
-          onChange={(value) => setModel(value.value.props.children)}
+          onChange={value => setModel(value.value.props.children)}
         />
       </div>
       <div>
-        <span>Type d'eau :  </span>
-        <Select onChange={(value) => { setTypeOfWater(value.value)}} defaultValue={props.typeOfWaterDefault.typeOfWaterDefault} options={props.typeOfWater.typeOfWater} />
-       
+        <span>Type d'eau : </span>
+        <Select
+          onChange={value => {
+            setTypeOfWater(value.value)
+          }}
+          defaultValue={props.typeOfWaterDefault.typeOfWaterDefault}
+          options={props.typeOfWater.typeOfWater}
+        />
       </div>
       <div className="ProductSelect__moq">
         <span>Quantité minimale :</span>
@@ -241,17 +250,19 @@ export default (props) => {
       </div>
       <div>
         <span>Type de bouchon :</span>
-   
-        <Select onChange={(value) => { setCapType(value.value)}} defaultValue={props.capTypeDefault.capTypeDefault} 
+
+        <Select
+          onChange={value => {
+            setCapType(value.value)
+          }}
+          defaultValue={props.capTypeDefault.capTypeDefault}
           options={props.capType.capType.map((capType, index) => {
-            
             return {
               value: capType.value,
-              label: <div onClick={switchCap[index]} >{capType.label}</div>
+              label: <div onClick={switchCap[index]}>{capType.label}</div>,
             }
-          })} 
-          />
-      
+          })}
+        />
       </div>
       <div>
         <span>Couleur de bouchon :</span>
@@ -259,21 +270,23 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        <Select onChange={(value) => setLabel(value.value)} defaultValue={props.labelDefault.labelDefault} options={props.label.label} />
-       
+        <Select
+          onChange={value => setLabel(value.value)}
+          defaultValue={props.labelDefault.labelDefault}
+          options={props.label.label}
+        />
       </div>
       <div>
         <span>Quantité :</span>
         <Select
-          onChange={(value) => setQuantity(value.value)}
-         options={props.quantity.quantity}
-          />
+          onChange={value => setQuantity(value.value)}
+          options={props.quantity.quantity}
+        />
       </div>
       <div>
         <span>Date de livraison souhaité :</span>
-     
+
         <DatePicker productDispatch={productDispatch} />
-      
       </div>
       <div className="ProductSelect__sample">
         <input type="checkbox" />
@@ -283,7 +296,7 @@ export default (props) => {
       </div>
 
       <PopupRate />
-    </div>
+    </form>
   )
   
 }
