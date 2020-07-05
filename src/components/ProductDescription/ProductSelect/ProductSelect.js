@@ -208,8 +208,6 @@ export default (props) => {
  
   return (
     <form
-      method="post"
-      action="/.netlify/functions/test"
       className="ProductSelect"
     >
       <div>
