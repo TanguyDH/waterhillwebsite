@@ -8,7 +8,7 @@ exports.handler = function(event, context, callback) {
      return { statusCode: 405, body: "Method Not Allowed" }
    }
  
-  const { name } = event.body;
+  const { name } = JSON.parse(event.body);
   // const params = querystring.parse(event.body)
   // const name = params.lang || "World"
   // console.log(event.queryStringParameters.name)
