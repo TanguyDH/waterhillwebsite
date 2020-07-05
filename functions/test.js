@@ -4,11 +4,15 @@ import querystring from "querystring"
 
 exports.handler = function(event, context, callback) {
 
-   if (event.httpMethod !== "POST") {
-     return { statusCode: 405, body: "Method Not Allowed" }
-   }
  
-  const { name } = JSON.parse(event.body);
+
+  if (event.httpMethod == "OPTIONS") {
+    return {
+      headers: { ...headers, Allow: "POST" },
+      statusCode: 204,
+    }
+  }
+  const { name } = JSON.parse(event.body)
   // const params = querystring.parse(event.body)
   // const name = params.lang || "World"
   // console.log(event.queryStringParameters.name)
