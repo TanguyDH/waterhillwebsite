@@ -3,12 +3,32 @@ import './PopupRate.scss';
 import Modal from "react-modal";
 import { FaRegCheckCircle} from 'react-icons/fa';
 import { IoMdClose} from 'react-icons/io'
-import { sentForm} from '../../../../lib/functions';
+// import { sentForm} from '../../../../lib/functions';
+import axios from "axios"
+
+
+
+
+
 
 export default () => {
   // const { productDispatch } = useContext(ProductContext)
  const [modalState, setModal] = useState(false)
-  
+    
+  const sentForm = async () => {
+      axios
+        .post("/.netlify/functions/test", {
+          name: "Fred",
+        })
+        .then(function(response) {
+          console.log(response)
+        })
+        .catch(function(error) {
+          console.log(error)
+        })
+
+    
+  }
 
   return (
     <React.Fragment>
@@ -94,7 +114,7 @@ export default () => {
               <input type="text" placeholder="Email" />
             </div>
 
-            <button onClick={() => sentForm({})}>Envoyer</button>
+            <button onClick={() => sentForm()}>Envoyer</button>
           </div>
         </div>
       </Modal>
