@@ -1,6 +1,5 @@
 const nodemailer = require("nodemailer")
-import querystring from "querystring"
-// const querystring = require("query-string")
+
 
 exports.handler = function(event, context, callback) {
 
@@ -12,16 +11,23 @@ exports.handler = function(event, context, callback) {
       statusCode: 204,
     }
   }
-  const { name, phone, email } = JSON.parse(event.body)
-  // const params = querystring.parse(event.body)
-  // const name = params.lang || "World"
-  // console.log(event.queryStringParameters.name)
-  // const params = querystring.parse(event.body)
-  // const name = params.name || "World"
+  const { name, phone, email, model, typeOfWater, moq, capType , label, quantity, date, color} = JSON.parse(event.body)
 
   console.log(name)
 
-  const sendMail = (name, phone, email) => {
+  const sendMail = (
+    name,
+    phone,
+    email,
+    model,
+    typeOfWater,
+    moq,
+    capType,
+    label,
+    quantity,
+    date,
+    color
+  ) => {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -37,7 +43,7 @@ exports.handler = function(event, context, callback) {
       from: "tanguydeherdt@gmail.com", // sender address
       to: "deherdttanguy@gmail.com", // list of receivers
       subject: `waterhill`, // Subject line
-      html: `${name} - ${phone} - ${email}  `, // plain text body
+      html: `name:${name} - phone:${phone} - email:${email}- model:${model}- typeOfWater:${typeOfWater}- moq:${moq}- capType:${capType}- label:${label}- quantity:${quantity}- date:${date}- color:${color}  `, // plain text body
     }
     transporter.sendMail(mailOptions, function(err, info) {
       if (err) console.log(err)
@@ -45,7 +51,19 @@ exports.handler = function(event, context, callback) {
     })
   }
 
-  sendMail(name, phone, email)
+  sendMail(
+    name,
+    phone,
+    email,
+    model,
+    typeOfWater,
+    moq,
+    capType,
+    label,
+    quantity,
+    date,
+    color
+  )
 
   callback(null, {
     statusCode: 200,

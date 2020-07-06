@@ -14,7 +14,6 @@ import DatePicker from '../../UI/DatePicker/DatePicker';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
-  console.log('productState', productState);
   const [model, setModel] = useState('');
   const [typeOfWater, setTypeOfWater] = useState('');
   const [capType, setCapType] = useState('');
@@ -207,9 +206,7 @@ export default (props) => {
 
  
   return (
-    <form
-      className="ProductSelect"
-    >
+    <form className="ProductSelect">
       <div>
         <span>Modèle : </span>
         <Select
@@ -293,7 +290,16 @@ export default (props) => {
         </a>
       </div>
 
-      <PopupRate />
+      <PopupRate
+        model={model}
+        typeOfWater={typeOfWater}
+        moq={props.moq}
+        capType={capType}
+        label={label}
+        quantity={quantity}
+        date={productState.date}
+        color={productState.hexa}
+      />
     </form>
   )
   

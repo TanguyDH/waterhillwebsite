@@ -11,7 +11,7 @@ import axios from "axios"
 
 
 
-export default () => {
+export default (props) => {
   // const { productDispatch } = useContext(ProductContext)
  const [modalState, setModal] = useState(false)
 
@@ -26,7 +26,15 @@ export default () => {
         .post("/.netlify/functions/test", {
           name: name,
           phone: phone,
-          email: email
+          email: email,
+          model: props.model,
+          typeOfWater: props.typeOfWater,
+          moq: props.moq,
+          capType: props.capType,
+          label: props.label,
+          quantity: props.quantity,
+          date: props.date,
+          color: props.color
         })
         .then(function(response) {
           console.log(response)
