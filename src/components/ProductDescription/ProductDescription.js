@@ -7,12 +7,15 @@ import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductSelect from "./ProductSelect/ProductSelect";
 import productReducer from "../../reducers/product"
 import ProductContext from "../../context/ProductContext"
+import moment from 'moment'
 
 
 export default (props) => {
   const [productState, productDispatch] = useReducer(productReducer, {
     sport: false,
-    classic: false
+    classic: false,
+    hexa: '',
+    date: moment().add('days', 7)._d
   }
 )
 

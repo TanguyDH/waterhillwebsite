@@ -14,10 +14,11 @@ import DatePicker from '../../UI/DatePicker/DatePicker';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
+  console.log('productState', productState)
   const [model, setModel] = useState('');
-  const [typeOfWater, setTypeOfWater] = useState('');
-  const [capType, setCapType] = useState('');
-  const [label, setLabel] = useState('');
+  const [typeOfWater, setTypeOfWater] = useState(props.typeOfWaterDefault.typeOfWaterDefault[0].value);
+  const [capType, setCapType] = useState(props.capTypeDefault.capTypeDefault[0].value);
+  const [label, setLabel] = useState(props.labelDefault.labelDefault[0].value);
   const [quantity, setQuantity] = useState('');
 
   console.log( model, typeOfWater, capType, label, quantity);

@@ -76,6 +76,16 @@ class Testimony extends React.Component {
 
             <Carousel
               slidesPerPage={3}
+              breakpoints={{
+                640: {
+                  slidesPerPage: 1,
+                  arrows: true
+                },
+                900: {
+                  slidesPerPage: 2,
+                  arrows: true
+                }
+              }}
               arrows
               infinite
               autoPlay={5000}
