@@ -46,6 +46,7 @@ export const query = graphql`
                }
              }
               quantity {quantity {value, label}}
+                quantityDefault {quantityDefault {label, value}}
                typeOfWater{ typeOfWater {label, value}}
                typeOfWaterDefault { typeOfWaterDefault {label, value}}
                 label  {label {value, label}}
@@ -76,6 +77,7 @@ export const query = graphql`
           questions={props.data.contentfulProduct.questions}
           capType={props.data.contentfulProduct.capType}
           quantity={props.data.contentfulProduct.quantity}
+          quantityDefault={props.data.contentfulProduct.quantityDefault}
            typeOfWater={props.data.contentfulProduct.typeOfWater}
           typeOfWaterDefault={props.data.contentfulProduct.typeOfWaterDefault}
           label={props.data.contentfulProduct.label}

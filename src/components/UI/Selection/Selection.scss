@@ -1,0 +1,27 @@
+
+
+.Selection {
+    display: flex;
+
+
+    &__item {
+        margin-right: 1.5rem;
+        font-size: 1.6rem;
+         box-shadow: 0 1rem 2rem rgba(black, .05);
+         padding: 1rem 2rem;
+         cursor: pointer;
+         border-radius: 3px;
+         opacity: .8;
+         max-width: 20rem;
+         
+
+         &:hover {
+                 box-shadow: 0 1rem 2rem rgba(black, .02);
+         }
+        
+
+         &--s {
+             background-color: #eee !important;
+         }
+    }
+}

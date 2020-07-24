@@ -6,7 +6,7 @@ import ProductContext from '../../../context/ProductContext';
 import ChooseColor from '../../UI/ChooseColor/ChooseColor';
 import PopupRate from '../PopupRate/PopupRate';
 import DatePicker from '../../UI/DatePicker/DatePicker';
-
+import Selection from '../../../components/UI/Selection/Selection';
 
 
 
@@ -232,33 +232,24 @@ export default (props) => {
       </div>
       <div>
         <span>Type d'eau : </span>
-        <Select
-          onChange={value => {
-            setTypeOfWater(value.value)
-          }}
+      
+        <Selection
           defaultValue={props.typeOfWaterDefault.typeOfWaterDefault}
-          options={props.typeOfWater.typeOfWater}
-        />
+          options={props.typeOfWater.typeOfWater} />
       </div>
-      <div className="ProductSelect__moq">
-        <span>Quantité minimale :</span>
-        <p>{props.moq}</p>
-      </div>
+   
       <div>
         <span>Type de bouchon :</span>
 
-        <Select
-          onChange={value => {
-            setCapType(value.value)
-          }}
+       
+        <Selection
           defaultValue={props.capTypeDefault.capTypeDefault}
           options={props.capType.capType.map((capType, index) => {
             return {
               value: capType.value,
               label: <div onClick={switchCap[index]}>{capType.label}</div>,
             }
-          })}
-        />
+          })} />
       </div>
       <div>
         <span>Couleur de bouchon :</span>
@@ -266,16 +257,16 @@ export default (props) => {
       </div>
       <div>
         <span>Etiquette :</span>
-        <Select
-          onChange={value => setLabel(value.value)}
-          defaultValue={props.labelDefault.labelDefault}
-          options={props.label.label}
-        />
+     
+        <Selection
+         defaultValue={props.labelDefault.labelDefault}
+          options={props.label.label} />
       </div>
       <div>
         <span>Quantité :</span>
         <Select
           onChange={value => setQuantity(value.value)}
+          defaultValue={props.quantityDefault.quantityDefault}
           options={props.quantity.quantity}
         />
       </div>
@@ -306,6 +297,33 @@ export default (props) => {
   
 }
 
+
+// <Select
+//   onChange={value => {
+//     setTypeOfWater(value.value)
+//   }}
+//   defaultValue={props.typeOfWaterDefault.typeOfWaterDefault}
+//   options={props.typeOfWater.typeOfWater}
+// />
+
+//   <Select
+//     onChange={value => setLabel(value.value)}
+//     defaultValue={props.labelDefault.labelDefault}
+//     options={props.label.label}
+//   />
+
+// <Select
+//   onChange={value => {
+//     setCapType(value.value)
+//   }}
+//   defaultValue={props.capTypeDefault.capTypeDefault}
+//   options={props.capType.capType.map((capType, index) => {
+//     return {
+//       value: capType.value,
+//       label: <div onClick={switchCap[index]}>{capType.label}</div>,
+//     }
+//   })}
+// />
 
 
 // <div>
