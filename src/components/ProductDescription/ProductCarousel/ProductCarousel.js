@@ -1,7 +1,7 @@
 import React from 'react'
 import './ProductCarousel.scss';
 import img from "../../../assets/img/annex/fridge.jpeg"
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 import InfiniteCarousel from "react-leaf-carousel"
 
 
@@ -37,17 +37,17 @@ export default () => {
           autoCycle={true}
           sideSize={0.1}
           slidesToScroll={1}
-          slidesToShow={4}
+          slidesToShow={3}
           scrollOnDevice={true}
           pagingSeparator={false}
           prevArrow={
             <div className="socialNetwork__arrow socialNetwork__arrow--next">
-              <FaArrowLeft />
+              <FaArrowAltCircleLeft />
             </div>
           }
           nextArrow={
             <div className="socialNetwork__arrow socialNetwork__arrow--prev">
-              <FaArrowRight />
+              <FaArrowAltCircleRight />
             </div>
           }
         >

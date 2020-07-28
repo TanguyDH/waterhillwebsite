@@ -5,6 +5,7 @@ import ProductText from "./ProductText/ProductText"
 import ProductQuestion from'./ProductQuestion/ProductQuestion';
 import ProductGallery from "./ProductGallery/ProductGallery";
 import ProductSelect from "./ProductSelect/ProductSelect";
+import ProductCarousel from './ProductCarousel/ProductCarousel';
 import productReducer from "../../reducers/product"
 import ProductContext from "../../context/ProductContext"
 import moment from 'moment'
@@ -37,7 +38,11 @@ export default (props) => {
           />
           <ProductSelect capType={props.capType} capTypeDefault={props.capTypeDefault} label={props.label} labelDefault={props.labelDefault} typeOfWater={props.typeOfWater} typeOfWaterDefault={props.typeOfWaterDefault} quantity={props.quantity} quantityDefault={props.quantityDefault} pathname={props.pathname} capType={props.capType}   colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
-        <ProductQuestion questions={props.questions} />
+     <ProductQuestion questions={props.questions} />
+
+
+        <ProductCarousel />
+
 
         <ProductText article={props.article} />
       
