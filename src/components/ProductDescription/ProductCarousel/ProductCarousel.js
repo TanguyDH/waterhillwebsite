@@ -2,7 +2,11 @@ import React from 'react'
 import './ProductCarousel.scss';
 import img from "../../../assets/img/annex/fridge.jpeg"
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
-import InfiniteCarousel from "react-leaf-carousel"
+// import InfiniteCarousel from "react-leaf-carousel"
+
+
+import Carousel from "@brainhubeu/react-carousel"
+import "@brainhubeu/react-carousel/lib/style.css"
 
 
 export default () => {
@@ -14,39 +18,29 @@ export default () => {
         <hr></hr>
       </h3>
       <div>
-        <InfiniteCarousel
-          animationDuration={1000}
-          breakpoints={[
-            {
-              breakpoint: 500,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              },
+        <Carousel
+          slidesPerPage={3}
+          breakpoints={{
+            640: {
+              slidesPerPage: 1,
+              arrows: true
             },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-              },
-            },
-          ]}
-          showSides={true}
-          swipe={true}
-          autoCycle={true}
-          sideSize={0.1}
-          slidesToScroll={1}
-          slidesToShow={3}
-          scrollOnDevice={true}
-          pagingSeparator={false}
-          prevArrow={
-            <div className="socialNetwork__arrow socialNetwork__arrow--next">
+            900: {
+              slidesPerPage: 2,
+              arrows: true
+            }
+          }}
+          arrows
+          infinite
+          autoPlay={5000}
+          addArrowClickHandler
+          arrowLeft={
+            <div className="testimony__arrow testimony__arrow--next">
               <FaArrowAltCircleLeft />
             </div>
           }
-          nextArrow={
-            <div className="socialNetwork__arrow socialNetwork__arrow--prev">
+          arrowRight={
+            <div className="testimony__arrow testimony__arrow--prev">
               <FaArrowAltCircleRight />
             </div>
           }
@@ -59,8 +53,48 @@ export default () => {
           <img alt='Anex Product' src={img} className="yours-custom-class" />
           <img alt='Anex Product' src={img} className="yours-custom-class" />
           <img alt='Anex Product' src={img} className="yours-custom-class" />
-        </InfiniteCarousel>
+        </Carousel>
       </div>
     </div>
   )
 }
+
+
+
+// <InfiniteCarousel
+//   animationDuration={1000}
+//   breakpoints={[
+//     {
+//       breakpoint: 500,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 1,
+//       },
+//     },
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ]}
+//   showSides={true}
+//   swipe={true}
+//   autoCycle={true}
+//   sideSize={0.1}
+//   slidesToScroll={1}
+//   slidesToShow={3}
+//   scrollOnDevice={true}
+//   pagingSeparator={false}
+//   prevArrow={
+//     <div className="socialNetwork__arrow socialNetwork__arrow--next">
+//       <FaArrowAltCircleLeft />
+//     </div>
+//   }
+//   nextArrow={
+//     <div className="socialNetwork__arrow socialNetwork__arrow--prev">
+//       <FaArrowAltCircleRight />
+//     </div>
+//   }
+// >
