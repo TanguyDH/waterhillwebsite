@@ -1,6 +1,8 @@
 import React from 'react'
 import './ProductCarousel.scss';
-import img from "../../../assets/img/annex/fridge.jpeg"
+import img from "../../../assets/img/Mes Images1522 copie.png"
+import img2 from "../../../assets/img/Mes Images1523 copie.png"
+import img3 from "../../../assets/img/Mes Images1524 copie.png"
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa"
 // import InfiniteCarousel from "react-leaf-carousel"
 
@@ -19,7 +21,7 @@ export default () => {
       </h3>
       <div>
         <Carousel
-          slidesPerPage={3}
+          slidesPerPage={4}
           breakpoints={{
             640: {
               slidesPerPage: 1,
@@ -46,13 +48,8 @@ export default () => {
           }
         >
           <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
-          <img alt='Anex Product' src={img} className="yours-custom-class" />
+          <img alt='Anex Product' src={img2} className="yours-custom-class" />
+          <img alt='Anex Product' src={img3} className="yours-custom-class" />
         </Carousel>
       </div>
     </div>

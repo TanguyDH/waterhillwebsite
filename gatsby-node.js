@@ -73,7 +73,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-  return Promise.all([products, blogs ])
+  return Promise.all([, blogs ])
 };
 
 
