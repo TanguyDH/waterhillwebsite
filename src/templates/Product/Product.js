@@ -38,6 +38,18 @@ export const query = graphql`
                  url
                }
              }
+             galleryTransparent {
+             file {
+                 url
+               }
+             }
+             galleryMetals {
+             file {
+                 url
+               }
+             }
+
+
               capType    {capType{value, label}}
             questions {allQuestions {answer, question}  }
              doc {
@@ -67,6 +79,8 @@ export const query = graphql`
           description1={props.data.contentfulProduct.description1}
           gallery={props.data.contentfulProduct.gallery}
           galleryClassicCap={props.data.contentfulProduct.galleryClassicCap}
+          galleryTransparent={props.data.contentfulProduct.galleryTransparent} 
+          galleryMetals={props.data.contentfulProduct.galleryMetals}
           gallerySportCap={props.data.contentfulProduct.gallerySportCap}
           price={props.data.contentfulProduct.price}
           moq={props.data.contentfulProduct.moq}

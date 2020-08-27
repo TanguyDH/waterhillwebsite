@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import './ProductGallery.scss';
 import ProductContext from "../../../context/ProductContext"
 import ImageGallery from "react-image-gallery"
 
 
 export default (props) => {
+  const [loader, setLoader] = useState(false);
   const { productState } = useContext(ProductContext);
 
     const images =  props.gallery.map(({ file }) => {
@@ -13,8 +14,9 @@ export default (props) => {
             
         });
 
-  const galleryClassicCapImages = props.galleryClassicCap ? props.galleryClassicCap.map(({ file }) => {
+  const galleryClassicCapImages = props.gallery ? props.gallery.map(({ file }) => {
     const img = file.url
+    
     return { original: img, thumbnail: img }
   }) : [];
 
@@ -23,7 +25,22 @@ export default (props) => {
         const img = file.url
         return { original: img, thumbnail: img }
       })
-    : []
+    : [];
+
+
+  const galleryMetalsImages = props.galleryMetals
+    ? props.galleryMetals.map(({ file }) => {
+      const img = file.url
+      return { original: img, thumbnail: img }
+    })
+    : [];
+  const galleryTransparentImages = props.galleryTransparent
+    ? props.galleryTransparent.map(({ file }) => {
+      const img = file.url
+      return { original: img, thumbnail: img }
+    })
+    : [];
+
 
 
     const  selectImages = () => {
@@ -32,7 +49,17 @@ export default (props) => {
       }
       else if (productState.classic) {
         return galleryClassicCapImages 
-       }else {
+       }
+      else if (productState.fullColorClassic) {
+        return galleryClassicCapImages
+      }
+      else if (productState.transparentClassic) {
+        return galleryTransparentImages
+      }
+      else if (productState.metalClassic) {
+        return galleryMetalsImages
+      }
+       else {
         return images
        }
 
@@ -41,7 +68,7 @@ export default (props) => {
 
     return (
       <div className="ProductGallery">
-        <ImageGallery startIndex={productState.color} items={selectImages()} />
+        {loader ? 'sisiisisisi' : <ImageGallery startIndex={productState.color} items={selectImages()} /> }
         <button className="ProductGallery__button ProductGallery__button-1">
           <a
             href={props.doc[1] && props.doc[1].file.url}

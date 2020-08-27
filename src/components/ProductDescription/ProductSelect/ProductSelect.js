@@ -14,6 +14,7 @@ import Selection from '../../../components/UI/Selection/Selection';
 export default (props) => {
 
   const { productState, productDispatch } = useContext(ProductContext);
+
   console.log('productState', productState)
   const [model, setModel] = useState('');
   const [typeOfWater, setTypeOfWater] = useState(props.typeOfWaterDefault.typeOfWaterDefault[0].value);
@@ -85,6 +86,27 @@ export default (props) => {
   }
   
 
+  const productDispatchMetalClassic = () => {
+    productDispatch({
+      type: "SELECT_METALCLASSIC",
+    })
+  }
+
+  const productDispatchTransparentClassic = () => {
+    productDispatch({
+      type: "SELECT_TRANSPATENTCLASSIC",
+    })
+
+  }
+
+
+
+  const productDispatchFullColorsClassic = () => {
+    productDispatch({
+      type: "SELECT_FULLCOLORCLASSIC",
+    })
+
+  }
   
 
   const switchCap = props.pathname === "/product/RPET-330ml" || props.pathname === "/product/RPET-500ml" ? [productDispatchClassic, productDispatchSport] : [() => {}];
@@ -244,6 +266,8 @@ export default (props) => {
        
         <Selection
           defaultValue={props.capTypeDefault.capTypeDefault}
+          productDispatchSport={productDispatchSport}
+          productDispatchClassic={productDispatchClassic}
           options={props.capType.capType.map((capType, index) => {
             return {
               value: capType.value,
@@ -260,7 +284,12 @@ export default (props) => {
      
         <Selection
          defaultValue={props.labelDefault.labelDefault}
-          options={props.label.label} />
+          options={props.label.label} 
+          productDispatchMetalClassic={productDispatchMetalClassic}
+          productDispatchTransparentClassic={productDispatchTransparentClassic}
+          productDispatchFullColorsClassic={productDispatchFullColorsClassic}
+          />
+          
       </div>
       <div>
         <span>Quantité :</span>
