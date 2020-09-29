@@ -8,10 +8,9 @@ export default (props) => {
   const [loader, setLoader] = useState(false);
   const { productState } = useContext(ProductContext);
 
-    const images =  props.gallery.map(({ file }) => {
+    const images =   props.gallery.map( ({ file }) => {
             const img = file.url
             return { original: img,thumbnail: img }
-            
         });
 
   const galleryClassicCapImages = props.gallery ? props.gallery.map(({ file }) => {
@@ -21,7 +20,8 @@ export default (props) => {
   }) : [];
 
   const gallerySportCapImages = props.gallerySportCap
-    ? props.gallerySportCap.map(({ file }) => {
+    ? props.gallerySportCap.map( ({ file }) => {
+     
         const img = file.url
         return { original: img, thumbnail: img }
       })
@@ -40,10 +40,12 @@ export default (props) => {
       return { original: img, thumbnail: img }
     })
     : [];
+    
 
 
 
-    const  selectImages = () => {
+    const selectImages = () => {
+      
       if (productState.sport) {
         return gallerySportCapImages
       }
