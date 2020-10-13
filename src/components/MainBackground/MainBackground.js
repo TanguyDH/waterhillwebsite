@@ -11,6 +11,7 @@ import { Link } from 'gatsby';
 import GraindeDeVie from '../../assets/img/mainBackground/logoGraine.png';
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
+import Fade from "react-reveal/Fade";
 
 
 
@@ -68,7 +69,22 @@ const  MainBackground = () =>  {
                 fluid={data.image1.childImageSharp.fluid}
                 className="mainBackground__background1"
               >
-                <div className="mainBackground__content"></div>
+                <div className="mainBackground__content">
+                  <div className="mainBackground__t1">
+                  <Fade left>
+                   <h3>votre outil de communication</h3>
+                    <h3>votre outil de communication</h3>
+                    <h3>votre outil de communication</h3>
+                    </Fade>
+                  </div>
+                  <div className="mainBackground__t2">
+                    <Fade right>
+                    <h3>votre outil de communication</h3>
+                    <h3>votre outil de communication</h3>
+                    <h3>votre outil de communication</h3>
+                    </Fade>
+                  </div>
+                </div>
               </BackgroundImage>
 
            

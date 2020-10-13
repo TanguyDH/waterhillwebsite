@@ -41,29 +41,30 @@
   background-size: cover;
     background-position: center;
     .mainBackground__content {
-     z-index: 9;
-   
-         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-          width: 100%;
-        div{
-              margin-bottom: 4rem;
-             p {
-                font-size: 4.5rem;
-                padding: 0;
-                margin: 0;
-                 line-height: 5rem;
-                 color: var(--color-primary);
-                 font-weight: 600;
-                 font-family: 'Roboto Slab';
+    
+    
     }
-    .mainBackground__p1 {
-        font-weight: bold;
+
+    .mainBackground__t1 {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        // transform: translate(-50%,-50%);
+        h3 {
+            font-size: 2.5rem;
+            color: white;
+        }    
     }
-        }
+
+     .mainBackground__t2 {
+        position: absolute;
+        top: 40%;
+        right: 15%;
+        //  transform: translate(-50%,-50%);
+        h3 {
+            font-size: 2.5rem;
+            color: white;
+        }    
     }
 
    
