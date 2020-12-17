@@ -73,6 +73,7 @@ export default () => {
                   fluid={data.image1.childImageSharp.fluid}
                   className="Commitment__section1"
                 >
+                  <span>Photo from VisionPic .net by Pexels</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3><img className="Commitment__logo" src={logoWhite} alt="logo"  />, notre vision du futur</h3>
@@ -90,6 +91,7 @@ export default () => {
                   fluid={data.image2.childImageSharp.fluid}
                   className="Commitment__section2"
                 >
+                  <span>Photo by Artem Beliaikin from Pexels</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3>Nous compensons 100% de notre empreinte carbone</h3>
@@ -114,6 +116,7 @@ export default () => {
                   fluid={data.image4.childImageSharp.fluid}
                   className="Commitment__section4"
                 >
+                  <span>Photo by Martin Damboldt from Pexels</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3>
@@ -141,6 +144,7 @@ export default () => {
                   fluid={data.image3.childImageSharp.fluid}
                   className="Commitment__section3"
                 >
+                  <span>Photo by Artem Beliaikin from Pexels</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3><img className="Commitment__logo" src={logoWhite} alt="whitelogo"  />, collabore avec...</h3>

@@ -22,6 +22,7 @@ export default () => {
    <Form />
 
       <BackgroundImage fluid={data.file.childImageSharp.fluid} className='ContactUs__image'>
+        <p>Photo by Artem Beliaikin from Pexels</p>
     </BackgroundImage>
       
     </div>

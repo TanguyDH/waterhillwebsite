@@ -9,6 +9,16 @@
       background-position: 25% 5%;
       background-size: cover;
     }
+
+    p {
+        
+        position: absolute;
+        right: -6rem;
+        top: 15rem;
+        transform: rotate(90deg);
+        font-size: 1rem;
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
