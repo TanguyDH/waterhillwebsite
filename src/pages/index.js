@@ -13,7 +13,7 @@ import WhyUs from '../components/WhyUs/WhyUs';
   export default class Index extends Component {
     render() {
       return (
-        <Layout>
+        <Layout bg={true} blue={true}>
           <MainBackground />
           <Poducts />
           <Vison />

@@ -18,7 +18,7 @@ import Fade from "react-reveal/Fade";
 const  MainBackground = () =>  {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "assets/img/mainBackground/bg55.jpeg" }) {
+      image1: file(relativePath: { eq: "assets/img/mainBackground/bgMain.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -69,7 +69,9 @@ const  MainBackground = () =>  {
                 fluid={data.image1.childImageSharp.fluid}
                 className="mainBackground__background1"
               >
+                <span>Photo by Domaine public CCo</span>
                 <div className="mainBackground__content">
+
                   <ul className="mainBackground__t1">
                     <Fade left delay={500}><li>100% biodégradable</li></Fade>
                     <Fade left delay={1000}> <li>Étiquettes et bouchons végétals</li></Fade>

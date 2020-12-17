@@ -91,7 +91,7 @@ export default () => {
                   fluid={data.image2.childImageSharp.fluid}
                   className="Commitment__section2"
                 >
-                  <span>Photo by Artem Beliaikin from Pexels</span>
+                  <span>Photo by Dioww from Shutterstock</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3>Nous compensons 100% de notre empreinte carbone</h3>
@@ -144,7 +144,7 @@ export default () => {
                   fluid={data.image3.childImageSharp.fluid}
                   className="Commitment__section3"
                 >
-                  <span>Photo by Artem Beliaikin from Pexels</span>
+                  <span>Photo by Seventyfour from Freepik</span>
                   <div className="Commitment__content">
                     <Fade bottom>
                       <h3><img className="Commitment__logo" src={logoWhite} alt="whitelogo"  />, collabore avec...</h3>

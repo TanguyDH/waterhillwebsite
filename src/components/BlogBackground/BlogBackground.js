@@ -23,6 +23,7 @@ export default () => {
         className="BlogBackground"
       >
         <h2 className="BlogBackground__title">Blog.</h2>
+        <span>Photo by Artem Beliaikin from Pexels</span>
       </BackgroundImage>
     )
 }

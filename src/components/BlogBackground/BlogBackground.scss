@@ -7,7 +7,14 @@
       // background-image: url(../../assets/img/blog2.jpeg);
   // background-size: cover;
     // background-position: center;
-
+span {
+             position: absolute;
+        right: -6rem;
+        top: 15rem;
+        transform: rotate(90deg);
+        font-size: 1rem;
+        color: white;
+        }
     &__title {
       color: white;
       font-weight: 500;
