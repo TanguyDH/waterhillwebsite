@@ -18,7 +18,7 @@ import Fade from "react-reveal/Fade";
 const  MainBackground = () =>  {
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "assets/img/mainBackground/bg7.jpg" }) {
+      image1: file(relativePath: { eq: "assets/img/mainBackground/bg777.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
