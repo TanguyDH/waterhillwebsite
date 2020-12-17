@@ -70,20 +70,16 @@ const  MainBackground = () =>  {
                 className="mainBackground__background1"
               >
                 <div className="mainBackground__content">
-                  <div className="mainBackground__t1">
-                  <Fade left>
-                   <h3>votre outil de communication</h3>
-                    <h3>votre outil de communication</h3>
-                    <h3>votre outil de communication</h3>
-                    </Fade>
-                  </div>
-                  <div className="mainBackground__t2">
-                    <Fade right>
-                    <h3>votre outil de communication</h3>
-                    <h3>votre outil de communication</h3>
-                    <h3>votre outil de communication</h3>
-                    </Fade>
-                  </div>
+                  <ul className="mainBackground__t1">
+                    <Fade left delay={500}><li>100% biodégradable</li></Fade>
+                    <Fade left delay={1000}> <li>Étiquettes et bouchons végétals</li></Fade>
+                  <Fade left delay={1500}> <li>Valorise votre démarche écologique</li></Fade>
+                  </ul>
+                  <ul className="mainBackground__t2">  
+                    <Fade right delay={500}> <li>Compostable (norme EN13432)</li></Fade>
+                    <Fade right delay={1000}> <li>Incassable et transparent</li></Fade>
+                    <Fade right delay={1500}><li>Fabriquée à partir de canne à sucre</li></Fade>
+                  </ul>
                 </div>
               </BackgroundImage>
 
