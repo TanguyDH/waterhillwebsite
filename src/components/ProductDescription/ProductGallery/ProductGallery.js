@@ -83,7 +83,7 @@ export default (props) => {
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
           <a
-            href={props.doc[0].file.url}
+            href={props.doc[0] && props.doc[0].file.url}
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -92,7 +92,24 @@ export default (props) => {
           </a>
         </button>
         <button className="ProductGallery__button ProductGallery__button-1">
-         Télécharger les photos
+        <a
+            href={props.mockupPsd[0] && props.mockupPsd[0].file.url}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          Télécharger le Mockup(psd)
+          </a>
+        </button>
+        <button className="ProductGallery__button ProductGallery__button-1">
+        <a
+            href={props.mockupJpg[0] && props.mockupJpg[0].file.url}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           Télécharger le Mockup(jpg)
+          </a>
         </button>
       </div>
     )

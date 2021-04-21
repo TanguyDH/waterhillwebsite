@@ -57,6 +57,16 @@ export const query = graphql`
                  url
                }
              }
+               mockupPsd {
+                 file {
+                   url
+                 }
+               }
+               mockupJpg {
+                 file {
+                   url
+                 }
+               }
               quantity {quantity {value, label}}
                 quantityDefault {quantityDefault {label, value}}
                typeOfWater{ typeOfWater {label, value}}
@@ -85,6 +95,8 @@ export const query = graphql`
           price={props.data.contentfulProduct.price}
           moq={props.data.contentfulProduct.moq}
           doc={props.data.contentfulProduct.doc}
+          mockupPsd={props.data.contentfulProduct.mockupPsd}
+          mockupJpg={props.data.contentfulProduct.mockupJpg}
           colorsCap={props.data.contentfulProduct.colorsCap.colors}
           colorsCapClassic={props.data.contentfulProduct.colorsCapClassic.colors}
           colorsCapSport={props.data.contentfulProduct.colorsCapSport.colors}

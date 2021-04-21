@@ -5,7 +5,7 @@ import { IoIosClose} from 'react-icons/io'
 import Fade from 'react-reveal/Fade';
 import Rotate from 'react-reveal/Rotate';
 
-export default function componentName() {
+const ContactCircle = () => {
     const [toggle, setToggle] = useState(false)
   return (
     <div className="ContactCircle">
@@ -68,3 +68,6 @@ export default function componentName() {
     </div>
   )
 }
+
+
+export default ContactCircle

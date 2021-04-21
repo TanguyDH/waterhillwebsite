@@ -4,7 +4,7 @@ import ProductContext from '../../../context/ProductContext';
 import { IoMdCheckmark} from 'react-icons/io';
 import ReactTooltip from 'react-tooltip'
 
-export default (props) => {
+const ChooseColor = (props) => {
   const [colorSelect, onChangeColor] = useState('')
   const { productDispatch } = useContext(ProductContext);
   const onClickColor = (color, index) => {
@@ -45,3 +45,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default ChooseColor

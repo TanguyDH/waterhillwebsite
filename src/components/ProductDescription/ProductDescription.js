@@ -32,6 +32,8 @@ export default (props) => {
         <div className="ProductDescription__main">
           <ProductGallery
             doc={props.doc}
+             mockupPsd={props.mockupPsd}
+              mockupJpg={props.mockupJpg}
             gallery={props.gallery}
             galleryClassicCap={props.galleryClassicCap}
             gallerySportCap={props.gallerySportCap}

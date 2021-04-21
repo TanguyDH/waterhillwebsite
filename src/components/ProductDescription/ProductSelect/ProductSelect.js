@@ -257,7 +257,8 @@ export default (props) => {
       
         <Selection
           defaultValue={props.typeOfWaterDefault.typeOfWaterDefault}
-          options={props.typeOfWater.typeOfWater} />
+          options={props.typeOfWater.typeOfWater} 
+          />
       </div>
    
       <div>
