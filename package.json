@@ -21,7 +21,7 @@
     "@contentful/rich-text-react-renderer": "^13.2.0",
     "@fullpage/react-fullpage": "^0.1.16",
     "@sendgrid/mail": "^7.0.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-preset-gatsby": "^0.2.22",
     "env-cmd": "^9.0.3",
     "gatsby": "^2.11.7",
