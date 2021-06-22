@@ -1,0 +1,74 @@
+.ProductSelect {
+       width: 55%;
+       & > * {
+           margin-bottom: 2rem;
+       }
+       span {
+           font-size: 1.8rem;
+           color: var(--color-primary-light);
+           font-weight: 400;
+       }
+
+       &__moq {
+           font-size: 1.4rem;
+           p {
+                border: 1px solid green;
+                padding: .4rem 1rem;
+                border-radius: 3px;
+                opacity: .7;
+                color: green;
+           }
+        
+    
+    }
+     &__bottleLink {
+        // font-size: 1.2rem;
+        color: black;
+        display: block;
+    }
+
+    &__plug {
+        font-size: 1.5rem;
+          border: 1px solid #444;
+                padding: .4rem 1rem;
+                border-radius: 3px;
+                opacity: .7;
+    }
+
+    &__input{
+        font-size: 1.6rem;
+        display: block;
+        width: 100%;
+         border: 1px solid rgb(216, 214, 214);
+                padding: 1rem;
+                border-radius: 3px;
+                opacity: .7;
+    }
+
+
+ &__sparklingWater {
+        font-size: 1.5rem;
+    }
+    &__sample {
+        display: flex;
+        align-items: center;
+         font-size: 1.5rem;
+
+         input {
+             margin-right: 1rem;
+         }
+
+    }
+}
+
+ @media only screen and (max-width: 800px)  {
+      .ProductSelect {
+        width:100%;
+      }
+ }
+
+
+
+ .css-2b097c-container {
+     font-size: 1.4rem;
+ }

@@ -1,0 +1,346 @@
+
+
+
+.caseStudie {
+     background-color: white;
+     border-radius: 5px;
+    //  border: 1px solid rgb(182, 180, 180);
+     transition: all ease .2s;
+     cursor: pointer;
+      overflow: hidden;
+      // height: 50rem;
+      // width: 30rem;
+    
+      margin: 1.5rem;
+
+
+
+      &__none {
+             display: none;
+             opacity: 0;
+         }
+ 
+      &--1 {
+            // height: 105rem;
+      // width: 60rem;
+      //       height: 100%;
+    
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        .caseStudie__part2 {
+            position: relative;
+        }
+        
+        .caseStudie__logo {
+            // padding-top: 15rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+    }
+     &:hover{
+          box-shadow: 0 2rem 4rem rgba(black, .1);
+     }
+
+
+     &__img {
+        //  max-height: 40rem;
+        width: 100%;
+         height: 75%;
+       
+         border-top-right-radius: 5px;
+         border-top-left-radius: 5px;
+       
+         overflow: hidden;
+
+         img {
+             width: 100%;
+             height: 100%;
+                object-fit: cover;
+                  transition: all 1.2s;
+                  &:hover {
+                      transform: scale(1.15);
+                  }
+         }
+       
+     }
+    &__part2{
+       height: 25%;
+    //    max-height: 20rem;
+         width: 100%;
+         text-align: center;  
+         position: relative;  
+         overflow: hidden;
+         
+    }
+    &__logo {
+        padding: 1rem;
+        width: 35%;  
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__text-box {
+        display: none;
+       
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+      .caseStudie--1 {
+        grid-row-start: 1 ;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+    .caseStudie {
+      &--1 {
+              height: 50rem;
+         &__logo {
+        padding: 1rem;
+       
+        
+    }
+
+      }
+    }
+    
+}
+
+
+
+//MODAL
+
+
+
+
+  .Modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 75%;
+    background-color: white;
+    border-radius: 2px;
+     &:focus {
+            outline: none;
+        }
+
+    &__imgModal {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+    &__close {
+        position: absolute;
+        top: .2rem;
+        right: 1rem;
+        font-size: 4rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    
+ 
+  }
+
+  .Overlay {
+    //    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(black, .4);
+    z-index: 100;
+   
+  }
+
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+    
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 1200px)  {
+     .Modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 2px;
+
+    
+    
+     }
+}
+
+
+
+
+
+
+// &__content{
+//         display: flex;
+//         height: 100%;
+//         width: 100%;
+//     }
+
+//     &__images {
+//         flex: 0 0 60%;
+//           position: relative;
+//         height: 100%;
+//     }
+
+//     &__image {
+//         height: 100%;
+//         width: 100%;
+//         object-fit: contain;
+//     } 
+
+
+     
+
+//     &__description {
+//         &:last-child {
+//             margin-bottom: 5rem;
+//         }
+//        overflow-y: scroll;
+//         flex: 0 0 40%;
+      
+//         font-size: 1.6rem;
+//         position: relative;
+//         h3 {
+//               padding: 4rem 0 0 2rem;
+            
+//     margin-bottom: 3rem;
+//      font-size: 3rem;
+//     text-transform: uppercase;
+//     font-weight: 500;
+//     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+//     -webkit-background-clip: text;
+//     color: transparent;
+//     letter-spacing: .2rem;
+//     transition: all .2s;
+ 
+//         }
+//         h4 {
+//               padding: 0 2rem;
+//             font-size: 1.6rem;
+//             text-transform: uppercase;
+//             color: rgb(95, 93, 93);
+//             margin-bottom: 2rem;
+//             color: var(--color-primary-light);
+//         }
+//         p {
+//               padding: 0 2rem;
+//             color: rgb(138, 138, 138);
+           
+//         }
+//         .Modal__button {
+//             position: fixed;
+//             bottom: 0;
+//             right: 0;
+//             background-color: var(--color-primary);
+//             padding: 1rem ;
+//             display: block;
+//             width: 40%;
+//             color: white;
+//             border: none;
+//             text-transform: uppercase;
+//             transition: all .3s;
+//             text-align: center;
+//             &:hover {
+//                 background-color: var(--color-primary-light);
+//             }
+           
+//         }
+       
+//     }
+
+//     &__close {
+//         position: absolute;
+//         top: 1rem;
+//         right: 1rem;
+//         border: none;
+//         background-color: transparent;
+//         cursor: pointer;
+//         font-size: 4rem;
+//         z-index: 10;
+//         &:hover {
+//             color: var(--color-primary-light);
+//         }
+//     }
+
+//       &__arrow {
+//         font-size: 2rem;
+//         cursor: pointer;
+//         z-index: 1000;
+//         color: white;
+//         &--next {
+
+//              position: absolute;
+//              left: 2rem;
+//              top: 45%;
+//         }
+//         &--prev {
+//              position: absolute;
+//              right: 2rem;
+//              top: 45%;
+//         }
+       
+//     }
+
+
+
+// &__content{
+//         display: flex;
+//         flex-direction: column;
+//         height: 100%;
+//         width: 100%;
+//     }
+
+//     &__button {
+//             position: fixed;
+//             bottom: 0;
+//             right: 0;
+//             background-color: var(--color-primary);
+//             padding: 1rem ;
+//             display: block;
+//             width: 100%;
+//             color: white;
+//             border: none;
+//             text-transform: uppercase;
+//             transition: all .3s;
+//             text-align: center;
+//             &:hover {
+//                 background-color: var(--color-primary-light);
+//             }
+//         }

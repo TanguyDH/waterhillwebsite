@@ -1,0 +1,30 @@
+
+
+.react-date-picker {
+    width: 100%;
+}
+
+.react-date-picker__wrapper  {
+    border: none;
+//     -webkit-box-shadow: 2px 4px 5px 0px rgba(51,51,51,1);
+// -moz-box-shadow: 2px 4px 5px 0px rgba(51,51,51,1);
+// box-shadow: 2px 4px 5px 0px rgba(51,51,51,1);
+font-size: 1.7rem;
+border-radius: 3px;
+padding: .3rem 1.5rem;
+border: 1px solid #ccc;
+font-weight: 300 !important;
+
+
+}
+
+
+.react-date-picker__inputGroup__leadingZero {
+    font-weight: 300 !important;
+    font-size: 1.7rem !important;
+    color: black !important;
+}
+
+.react-date-picker__inputGroup {
+   
+}

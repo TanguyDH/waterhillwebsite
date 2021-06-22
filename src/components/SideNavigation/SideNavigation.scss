@@ -1,0 +1,95 @@
+.SideNavigation {
+    display: none;
+   
+}
+
+@media only screen and (max-width: 1100px) {
+    .SideNavigation{
+        
+        display: block;
+           position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+     background-color: white;
+
+    height: 5.5rem;
+    padding: .5rem;
+    width: 100%;
+    font-size: 1.2rem;
+     z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.3px 0.3px 0px 0px rgba(12,34,66,0.09),5px 3px 30px 0px rgba(12,34,66,0.13); 
+    
+    }
+    .SideNavigation__logo {
+        width: 10rem;
+        margin: 0 2rem;
+        line-height: 50%;
+    }
+    .SideNavigation__hamburger {
+        position: absolute;
+          top: 2rem;
+          right: 2rem;
+         
+          
+              cursor: pointer;
+              display: block;
+              width: 45px;
+               &:hover div {
+                width: 45px;
+              }
+        div {
+             height: 3.5px;
+              background-color: black;
+            //   opacity: .7;
+              margin: 4px 0;
+              border-radius: 24px;
+              transition: .5s;
+              border-radius: 500px;
+        }
+              .one{
+              width: 40px;
+             
+            }
+            .two {
+              width: 25px;
+            }
+    }
+    .SideNavigation__modal {
+          position: absolute;
+        top: 0;
+       right:0;
+    // width: 75%;
+    width: 25rem;
+    height: 100vh;
+    background-color: white;
+   
+      nav {
+          display: flex;
+          flex-direction: column;
+          padding: 3rem;
+        //   width: 30%;
+        //   text-align: end;
+
+          a {
+              font-size: 1.7rem;
+              
+              margin-bottom: 1.5rem;
+          }
+      }
+    
+
+    }
+
+    .SideNavigation__contact2 {
+    //   text-align: end;
+    margin: 2rem 0;
+    }
+
+    .SideNavigation__link  {
+        color: black !important;
+    }
+}

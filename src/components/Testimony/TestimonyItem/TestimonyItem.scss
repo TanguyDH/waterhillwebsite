@@ -1,0 +1,45 @@
+
+
+.testimonyItem {
+
+    padding: 2rem;
+     font-size: 2rem;
+     margin: 1rem;
+     color: white;
+    
+    //  background-color: white;
+
+   
+     &__name {
+         margin-left: 1rem;
+           font-weight: 500;
+             color: var(--color-primary);
+         
+     }
+     &__pofile {
+         display: flex;
+         align-items: center;
+        font-style: italic;
+        //  justify-content: center;
+     }
+     &__img {
+         width: 5rem;
+         height: 5rem;
+         border-radius: 50%;
+         object-fit: cover;
+     }
+
+     &__stars {
+         color: #f1c40f;
+         font-size: 2rem;
+     }
+
+     &__text {
+          color: white;
+           color: var(--color-primary);
+          font-weight: 500;
+         margin-top: 1rem;
+
+     }
+
+}

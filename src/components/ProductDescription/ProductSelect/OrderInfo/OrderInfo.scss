@@ -1,0 +1,39 @@
+
+
+.OrderInfo {
+
+ font-size: 1.6rem;
+ text-align: center;
+ line-height: 2rem;
+    &__full {
+        border: 1px solid #999;
+        margin-bottom: 1.5rem;
+        border-radius: .5rem;
+        padding: .7rem 2rem;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         cursor: pointer;
+        img {
+            width: 2.5rem;
+            margin-right: 1rem;
+           
+        }
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__demi {
+           border: 1px solid #999;
+          padding: .7rem 0;
+         border-radius: .5rem;
+        width: 49%;
+           padding: 1rem 2rem;
+           cursor: pointer;
+    }
+
+}

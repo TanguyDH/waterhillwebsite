@@ -1,0 +1,24 @@
+.ChooseColor  {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-top: .5rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 30px;
+ display: flex;
+           align-items: center;
+           justify-content: center;
+           border: 1px solid rgb(211, 211, 211);
+        span {
+            color: white;
+           font-size: 2rem;
+           
+        }
+    }
+}
+
+

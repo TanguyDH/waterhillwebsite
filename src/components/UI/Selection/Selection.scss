@@ -1,0 +1,36 @@
+
+
+.Selection {
+    display: flex;
+
+
+    &__item:not(:last-child) {
+         margin-right: 1.5rem;
+    }
+
+
+    &__item {
+        flex-grow: 1;
+        width: 50%;
+        font-size: 1.5rem;
+        //  box-shadow: 0 1rem 2rem rgba(black, .05);
+        border: 2px solid #f3f3f3;
+         padding: .6rem 2rem;
+         cursor: pointer;
+         border-radius: 4px;
+         opacity: .8;
+         text-align: center;
+        //  max-width: 20rem;
+         
+
+         &:hover {
+                 box-shadow: 0 1rem 2rem rgba(black, .02);
+         }
+        
+
+         &--s {
+             background-color: #eee !important;
+            //  box-shadow: 0 1rem 2rem rgba(black, .05);
+         }
+    }
+}

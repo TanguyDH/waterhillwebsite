@@ -1,0 +1,256 @@
+
+
+// .product {
+//      box-shadow: 0 1rem 2rem rgba(black, .1);
+//     cursor: pointer;
+//     width: 30rem;
+//     height: 30rem;
+//     border-radius: 5px;
+//     margin: 2rem 0;
+//     overflow: hidden;
+//      transition: transform .5s ease;
+//      color: black;
+//       &:hover  {
+//           color: black;
+//            text-decoration: none;
+        
+//     }
+
+
+// }
+
+// .product__img {
+//     display: block;
+//     margin:  auto;
+//      overflow: visible;
+//      width: 100%;
+//       width: 10rem;
+//     height: 70%;
+//    object-fit: contain;
+//     border-radius: 5px;
+//       transition: transform .5s ease;
+//        margin: 0 auto;
+//     text-align: center;
+//     transform: scale(1.2);
+//        &:hover  {
+         
+//                transform: scale(1.1);
+//           }
+    
+    
+// }
+
+
+// .product__text-box {
+//    font-size: 1.4rem;
+//    margin-top: 1.5rem;
+//    padding: 1rem;
+// }
+// .product__icon {
+//     font-size: 1.5rem;
+//      transition: transform .5s ease;
+    
+// }
+
+// .product__title {
+//     padding: 0;
+//     margin: 0;
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     color: rgb(61, 61, 61);
+    
+//     &:hover,:link,:focus {
+//          color: rgb(61, 61, 61);
+//     }
+
+// }
+
+// .product__description {
+//     padding: 0;
+//     margin: 0;
+//       color: #999;
+// }
+
+// @media only screen and (max-width: 1000px) {
+//     .product {
+//    width: 100%;
+//     height: 30rem;
+    
+// }
+
+
+// }
+
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+
+.product {
+     box-shadow: 0 1rem 2rem rgba(black, .1);
+    cursor: pointer;
+    width: 30rem;
+    height: 33rem;
+    // height: 40rem;
+    border-radius: 5px;
+    margin: 2rem 0 2rem 0;
+    overflow: hidden;
+     transition: transform .5s ease;
+     color: black;
+    //  border: 1px solid black;
+      &:hover  {
+          color: black;
+           text-decoration: none;
+           
+        .product__price {
+            animation: bounce 1s 1;
+        }
+    
+        
+    }
+
+    &__price:hover {
+      
+    }
+
+    &__price {
+        display: block;
+    }
+
+ 
+
+
+}
+
+.product__imgBox{
+    height: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.product__img {
+    // display: block;
+    // margin:   0 auto -0 auto;
+    padding: 0;
+     overflow: visible;
+     width: 10rem;
+     height: auto;
+   object-fit: contain;
+    border-radius: 5px;
+      transition: transform .5s ease;
+    text-align: center;
+    transform: scale(1.2);
+    // background-color: red;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+   
+       &:hover  {
+         
+               transform: scale(1.1);
+          }
+    
+    
+}
+
+
+.product__text-box {
+    height: 40%;
+   font-size: 1.4rem;
+   margin-top: 1.5rem;
+   padding: 1rem;
+//    padding-top: -4rem;
+// background-color: red;
+
+ button {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   margin: 1rem 0 0 0;
+     font-size: 1.2rem;
+    background-color: green;
+    width: 100%;
+   color: white;
+   text-transform: uppercase;
+   text-decoration: none;
+   padding: .7rem 4rem;
+   display: inline-block;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   transition: all .2s;
+   position: relative;
+   transition: all ease .5s;
+   border: none;
+   cursor: pointer;
+ }
+}
+.product__icon {
+    font-size: 1.5rem;
+     transition: transform .5s ease;
+    
+}
+
+.product__title {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(61, 61, 61);
+    
+    &:hover,:link,:focus {
+         color: rgb(61, 61, 61);
+    }
+
+}
+
+.product__description {
+    padding: 0;
+    margin: 0;
+      color: #999;
+      display: flex;
+      justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .product {
+   width: 100%;
+    height: 30rem;
+    
+}
+
+
+}
+
+@keyframes wobble {
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }

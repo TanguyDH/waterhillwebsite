@@ -1,0 +1,75 @@
+
+.ContactCircle {
+ position: fixed !important;
+    bottom: 3rem; 
+    right: 3rem;
+   z-index: 1000000;
+   
+
+ 
+
+    &__secondary {
+        width: 6rem;
+    height: 6rem;
+    border-radius: 50px;
+   
+    margin-bottom: 1rem;
+    position: relative;
+     span {
+        font-size: 3rem;
+        color: white;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &--1 {
+        background-color: #007cfd;
+    }
+    &--2 {
+        background-color: #4aac4e;
+    }
+    &--3 {
+        background-color: #868487;
+       
+    }
+    }
+   
+
+    &__button {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50px;
+    background-color: #003064;
+    position: relative;
+    span {
+        font-size: 3rem;
+        color: white;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-.2px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(.5px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}

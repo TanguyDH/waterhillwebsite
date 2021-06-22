@@ -1,0 +1,125 @@
+@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+
+
+.ProductDescription {
+    padding: 1rem;
+    width: 100rem;
+    margin: 10rem auto 0 auto;
+
+   
+
+    &__header {
+        border-bottom: solid 2px rgb(189, 188, 188);
+        display: flex;
+        justify-content: space-between;
+        span {
+           color: var(--color-primary-light);
+            font-size: 1.8rem;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+    }
+ 
+    &__main {
+           display: flex;
+    justify-content: space-between;
+
+    }
+    // align-items: center;
+      & > * {
+           margin-bottom: 2rem;
+       }
+
+ 
+    &__select {
+       width: 55%;
+       & > * {
+           margin-bottom: 2rem;
+       }
+       span {
+           font-size: 1.5rem;
+           color: var(--color-primary-light);
+       }
+    }
+
+    &__button {
+          background-color: var(--color-primary-light);
+         width: 100%;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: .4rem;
+        transition: all .2s;
+        position: relative;
+        transition: all ease .5s;
+        border: none;
+        cursor: pointer;
+        // &-1 {
+        //      background-color: rgb(146, 145, 145);
+        //      font-size: 1rem;
+        //      margin: .3rem 0;
+        //      padding: .5rem 0;
+        //       &:hover {
+        //          background-color: rgb(112, 111, 111);
+        //      }
+        // }
+        &-2 {
+             background-color: green;
+             font-size: 1.6rem;
+             &:hover {
+                  background-color: rgb(0, 99, 0);
+             }
+        }
+    }
+
+    &__sparklingWater {
+        font-size: 1.5rem;
+    }
+    &__sample {
+        display: flex;
+        align-items: center;
+         font-size: 1.5rem;
+
+         input {
+             margin-right: 1rem;
+         }
+
+    }
+}
+
+
+@media only screen and (max-width: 1300px)  {
+
+
+.ProductDescription {
+    padding: 2rem;
+    width: 100%;
+    margin: 8rem auto 0 auto;
+
+   
+}
+
+}
+
+@media only screen and (max-width: 800px)  {
+
+
+.ProductDescription {
+    padding: 2rem;
+    width: 100%;
+    margin: 8rem auto 0 auto;
+
+     &__main {
+           display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    }
+
+   
+}
+
+}
+

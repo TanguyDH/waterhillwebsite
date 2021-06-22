@@ -1,0 +1,41 @@
+.ProductQuestion {
+   margin: 4rem 0;
+    font-size: 1.4rem;
+
+    &__title {
+        margin-bottom: 2rem;
+        // border: solid 2px rgb(189, 188, 188);
+        display: flex;
+
+       span {
+           margin-right: 1rem;
+           color: var(--color-primary-dark);
+           font-size: 1.8rem;
+       }
+        hr {
+           flex-grow: 1;
+            background-color: rgb(189, 188, 188);
+            height: 1px;
+            align-self: center;
+        }
+    }
+    &__trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            font-size: 2.5rem;
+        }
+    }
+
+}
+
+.Collapsible__trigger  {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.ProductQuestion__content {
+     font-size: 1.7rem;
+     opacity: .7;
+}
