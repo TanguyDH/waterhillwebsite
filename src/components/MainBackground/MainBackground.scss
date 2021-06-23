@@ -80,7 +80,7 @@
             font-size: 1.6vw;
             color: white;
              margin-bottom: 1rem;
-             list-style-type: square;
+             list-style-type: none;
               font-family: 'Roboto Slab';
         }    
     }
@@ -92,7 +92,8 @@
         
         //  transform: translate(-50%,-50%);
         li {
-           list-style-type: square;
+           list-style-type: none;
+           text-align: end;
             font-size: 1.6vw;
             color: white;
             margin-bottom: 1rem;
