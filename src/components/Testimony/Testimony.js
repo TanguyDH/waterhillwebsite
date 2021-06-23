@@ -10,6 +10,7 @@ import geraldine from '../../assets/img/testimony/geraldine.jpg';
 import serge from "../../assets/img/testimony/serge.jpg"
 import Leslie from "../../assets/img/testimony/Leslie.png"
 import caroline from "../../assets/img/testimony/caroline.jpg"
+import benoit from "../../assets/img/testimony/benoit.jpeg"
 import profile from "../../assets/img/testimony/profile.png"
 import TextLoop from "react-text-loop"
 import Carousel from "@brainhubeu/react-carousel"
@@ -146,8 +147,8 @@ class Testimony extends React.Component {
               />
                <TestimonyItem
                 text = "«Les bouteilles d’eau personnalisées apportent un « wow effect » auprès de nos clients. Les bouteilles d’eau sont appréciées et véhiculent une image très positive. Nous avons passé différentes commandes à Waterhill. »"
-                name=""
-                profil={profile}
+                name="Benoît Henry, Marketing Manager San Mazuin"
+                profil={benoit}
               />
               
             </Carousel>

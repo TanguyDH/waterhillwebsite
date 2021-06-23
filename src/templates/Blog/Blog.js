@@ -3,7 +3,7 @@ import './Blog.scss';
 import Layout from '../../components/Layout/Layout';
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-// import SocialNetwork from '../../components/SocialNetwork/SocialNetwork';
+import { Helmet } from 'react-helmet' 
 import {
   FacebookShareButton,
   FacebookIcon
@@ -43,7 +43,7 @@ const Blog = (props) => {
   }
     return (
       <Layout bg={true} blue={true}>
-     
+      <Helmet title={props.data.contentfulBlog.title} defer={false} />
 
         <div className="blog">
           <h2 className="blog__title">{props.data.contentfulBlog.title}</h2>

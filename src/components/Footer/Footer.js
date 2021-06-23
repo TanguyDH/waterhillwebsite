@@ -89,7 +89,8 @@ const Footer = () => (
           <h4>Crédit photo</h4>
       <p>
       <a href="https://stocksnap.io/photo/green-trees-B11FE72D4B">Photo</a> by <a href="https://stocksnap.io/author/97">Jonas Nilsson Lee</a> on <a href="https://stocksnap.io">StockSnap</a> CCO | 
-      Photo from VisionPic .net by Pexels  | Photo by Dioww from Shutterstock | Photo by Martin Damboldt from Pexels | Photo by Seventyfour from Freepik | Photo by Artem Beliaikin from Pexels
+      Photo from VisionPic.net by Pexels | Photo by Dioww from Shutterstock | Photo by Martin Damboldt from Pexels | Photo by Seventyfour from Freepik | Photo by Artem Beliaikin from Pexels | Photo by Artem Beliaikin from Pexels 
+       | Icons from icons8.com
        
       </p>
 

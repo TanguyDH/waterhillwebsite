@@ -3,6 +3,7 @@ import './Product.scss';
 import Layout from '../../components/Layout/Layout';
 import ProductDescription from '../../components/ProductDescription/ProductDescription';
 import ContactCircle from '../../components/ContactCircle/ContactCircle';
+import { Helmet } from 'react-helmet' 
 
 import { graphql } from "gatsby";
 
@@ -82,6 +83,7 @@ export const query = graphql`
  const Product = (props) => {
     return (
       <Layout  blue={true}>
+       <Helmet title={props.data.contentfulProduct.description} defer={false} />
         <ProductDescription
           pathname={props.location.pathname}
           article={props.data.contentfulProduct.article.json}

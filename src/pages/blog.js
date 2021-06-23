@@ -9,6 +9,7 @@ import ContactCircle from '../components/ContactCircle/ContactCircle';
         render() {
             return (
                 <Layout>
+                 
                     <BlogBackground />
                     <BlogList />
                     <ContactCircle />
