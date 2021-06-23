@@ -28,6 +28,16 @@
       justify-content: space-around;
 
     }
+
+    &__credit {
+         width: 120rem;
+         padding: 0 3rem;
+         margin: 0 auto;
+         text-align: center;
+         a {
+             color: white;
+         }
+    }
     &__newsletter {
         width: 40%;
     }

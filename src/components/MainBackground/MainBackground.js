@@ -69,7 +69,7 @@ const  MainBackground = () =>  {
                 fluid={data.image1.childImageSharp.fluid}
                 className="mainBackground__background1"
               >
-                <span>Photo by Domaine public CCo</span>
+                <span>Photo by Jonas Nilsson Lee on StockSnap CCO</span>
                 <div className="mainBackground__content">
 
                   <ul className="mainBackground__t1">

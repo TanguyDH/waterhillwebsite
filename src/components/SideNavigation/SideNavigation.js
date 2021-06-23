@@ -54,8 +54,8 @@ export default () => {
           <div
             className="SideNavigation__contact2"
           >
-            <a className="SideNavigation__tel" href="tel:+3281220440">
-              +32 81 220 440
+            <a className="SideNavigation__tel" href="tel:+32498119911">
+              +32 498 11 99 11
             </a>
             <strong>/</strong>
             <a

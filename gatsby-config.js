@@ -66,6 +66,20 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `WaterHill`,
+        short_name: `WaterHill`,
+        description: `WaterHill, votre outil de communication`,
+        lang: `fr`,
+        display: `standalone`,
+        icon: `src/assets/img/blueLogo.png`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+      },
+    },
   ],
 }
 

@@ -66,15 +66,14 @@ const SocialNetwork = () => {
         <div>instagram</div>
       </div>
       <Slider  {...settings}>
-        <img className="socialNetwork__img" alt="" src={insta18} />
-        <img className="socialNetwork__img" alt="" src={insta2} />
-        <img className="socialNetwork__img" alt="" src={insta7} />
-        <img className="socialNetwork__img" alt="" src={insta8} />
-        <img className="socialNetwork__img" alt="" src={insta9} />
-        <img className="socialNetwork__img" alt="" src={insta13} />
-        <img className="socialNetwork__img" alt="" src={insta14} />
-        <img className="socialNetwork__img" alt="" src={insta16} />
-        <img className="socialNetwork__img" alt="" src={insta17} />
+        <img className="socialNetwork__img" alt="instagram" src={insta18} />
+        <img className="socialNetwork__img" alt="instagram" src={insta2} />
+        <img className="socialNetwork__img" alt="instagram" src={insta7} />
+        <img className="socialNetwork__img" alt="instagram" src={insta8} />
+        <img className="socialNetwork__img" alt="instagram" src={insta9} />
+        <img className="socialNetwork__img" alt="instagram" src={insta13} />
+        <img className="socialNetwork__img" alt="instagram" src={insta16} />
+        <img className="socialNetwork__img" alt="instagram" src={insta17} />
       </Slider>
 
     </a>
