@@ -1,0 +1,141 @@
+
+
+.PopupDevis {
+    position: relative;
+
+    &__title {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-family: 'Roboto Slab';
+    font-size: 3rem;
+       width: 100%;
+       padding: 1rem 0rem;
+
+    }
+
+    &__info {
+        font-size: 1.2rem;
+    }
+
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+
+        p{
+            margin-right: 1rem;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        font-size: 3rem;
+        color: var(--color-primary);
+    }
+
+    &__subTitle {
+    //    background-color: var(--color-primary-light);
+    //     color: white;
+    //     width: 100%;
+    //     margin: 2rem 0;
+    //     padding: .5rem 2rem;
+
+        color: var(--color-primary);
+        text-transform: uppercase;
+        font-family: 'Roboto Slab';
+        font-size: 2rem;
+           width: 100%;
+           padding: 1rem 0rem;
+    }
+
+    &__intro {
+        // display: flex;
+        // align-items: center;
+        img {
+            margin-top: 1rem;
+           width: 10rem;
+        //    box-shadow: 0 1rem 2rem rgba(black, .1);
+        //    border: 1px solid black;
+           border-radius: .5rem;
+        }
+        h3 {
+
+        }
+    }
+   
+
+    &__modal {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 80rem;
+        height: 70rem;
+        overflow-y: scroll;
+        padding: 3rem 3rem 3rem 3rem;
+        font-size: 1.6rem;
+        input, textarea {
+            width: 100%;
+            padding: .5rem 1rem;
+            padding: .8rem;
+            border: none;
+            border-bottom:  solid #999 1px;
+            // border-radius: 3px;
+            &:focus {
+                border-bottom: solid #333 1px;
+                outline: none;
+            }
+        }
+
+        button {
+
+            margin: 2rem auto;
+            width: 100%;
+           color: white;
+           text-transform: uppercase;
+           text-decoration: none;
+           padding: 1rem 4rem;
+           display: inline-block;
+           border-radius: .4rem;
+           transition: all .2s;
+           position: relative;
+           transition: all ease .5s;
+           border: none;
+           cursor: pointer;
+           background-color: green;
+           &:hover {
+                background-color: rgb(0, 99, 0);
+           }
+        }
+    }
+
+   
+
+    &__inputOne {
+        margin-bottom: 1.5rem;
+        div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+ 
+    &__inputTwo {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        div {
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__marginBottom {
+        margin-bottom: 2rem;
+    }
+}

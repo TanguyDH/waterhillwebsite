@@ -40,9 +40,9 @@ export default (props) => {
             galleryTransparent={props.galleryTransparent}
             galleryMetals={props.galleryMetals} 
           />
-          <ProductSelect description={props.description}   gallery={props.gallery} capType={props.capType} capTypeDefault={props.capTypeDefault} label={props.label} labelDefault={props.labelDefault} typeOfWater={props.typeOfWater} typeOfWaterDefault={props.typeOfWaterDefault} quantity={props.quantity} quantityDefault={props.quantityDefault} pathname={props.pathname} capType={props.capType}   colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
+          <ProductSelect   description1={props.description1} description={props.description}   gallery={props.gallery} capType={props.capType} capTypeDefault={props.capTypeDefault} label={props.label} labelDefault={props.labelDefault} typeOfWater={props.typeOfWater} typeOfWaterDefault={props.typeOfWaterDefault} quantity={props.quantity} quantityDefault={props.quantityDefault} pathname={props.pathname} capType={props.capType}   colorsCapSport={props.colorsCapSport} colorsCapClassic={props.colorsCapClassic} colorsCap={props.colorsCap} moq={props.moq} />
         </div>
-           <ProductQuestion questions={props.questions} />
+           <ProductQuestion  questions={props.questions} />
 
 
         <ProductCarousel />

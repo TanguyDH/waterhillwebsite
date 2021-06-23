@@ -50,7 +50,8 @@ const productReducer = (state,action) => {
       return {
         ...state,
         color: action.color,
-        hexa: action.hexa
+        hexa: action.hexa,
+        colorName: action.colorName
       }
     case "SET_DATE":
       return {

@@ -7,7 +7,7 @@
  line-height: 2rem;
     &__full {
         border: 1px solid #999;
-        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
         border-radius: .5rem;
         padding: .7rem 2rem;
          display: flex;
@@ -34,6 +34,19 @@
         width: 49%;
            padding: 1rem 2rem;
            cursor: pointer;
+    }
+
+    &__devis {
+        background-color: green;
+        color: white;
+        transition: all .2s;
+        &:hover {
+            background-color: rgb(5, 156, 5);
+        }
+    }
+
+    &__sample {
+     
     }
 
 }

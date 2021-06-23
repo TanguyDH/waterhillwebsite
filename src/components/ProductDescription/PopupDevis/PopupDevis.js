@@ -1,14 +1,15 @@
 import React, { useState} from 'react'
-import './PopupSample.scss';
+import './PopupDevis.scss';
 import Modal from "react-modal";
 import { FaRegCheckCircle} from 'react-icons/fa';
 import { IoMdClose} from 'react-icons/io'
 import axios from "axios"
+import moment from 'moment';
 
 
 export default (props) => {
   // const { productDispatch } = useContext(ProductContext)
-//  const [props.popupSample, props.setPopupSample] = useState(true)
+//  const [props.PopupDevis, props.setPopupDevis] = useState(true)
  
 
   const [name, setName] = useState('')
@@ -50,31 +51,42 @@ export default (props) => {
     
   }
 
+
   return (
     <React.Fragment>
      
       <Modal
-        isOpen={props.popupSample}
-        onRequestClose={() => props.setPopupSample(false)}
-        className="PopupSample__modal"
+        isOpen={props.popupDevis}
+        onRequestClose={() => props.setPopupDevis(false)}
+        className="PopupDevis__modal"
         overlayClassName="Overlay"
       >
-       <div  className='PopupSample__title'>
-           Un échantillon gratuit 
+       <div  className='PopupDevis__title'>
+          Demande de devis sans engagement
        </div>
-       <div onClick={() => props.setPopupSample(false)} className='PopupSample__close'>
+       <div onClick={() => props.setPopupDevis(false)} className='PopupDevis__close'>
             <IoMdClose />
        </div>
-      <div  className="PopupSample__intro">
+      <div  className="PopupDevis__intro">
         <h3>Bouteille {props.description} {props.description1}</h3>
-        <img src={props.gallery[0].file.url} />
+          <div >
+              <img src={props.gallery[0].file.url} />
+         <div className="PopupDevis__flex">
+          <p>Type d'eau: <strong>{props.typeOfWater}</strong> </p>
+         <p>Type de bouchon: <strong>{props.capType}</strong></p>
+         <p>Couleur de bouchon: <strong>{props.colorName}</strong></p>
+         <p>Etiquette: <strong>{props.label}</strong></p>
+         <p>Quantité: <strong>{props.quantity}</strong></p>
+         <p>Date de livraison souhaité: <strong>{props.date.getDate()}/{props.date.getMonth() + 1}/{props.date.getFullYear()}</strong> </p>
+         </div>
+          </div>
       </div>
 
-       <div className='PopupSample__subTitle'>
+       <div className='PopupDevis__subTitle'>
            Vos données 
        </div>
 
-       <div className='PopupSample__inputOne'>
+       <div className='PopupDevis__inputOne'>
            <div>
                <label>Nom de l'entreprise</label>
                <input
@@ -86,7 +98,7 @@ export default (props) => {
            </div>
        </div>
 
-       <div className='PopupSample__inputOne'>
+       <div className='PopupDevis__inputOne'>
            <div>
                <label>TVA</label>
                <input
@@ -100,7 +112,7 @@ export default (props) => {
 
 
 
-       <div className='PopupSample__inputTwo'>
+       <div className='PopupDevis__inputTwo'>
            <div>
                <label>Prénom</label>
                <input
@@ -121,7 +133,7 @@ export default (props) => {
            </div>
        </div>
 
-       <div className='PopupSample__inputTwo'>
+       <div className='PopupDevis__inputTwo'>
            <div>
                <label>Adresse</label>
                <input
@@ -143,7 +155,7 @@ export default (props) => {
        </div>
 
 
-       <div className='PopupSample__inputTwo'>
+       <div className='PopupDevis__inputTwo'>
            <div>
                <label>Code Postale</label>
                <input
@@ -164,7 +176,7 @@ export default (props) => {
            </div>
        </div>
 
-       <div className='PopupSample__inputTwo'>
+       <div className='PopupDevis__inputTwo'>
            <div>
                <label>Adresse e-mail</label>
                <input
@@ -186,13 +198,13 @@ export default (props) => {
        </div>
 
 
-       <div className='PopupSample__marginBottom'></div>
+       <div className='PopupDevis__marginBottom'></div>
 
-       <div className='PopupSample__subTitle'>
+       <div className='PopupDevis__subTitle'>
            Détails de votre commande 
        </div>
 
-       <div className='PopupSample__inputOne'>
+       <div className='PopupDevis__inputOne'>
            <div>
                <label>Détails de votre commande</label>
               <textarea

@@ -6,6 +6,7 @@ import ProductContext from '../../../context/ProductContext';
 import ChooseColor from '../../UI/ChooseColor/ChooseColor';
 import PopupRate from '../PopupRate/PopupRate';
 import PopupSample from '../PopupSample/PopupSample'
+import PopupDevis from '../PopupDevis/PopupDevis';
 import DatePicker from '../../UI/DatePicker/DatePicker';
 import Selection from '../../../components/UI/Selection/Selection';
 import OrderInfo from './OrderInfo/OrderInfo';
@@ -15,6 +16,7 @@ import OrderInfo from './OrderInfo/OrderInfo';
 export default (props) => {
 
   const [popupSample, setPopupSample] = useState(false)
+  const [popupDevis, setPopupDevis] = useState(false)
 
   const { productState, productDispatch } = useContext(ProductContext);
 
@@ -23,9 +25,8 @@ export default (props) => {
   const [typeOfWater, setTypeOfWater] = useState(props.typeOfWaterDefault.typeOfWaterDefault[0].value);
   const [capType, setCapType] = useState(props.capTypeDefault.capTypeDefault[0].value);
   const [label, setLabel] = useState(props.labelDefault.labelDefault[0].value);
-  const [quantity, setQuantity] = useState('');
+  const [quantity, setQuantity] = useState(props.quantity.quantity[0].value);
 
-  console.log( model, typeOfWater, capType, label, quantity);
 
 
   const onchangeName = () => {
@@ -310,25 +311,28 @@ export default (props) => {
       </div>
      
 
-      <PopupRate
-        model={model}
-        typeOfWater={typeOfWater}
-        moq={props.moq}
-        capType={capType}
-        label={label}
-        quantity={quantity}
-        date={productState.date}
-        color={productState.hexa}
-      />
 
-      <PopupSample popupSample={popupSample} setPopupSample={setPopupSample} description={props.description}   gallery={props.gallery} />
-
-      <OrderInfo setPopupSample={setPopupSample} />
+      <PopupSample description1={props.description1} popupSample={popupSample} setPopupSample={setPopupSample} description={props.description}   gallery={props.gallery} />
+      <PopupDevis description1={props.description1}  popupDevis={popupDevis} setPopupDevis={setPopupDevis}  description={props.description}   gallery={props.gallery} typeOfWater={typeOfWater} capType={capType} label={label} quantity={quantity} date={productState.date} colorName={productState.colorName} />
+      <OrderInfo setPopupSample={setPopupSample} setPopupDevis={setPopupDevis}  />
     </form>
   )
   
 }
 
+
+
+
+      // <PopupRate
+      //   model={model}
+      //   typeOfWater={typeOfWater}
+      //   moq={props.moq}
+      //   capType={capType}
+      //   label={label}
+      //   quantity={quantity}
+      //   date={productState.date}
+      //   color={productState.hexa}
+      // />
 
 {/* <div className="ProductSelect__sample">
 <input type="checkbox" />

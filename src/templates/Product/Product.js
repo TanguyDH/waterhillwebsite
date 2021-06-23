@@ -83,7 +83,7 @@ export const query = graphql`
  const Product = (props) => {
     return (
       <Layout  blue={true}>
-       <Helmet title={props.data.contentfulProduct.description} defer={false} />
+       <Helmet title={`${props.data.contentfulProduct.description} ${props.data.contentfulProduct.description1}`} defer={false} />
         <ProductDescription
           pathname={props.location.pathname}
           article={props.data.contentfulProduct.article.json}
