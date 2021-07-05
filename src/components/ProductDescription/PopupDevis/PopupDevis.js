@@ -8,6 +8,7 @@ import moment from 'moment';
 
 
 export default (props) => {
+
   // const { productDispatch } = useContext(ProductContext)
 //  const [props.PopupDevis, props.setPopupDevis] = useState(true)
  
@@ -24,11 +25,15 @@ export default (props) => {
      const [description, setDescription] = useState("")
 
 
+      const [sucesss, setSuccesss] = useState(false)
+       const [error, setError] = useState(false)
+
+
   
     
   const sentForm = async () => {
       axios
-        .post("/.netlify/functions/test", {
+        .post("/.netlify/functions/sendEmail", {
           name,
           phone,
           email,
@@ -50,9 +55,13 @@ export default (props) => {
         })
         .then(function(response) {
           console.log(response)
+          setSuccesss(true)
+          setError(false)
         })
         .catch(function(error) {
           console.log(error)
+           setSuccesss(false)
+           setError(true)
         })
 
     
@@ -224,9 +233,12 @@ export default (props) => {
        </div>
 
 
-       <button>Demandez un échantillon</button>
+ { sucesss ? <div className='PopupDevis__message'>vos données ont bien été envoyées</div> : ''}
+  {error ? <div className='PopupDevis__message PopupDevis__message--red'>une erreur s'est produite</div> : ''}
 
-   
+       <button onClick={() => sentForm()}>Demandez un échantillon</button>
+
+      
 
       </Modal>
     </React.Fragment>

@@ -27,7 +27,7 @@ export default (props) => {
     
   const sentForm = async () => {
       axios
-        .post("/.netlify/functions/test", {
+        .post("/.netlify/functions/sendEmail", {
            name,
            phone,
            email,
