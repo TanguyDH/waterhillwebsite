@@ -1,85 +1,145 @@
-const nodemailer = require("nodemailer")
+// const nodemailer = require("nodemailer")
 
 
-exports.handler = function(event, context, callback) {
+// exports.handler = function(event, context, callback) {
+//   if (event.httpMethod == "OPTIONS") {
+//     return {
+//       headers: { ...headers, Allow: "POST" },
+//       statusCode: 204,
+//     }
+//   }
+//   const { name, phone, email, model, typeOfWater, moq, capType , label, quantity, date, color} = JSON.parse(event.body)
+//   // const sendMail = (
+//   //   name,
+//   //   phone,
+//   //   email,
+//   //   model,
+//   //   typeOfWater,
+//   //   moq,
+//   //   capType,
+//   //   label,
+//   //   quantity,
+//   //   date,
+//   //   color
+//   // ) => {
+//     const transporter = nodemailer.createTransport({
+//       host: "smtp.gmail.com",
+//       port: 587,
+//       secure: false,
+//       service: "gmail",
+//       auth: {
+//         user: "tanguydeherdt@gmail.com",
+//         pass: "wendyam18",
+//       },
+//     })
 
- 
+//     const mailOptions = {
+//       from: "tanguydeherdt@gmail.com", // sender address
+//       to: "deherdttanguy@gmail.com", // list of receivers
+//       subject: `waterhill`, // Subject line
+//       // html: `name:${name} - phone:${phone} - email:${email}- model:${model}- typeOfWater:${typeOfWater}- moq:${moq}- capType:${capType}- label:${label}- quantity:${quantity}- date:${date}- color:${color}  `, 
+//       html: 'html'
+//     }
+//     transporter.sendMail(mailOptions, function(err, info) {
+//       if (err) {
+//          callback(err)
+//          console.log(err)
+//       }
+//       else  {
+//           callback(null, {
+//             statusCode: 200,
+//             body: "Merci !",
+//           })
+//         console.log(info)
+//       }
+//     })
+//   // }
 
-  if (event.httpMethod == "OPTIONS") {
+//   // sendMail(
+//   //   name,
+//   //   phone,
+//   //   email,
+//   //   model,
+//   //   typeOfWater,
+//   //   moq,
+//   //   capType,
+//   //   label,
+//   //   quantity,
+//   //   date,
+//   //   color
+//   // )
+// }
+
+
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+exports.handler =  async (event, context, callback) => {
+
+  const data = JSON.parse(event.body)
+   const {
+     name,
+     phone,
+     email,
+     businessName,
+     TVA,
+     adress,
+     numero,
+     postalCode,
+     city,
+     description,
+     model,
+     typeOfWater,
+     moq,
+     capType,
+     label,
+     quantity,
+     date,
+     color
+   } = data
+
+  // const body = Object.keys(data).map((k) => {
+  //   return `${k}: ${data[k]}`
+  // }).join("<br><br>");
+
+
+  // const mail_to_send = {
+  //   to: "me@rajrajhans.com",
+  //   from: email,
+  //   subject: subject ? subject : 'New Entry from Contact Form',
+  //   html: body,
+  // };
+
+    const text = `text`
+
+    const mail_to_send = {
+      to: "tanguydeherdt@gmail.com", // replace this with your email address
+      from: "waterhillwebsite@gmail.com", // replace this with your email address
+      // subject: event.subject,
+      subject: 'données formulaire',
+      text:  `
+        voici les données:
+         name: ${name},
+         phone: ${phone},
+         email: ${email}
+      `,
+    }
+
+  try{
+    await sgMail.send(mail_to_send)
     return {
-      headers: { ...headers, Allow: "POST" },
-      statusCode: 204,
+      statusCode: 200,
+      body: "Message sent successfully"
+    }
+  } catch(e){
+    return {
+      statusCode: e.code,
+      body: e.message
     }
   }
-  
-  const { name, phone, email, model, typeOfWater, moq, capType , label, quantity, date, color} = JSON.parse(event.body)
 
-
-  // const sendMail = (
-  //   name,
-  //   phone,
-  //   email,
-  //   model,
-  //   typeOfWater,
-  //   moq,
-  //   capType,
-  //   label,
-  //   quantity,
-  //   date,
-  //   color
-  // ) => {
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      service: "gmail",
-      auth: {
-        user: "tanguydeherdt@gmail.com",
-        pass: "wendyam18",
-      },
-    })
-
-    const mailOptions = {
-      from: "tanguydeherdt@gmail.com", // sender address
-      to: "deherdttanguy@gmail.com", // list of receivers
-      subject: `waterhill`, // Subject line
-      // html: `name:${name} - phone:${phone} - email:${email}- model:${model}- typeOfWater:${typeOfWater}- moq:${moq}- capType:${capType}- label:${label}- quantity:${quantity}- date:${date}- color:${color}  `, 
-      html: 'html'
-    }
-    transporter.sendMail(mailOptions, function(err, info) {
-      if (err) {
-         callback(err)
-         console.log(err)
-      }
-      else  {
-          callback(null, {
-            statusCode: 200,
-            body: "Merci !",
-          })
-        console.log(info)
-      }
-    })
-  // }
-
-  // sendMail(
-  //   name,
-  //   phone,
-  //   email,
-  //   model,
-  //   typeOfWater,
-  //   moq,
-  //   capType,
-  //   label,
-  //   quantity,
-  //   date,
-  //   color
-  // )
-
-
-
-
-}
-
+};
 
 
 

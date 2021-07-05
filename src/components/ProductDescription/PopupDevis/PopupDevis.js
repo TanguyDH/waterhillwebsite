@@ -29,9 +29,16 @@ export default (props) => {
   const sentForm = async () => {
       axios
         .post("/.netlify/functions/test", {
-          name: name,
-          phone: phone,
-          email: email,
+          name,
+          phone,
+          email,
+          businessName,
+          TVA,
+          adress,
+          numero,
+          postalCode,
+          city,
+          description,
           model: props.model,
           typeOfWater: props.typeOfWater,
           moq: props.moq,

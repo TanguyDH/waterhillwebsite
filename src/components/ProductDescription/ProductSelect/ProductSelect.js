@@ -312,8 +312,26 @@ export default (props) => {
      
 
 
-      <PopupSample description1={props.description1} popupSample={popupSample} setPopupSample={setPopupSample} description={props.description}   gallery={props.gallery} />
-      <PopupDevis description1={props.description1}  popupDevis={popupDevis} setPopupDevis={setPopupDevis}  description={props.description}   gallery={props.gallery} typeOfWater={typeOfWater} capType={capType} label={label} quantity={quantity} date={productState.date} colorName={productState.colorName} />
+      <PopupSample
+      model={model}
+        typeOfWater={typeOfWater}
+        moq={props.moq}
+        capType={capType}
+        label={label}
+        quantity={quantity}
+        date={productState.date}
+        color={productState.hexa}
+       description1={props.description1} popupSample={popupSample} setPopupSample={setPopupSample} description={props.description}   gallery={props.gallery} />
+      <PopupDevis
+      model={model}
+        typeOfWater={typeOfWater}
+        moq={props.moq}
+        capType={capType}
+        label={label}
+        quantity={quantity}
+        date={productState.date}
+        color={productState.hexa}
+       description1={props.description1}  popupDevis={popupDevis} setPopupDevis={setPopupDevis}  description={props.description}   gallery={props.gallery} typeOfWater={typeOfWater} capType={capType} label={label} quantity={quantity}  colorName={productState.colorName} />
       <OrderInfo setPopupSample={setPopupSample} setPopupDevis={setPopupDevis}  />
     </form>
   )
