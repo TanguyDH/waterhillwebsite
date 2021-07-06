@@ -148,6 +148,17 @@
   .Footer__content {
       width: 100%;
   }
+  .Footer__credit {
+      font-size: 1.2rem;
+      width: 100%;
+      padding: 0 1rem;
+      margin: 0 auto;
+      text-align: center;
+
+      a {
+          color: white;
+      }
+  }
 }
 
 @media only screen and (max-width: 1000px)  {
@@ -164,4 +175,6 @@
      .Footer__contactus {
         width: 100%;
      }
+
+     
 }
