@@ -119,10 +119,25 @@ exports.handler =  async (event, context, callback) => {
       // subject: event.subject,
       subject: 'données formulaire',
       text:  `
-        voici les données:
-         name: ${name},
-         phone: ${phone},
-         email: ${email}
+      voici les données:
+      name: ${name},
+      phone: ${phone},
+      email: ${email},
+      businessName: ${businessName},
+      TVA: ${TVA},
+     adress: ${adress},
+     numero: ${numero},
+     postalCode: ${postalCode},
+     city: ${city},
+     description: ${description},
+     model: ${model},
+     typeOfWater: ${typeOfWater},
+     moq: ${moq},
+     capType: ${capType},
+     label: ${label},
+     quantity: ${quantity},
+     date: ${date},
+     color: ${color}   
       `,
     }
 
