@@ -22,6 +22,10 @@ export default (props) => {
     const [city, setCity] = useState("")
      const [description, setDescription] = useState("")
 
+           const [sucesss, setSuccesss] = useState(false)
+           const [error, setError] = useState(false)
+
+
 
   
     
@@ -48,10 +52,14 @@ export default (props) => {
           color: props.color
         })
         .then(function(response) {
-          console.log(response)
+            console.log(response)
+            setSuccesss(true)
+            setError(false)
         })
         .catch(function(error) {
-          console.log(error)
+            console.log(error)
+            setSuccesss(false)
+            setError(true)
         })
 
     
@@ -210,9 +218,11 @@ export default (props) => {
                />
            </div>
        </div>
+       
+ { sucesss ? <div className='PopupDevis__message'>vos données ont bien été envoyées</div> : ''}
+  {error ? <div className='PopupDevis__message PopupDevis__message--red'>une erreur s'est produite</div> : ''}
 
-
-       <button>Demandez un échantillon</button>
+       <button onClick={() => sentForm()}>Demandez un échantillon</button>
 
    
 
