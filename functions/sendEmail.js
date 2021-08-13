@@ -114,7 +114,7 @@ exports.handler =  async (event, context, callback) => {
     const text = `text`
 
     const mail_to_send = {
-      to: ['tanguydeherdt@gmail.com', 'tanguydeherdt@hotmail.com'], // replace this with your email address
+      to: ['bernard@waterhill.net', 'helene@waterhill.net'], // replace this with your email address
       from: "waterhillwebsite@gmail.com", // replace this with your email address
       // subject: event.subject,
       subject: 'données formulaire',
