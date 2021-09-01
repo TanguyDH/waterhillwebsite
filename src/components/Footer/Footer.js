@@ -68,7 +68,7 @@ const Footer = () => (
           <a rel="noopener noreferrer"
             target="_blank" href="mailto:contact@waterhill.be">contact@waterhill.be</a>
           <a rel="noopener noreferrer"
-            target="_blank" href="tel:+32498119911">Téléphone : +32 498 11 99 11</a>
+            target="_blank" href="tel:+32498119911">Téléphone : +32 489 11 99 11</a>
         
           <p>Lund - Vend 8h-22h, Sam 9h-18h</p>   
           
