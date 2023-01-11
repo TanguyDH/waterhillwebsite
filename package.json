@@ -37,7 +37,7 @@
     "gatsby-remark-images-contentful": "^2.1.4",
     "gatsby-source-contentful": "^2.1.18",
     "gatsby-source-filesystem": "^2.1.2",
-    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.6",
     "gatsby-transformer-sqip": "^2.1.12",
     "intersection-observer": "^0.7.0",
